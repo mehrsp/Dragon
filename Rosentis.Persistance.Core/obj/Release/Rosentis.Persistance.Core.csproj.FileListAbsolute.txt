@@ -1,0 +1,42 @@
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Persistance.Core\bin\Release\Rosentis.Persistance.Core.dll.config
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Persistance.Core\bin\Release\Rosentis.Persistance.Core.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Persistance.Core\bin\Release\Rosentis.Persistance.Core.pdb
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Persistance.Core\bin\Release\EntityFramework.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Persistance.Core\bin\Release\Rosentis.Core.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Persistance.Core\bin\Release\Rosentis.DomainModel.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Persistance.Core\bin\Release\System.Data.Entity.Repository.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Persistance.Core\bin\Release\Newtonsoft.Json.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Persistance.Core\bin\Release\Fasterflect.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Persistance.Core\bin\Release\System.Linq.Dynamic.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Persistance.Core\bin\Release\Rosentis.Common.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Persistance.Core\bin\Release\Rosentis.Core.pdb
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Persistance.Core\bin\Release\Rosentis.DomainModel.pdb
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Persistance.Core\bin\Release\Rosentis.DomainModel.dll.config
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Persistance.Core\bin\Release\EntityFramework.xml
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Persistance.Core\bin\Release\Newtonsoft.Json.xml
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Persistance.Core\bin\Release\Fasterflect.xml
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Persistance.Core\bin\Release\Rosentis.Common.pdb
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Persistance.Core\bin\Release\Rosentis.Common.dll.config
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Persistance.Core\obj\Release\Rosentis.Persistance.Core.csprojResolveAssemblyReference.cache
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Persistance.Core\obj\Release\Rosentis.Persistance.Core.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Persistance.Core\obj\Release\Rosentis.Persistance.Core.pdb
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Persistance.Core\bin\Release\Rosentis.Persistance.Core.dll.config
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Persistance.Core\bin\Release\Rosentis.Persistance.Core.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Persistance.Core\bin\Release\Rosentis.Persistance.Core.pdb
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Persistance.Core\bin\Release\EntityFramework.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Persistance.Core\bin\Release\Rosentis.Core.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Persistance.Core\bin\Release\Rosentis.DomainModel.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Persistance.Core\bin\Release\System.Data.Entity.Repository.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Persistance.Core\bin\Release\Newtonsoft.Json.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Persistance.Core\bin\Release\Fasterflect.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Persistance.Core\bin\Release\System.Linq.Dynamic.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Persistance.Core\bin\Release\Rosentis.Common.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Persistance.Core\bin\Release\Rosentis.Core.pdb
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Persistance.Core\bin\Release\Rosentis.DomainModel.pdb
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Persistance.Core\bin\Release\EntityFramework.xml
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Persistance.Core\bin\Release\Newtonsoft.Json.xml
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Persistance.Core\bin\Release\Fasterflect.xml
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Persistance.Core\bin\Release\Rosentis.Common.pdb
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Persistance.Core\obj\Release\Rosentis.Persistance.Core.csprojResolveAssemblyReference.cache
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Persistance.Core\obj\Release\Rosentis.Persistance.Core.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Persistance.Core\obj\Release\Rosentis.Persistance.Core.pdb

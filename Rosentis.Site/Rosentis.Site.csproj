@@ -1,0 +1,1076 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{400788D5-80FA-4520-8958-466DE6ABE48C}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Rosentis.Site</RootNamespace>
+    <AssemblyName>Rosentis.Site</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort>8080</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication>enabled</IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>disabled</IISExpressWindowsAuthentication>
+    <IISExpressUseClassicPipelineMode>false</IISExpressUseClassicPipelineMode>
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <IncludeIisSettings>false</IncludeIisSettings>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.4.1.9004, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=2.0.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.0.6\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.2.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.2.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.2.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.2.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.2.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.2.0\lib\net46\Microsoft.ApplicationInsights.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=1.1.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.Abstractions.1.1.1\lib\netstandard1.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.JsonWebTokens, Version=5.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.JsonWebTokens.5.6.0\lib\net461\Microsoft.IdentityModel.JsonWebTokens.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Logging, Version=5.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Logging.5.6.0\lib\net461\Microsoft.IdentityModel.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Tokens, Version=5.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Tokens.5.6.0\lib\net461\Microsoft.IdentityModel.Tokens.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Win32.Primitives, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Win32.Primitives.4.3.0\lib\net46\Microsoft.Win32.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp, Version=106.0.0.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.106.10.1\lib\net452\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="StructureMap, Version=4.7.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\StructureMap.4.7.1\lib\net45\StructureMap.dll</HintPath>
+    </Reference>
+    <Reference Include="StructureMap.Microsoft.DependencyInjection, Version=1.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\StructureMap.Microsoft.DependencyInjection.1.4.0\lib\net451\StructureMap.Microsoft.DependencyInjection.dll</HintPath>
+    </Reference>
+    <Reference Include="StructureMap.Web, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\structuremap.web.3.1.0.133\lib\net40\StructureMap.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.AppContext, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.AppContext.4.3.0\lib\net46\System.AppContext.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.0\lib\netstandard1.1\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Console, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Console.4.3.0\lib\net46\System.Console.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.SqlClient, Version=4.6.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SqlClient.4.8.0\lib\net461\System.Data.SqlClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.4.3.0\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.Tracing, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.Tracing.4.3.0\lib\net462\System.Diagnostics.Tracing.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Globalization.Calendars, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Globalization.Calendars.4.3.0\lib\net46\System.Globalization.Calendars.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IdentityModel.Tokens.Jwt, Version=5.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IdentityModel.Tokens.Jwt.5.6.0\lib\net461\System.IdentityModel.Tokens.Jwt.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.4.3.0\lib\net462\System.IO.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Compression, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Compression.4.3.0\lib\net46\System.IO.Compression.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.IO.Compression.ZipFile, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Compression.ZipFile.4.3.0\lib\net46\System.IO.Compression.ZipFile.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.FileSystem, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.FileSystem.4.3.0\lib\net46\System.IO.FileSystem.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.FileSystem.Primitives, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.FileSystem.Primitives.4.3.0\lib\net46\System.IO.FileSystem.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Http.4.3.0\lib\net46\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Sockets, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Sockets.4.3.0\lib\net46\System.Net.Sockets.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Reflection, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Reflection.4.3.0\lib\net462\System.Reflection.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.4.3.0\lib\net462\System.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Extensions, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.Extensions.4.3.0\lib\net462\System.Runtime.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.InteropServices.4.3.0\lib\net462\System.Runtime.InteropServices.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Algorithms, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Algorithms.4.3.0\lib\net461\System.Security.Cryptography.Algorithms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Encoding, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Encoding.4.3.0\lib\net46\System.Security.Cryptography.Encoding.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Primitives.4.3.0\lib\net46\System.Security.Cryptography.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.X509Certificates, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.X509Certificates.4.3.0\lib\net461\System.Security.Cryptography.X509Certificates.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.7\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml.ReaderWriter, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Xml.ReaderWriter.4.3.0\lib\net46\System.Xml.ReaderWriter.dll</HintPath>
+    </Reference>
+    <Reference Include="WebActivatorEx, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebActivatorEx.2.0.5\lib\net40\WebActivatorEx.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease, Version=1.5.2.14234, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\StructuremapMvc.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\Base\BaseController.cs" />
+    <Compile Include="Controllers\CartController.cs" />
+    <Compile Include="Controllers\CheckoutController.cs" />
+    <Compile Include="Controllers\CityController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MemberController.cs" />
+    <Compile Include="Controllers\Messaging\MessagingController.cs" />
+    <Compile Include="Controllers\OrdersController.cs" />
+    <Compile Include="Controllers\PartialController.cs" />
+    <Compile Include="Controllers\ProductsController.cs" />
+    <Compile Include="Controllers\ShopController.cs" />
+    <Compile Include="DependencyResolution\ControllerConvention.cs" />
+    <Compile Include="DependencyResolution\DefaultRegistry.cs" />
+    <Compile Include="DependencyResolution\IoC.cs" />
+    <Compile Include="DependencyResolution\StructureMapDependencyScope.cs" />
+    <Compile Include="DependencyResolution\StructureMapScopeModule.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\Api.cs" />
+    <Compile Include="Jwt\JwtAuthorizeAttribute.cs" />
+    <Compile Include="Models\FilterCategoryChild.cs" />
+    <Compile Include="Models\LoginModel.cs" />
+    <Compile Include="Models\FilterModel.cs" />
+    <Compile Include="Models\ProductFilterModel.cs" />
+    <Compile Include="Models\ProfileAdditional.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\toastr.css" />
+    <Content Include="Content\toastr.min.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Scripts\toastr.js" />
+    <Content Include="Scripts\toastr.min.js" />
+    <Content Include="wp-admin\js\password-strength-meter.min.js" />
+    <Content Include="wp-content\plugins\ajax-search-for-woocommerce\assets\css\style.min.css" />
+    <Content Include="wp-content\plugins\ajax-search-for-woocommerce\assets\img\close.png" />
+    <Content Include="wp-content\plugins\ajax-search-for-woocommerce\assets\img\preloader.gif" />
+    <Content Include="wp-content\plugins\ajax-search-for-woocommerce\assets\img\preloader.png" />
+    <Content Include="wp-content\plugins\ajax-search-for-woocommerce\assets\js\search.min.js" />
+    <Content Include="wp-content\plugins\dokan-lite\assets\css\rtl.css" />
+    <Content Include="wp-content\plugins\dokan-lite\assets\css\style.css" />
+    <Content Include="wp-content\plugins\dokan-lite\assets\images\loader.svg" />
+    <Content Include="wp-content\plugins\dokan-lite\assets\images\searchicon.png" />
+    <Content Include="wp-content\plugins\dokan-lite\assets\images\spinner-2x.gif" />
+    <Content Include="wp-content\plugins\dokan-lite\assets\images\wpspin_light.gif" />
+    <Content Include="wp-content\plugins\dokan-lite\assets\js\dokan.js" />
+    <Content Include="wp-content\plugins\dokan-lite\assets\js\login-form-popup.js" />
+    <Content Include="wp-content\plugins\dokan-lite\assets\js\speakingurl.min.js" />
+    <Content Include="wp-content\plugins\dokan-lite\assets\js\vendor-registration.js" />
+    <Content Include="wp-content\plugins\dokan-lite\assets\vendors\font-awesome\font-awesome.min.css" />
+    <Content Include="wp-content\plugins\dokan-lite\assets\vendors\fonts\fontawesome-webfont3e6e.svg" />
+    <Content Include="wp-content\plugins\dokan-lite\assets\vendors\form-validate\form-validate.js" />
+    <Content Include="wp-content\plugins\dokan-lite\assets\vendors\i18n\jed.js" />
+    <Content Include="wp-content\plugins\dokan-lite\assets\vendors\magnific\jquery.magnific-popup.min.js" />
+    <Content Include="wp-content\plugins\dokan-lite\assets\vendors\select2\select2.css" />
+    <Content Include="wp-content\plugins\dokan-lite\assets\vendors\select2\select2.full.min.js" />
+    <Content Include="wp-content\plugins\dokan-lite\assets\vendors\tooltips\tooltips.js" />
+    <Content Include="wp-content\plugins\dokan-pro\assets\css\jssocials-theme-flat.css" />
+    <Content Include="wp-content\plugins\dokan-pro\assets\css\jssocials.css" />
+    <Content Include="wp-content\plugins\dokan-pro\assets\css\rtl.css" />
+    <Content Include="wp-content\plugins\dokan-pro\assets\css\style.css" />
+    <Content Include="wp-content\plugins\dokan-pro\assets\images\ajax-loader%402x.gif" />
+    <Content Include="wp-content\plugins\dokan-pro\assets\images\searchicon.html" />
+    <Content Include="wp-content\plugins\dokan-pro\assets\images\spinner-2x.gif" />
+    <Content Include="wp-content\plugins\dokan-pro\assets\images\wpspin_light.html" />
+    <Content Include="wp-content\plugins\dokan-pro\assets\js\dokan-pro.js" />
+    <Content Include="wp-content\plugins\dokan-pro\assets\js\single-product-shipping.js" />
+    <Content Include="wp-content\plugins\dokan-pro\includes\modules\single-product-multiple-vendor\assets\js\tinysort.min.js" />
+    <Content Include="wp-content\plugins\js_composer\assets\css\js_composer.min.css" />
+    <Content Include="wp-content\plugins\js_composer\assets\fonts\vc_grid\vc_grid_v157a1.svg" />
+    <Content Include="wp-content\plugins\js_composer\assets\fonts\vc_icons_v2\fonts\vcpb-plugin-iconsb82a.svg" />
+    <Content Include="wp-content\plugins\js_composer\assets\images\flickr.png" />
+    <Content Include="wp-content\plugins\js_composer\assets\images\icons\address-book.png" />
+    <Content Include="wp-content\plugins\js_composer\assets\images\icons\alarm-clock.png" />
+    <Content Include="wp-content\plugins\js_composer\assets\images\icons\anchor.png" />
+    <Content Include="wp-content\plugins\js_composer\assets\images\icons\application-image.png" />
+    <Content Include="wp-content\plugins\js_composer\assets\images\icons\arrow.png" />
+    <Content Include="wp-content\plugins\js_composer\assets\images\icons\asterisk.png" />
+    <Content Include="wp-content\plugins\js_composer\assets\images\icons\auction-hammer.png" />
+    <Content Include="wp-content\plugins\js_composer\assets\images\icons\balloon-buzz.png" />
+    <Content Include="wp-content\plugins\js_composer\assets\images\icons\balloon-facebook.png" />
+    <Content Include="wp-content\plugins\js_composer\assets\images\icons\balloon-twitter.png" />
+    <Content Include="wp-content\plugins\js_composer\assets\images\icons\balloon.png" />
+    <Content Include="wp-content\plugins\js_composer\assets\images\icons\battery-full.png" />
+    <Content Include="wp-content\plugins\js_composer\assets\images\icons\binocular.png" />
+    <Content Include="wp-content\plugins\js_composer\assets\images\icons\blue-document-excel.png" />
+    <Content Include="wp-content\plugins\js_composer\assets\images\icons\blue-document-image.png" />
+    <Content Include="wp-content\plugins\js_composer\assets\images\icons\blue-document-music.png" />
+    <Content Include="wp-content\plugins\js_composer\assets\images\icons\blue-document-office.png" />
+    <Content Include="wp-content\plugins\js_composer\assets\images\icons\blue-document-pdf.png" />
+    <Content Include="wp-content\plugins\js_composer\assets\images\icons\blue-document-powerpoint.png" />
+    <Content Include="wp-content\plugins\js_composer\assets\images\icons\blue-document-word.png" />
+    <Content Include="wp-content\plugins\js_composer\assets\images\icons\bookmark.png" />
+    <Content Include="wp-content\plugins\js_composer\assets\images\icons\camcorder.png" />
+    <Content Include="wp-content\plugins\js_composer\assets\images\icons\camera.png" />
+    <Content Include="wp-content\plugins\js_composer\assets\images\icons\chart-pie.png" />
+    <Content Include="wp-content\plugins\js_composer\assets\images\icons\chart.png" />
+    <Content Include="wp-content\plugins\js_composer\assets\images\icons\clock.png" />
+    <Content Include="wp-content\plugins\js_composer\assets\images\icons\control.png" />
+    <Content Include="wp-content\plugins\js_composer\assets\images\icons\fire.png" />
+    <Content Include="wp-content\plugins\js_composer\assets\images\icons\heart.png" />
+    <Content Include="wp-content\plugins\js_composer\assets\images\icons\mail.png" />
+    <Content Include="wp-content\plugins\js_composer\assets\images\icons\plus-shield.png" />
+    <Content Include="wp-content\plugins\js_composer\assets\images\icons\video.png" />
+    <Content Include="wp-content\plugins\js_composer\assets\images\spinner.gif" />
+    <Content Include="wp-content\plugins\js_composer\assets\images\toggle_close.png" />
+    <Content Include="wp-content\plugins\js_composer\assets\images\toggle_open.png" />
+    <Content Include="wp-content\plugins\js_composer\assets\js\dist\js_composer_front.min.js" />
+    <Content Include="wp-content\plugins\js_composer\assets\js\vendors\woocommerce-add-to-cart.js" />
+    <Content Include="wp-content\plugins\js_composer\assets\vc\alert.png" />
+    <Content Include="wp-content\plugins\js_composer\assets\vc\blur.svg" />
+    <Content Include="wp-content\plugins\js_composer\assets\vc\exclamation.png" />
+    <Content Include="wp-content\plugins\js_composer\assets\vc\info.png" />
+    <Content Include="wp-content\plugins\js_composer\assets\vc\remove.png" />
+    <Content Include="wp-content\plugins\js_composer\assets\vc\tick.png" />
+    <Content Include="wp-content\plugins\menu-image\includes\css\menu-image.css" />
+    <Content Include="wp-content\plugins\persian-woocommerce\assets\images\payir.png" />
+    <Content Include="wp-content\plugins\persian-woocommerce\assets\js\iran_cities.min.js" />
+    <Content Include="wp-content\plugins\woocommerce-attributes-nikan\assets\js\frontend\product.js" />
+    <Content Include="wp-content\plugins\woocommerce-colororimage-variation-select\css\front-end.css" />
+    <Content Include="wp-content\plugins\woocommerce-colororimage-variation-select\css\shop-frontend.css" />
+    <Content Include="wp-content\plugins\woocommerce-colororimage-variation-select\js\add-to-cart-variation3.js" />
+    <Content Include="wp-content\plugins\woocommerce-colororimage-variation-select\js\product-frontend.js" />
+    <Content Include="wp-content\plugins\woocommerce-colororimage-variation-select\js\shop-frontend.js" />
+    <Content Include="wp-content\plugins\woocommerce-offer-nikan\assets\css\core.css" />
+    <Content Include="wp-content\plugins\woocommerce-offer-nikan\assets\images\all-offers-top.png" />
+    <Content Include="wp-content\plugins\woocommerce-offer-nikan\assets\images\clock.svg" />
+    <Content Include="wp-content\plugins\woocommerce-offer-nikan\assets\images\left-arrow.png" />
+    <Content Include="wp-content\plugins\woocommerce-offer-nikan\assets\images\loading.gif" />
+    <Content Include="wp-content\plugins\woocommerce-offer-nikan\assets\images\offer_title.png" />
+    <Content Include="wp-content\plugins\woocommerce-offer-nikan\assets\images\top-img.png" />
+    <Content Include="wp-content\plugins\woocommerce-offer-nikan\assets\js\jquery.countdown.min.js" />
+    <Content Include="wp-content\plugins\woocommerce-offer-nikan\assets\js\jquery.easing.js" />
+    <Content Include="wp-content\plugins\woocommerce-offer-nikan\assets\js\main.js" />
+    <Content Include="wp-content\plugins\woocommerce\assets\css\select2.css" />
+    <Content Include="wp-content\plugins\woocommerce\assets\css\woocommerce-layout-rtl.css" />
+    <Content Include="wp-content\plugins\woocommerce\assets\css\woocommerce-rtl.css" />
+    <Content Include="wp-content\plugins\woocommerce\assets\css\woocommerce-smallscreen-rtl.css" />
+    <Content Include="wp-content\plugins\woocommerce\assets\fonts\star.svg" />
+    <Content Include="wp-content\plugins\woocommerce\assets\fonts\WooCommerce.svg" />
+    <Content Include="wp-content\plugins\woocommerce\assets\images\icons\credit-cards\amex.svg" />
+    <Content Include="wp-content\plugins\woocommerce\assets\images\icons\credit-cards\diners.svg" />
+    <Content Include="wp-content\plugins\woocommerce\assets\images\icons\credit-cards\discover.svg" />
+    <Content Include="wp-content\plugins\woocommerce\assets\images\icons\credit-cards\jcb.svg" />
+    <Content Include="wp-content\plugins\woocommerce\assets\images\icons\credit-cards\laser.svg" />
+    <Content Include="wp-content\plugins\woocommerce\assets\images\icons\credit-cards\maestro.svg" />
+    <Content Include="wp-content\plugins\woocommerce\assets\images\icons\credit-cards\mastercard.svg" />
+    <Content Include="wp-content\plugins\woocommerce\assets\images\icons\credit-cards\visa.svg" />
+    <Content Include="wp-content\plugins\woocommerce\assets\images\icons\loader.svg" />
+    <Content Include="wp-content\plugins\woocommerce\assets\js\accounting\accounting.min.js" />
+    <Content Include="wp-content\plugins\woocommerce\assets\js\frontend\add-to-cart.min.js" />
+    <Content Include="wp-content\plugins\woocommerce\assets\js\frontend\address-i18n.min.js" />
+    <Content Include="wp-content\plugins\woocommerce\assets\js\frontend\cart-fragments.min.js" />
+    <Content Include="wp-content\plugins\woocommerce\assets\js\frontend\cart.min.js" />
+    <Content Include="wp-content\plugins\woocommerce\assets\js\frontend\checkout.min.js" />
+    <Content Include="wp-content\plugins\woocommerce\assets\js\frontend\country-select.min.js" />
+    <Content Include="wp-content\plugins\woocommerce\assets\js\frontend\lost-password.min.js" />
+    <Content Include="wp-content\plugins\woocommerce\assets\js\frontend\password-strength-meter.min.js" />
+    <Content Include="wp-content\plugins\woocommerce\assets\js\frontend\price-slider.min.js" />
+    <Content Include="wp-content\plugins\woocommerce\assets\js\frontend\single-product.min.js" />
+    <Content Include="wp-content\plugins\woocommerce\assets\js\frontend\woocommerce.min.js" />
+    <Content Include="wp-content\plugins\woocommerce\assets\js\jquery-blockui\jquery.blockUI.min.js" />
+    <Content Include="wp-content\plugins\woocommerce\assets\js\jquery-serializejson\jquery.serializejson.min.js" />
+    <Content Include="wp-content\plugins\woocommerce\assets\js\jquery-ui-touch-punch\jquery-ui-touch-punch.min.js" />
+    <Content Include="wp-content\plugins\woocommerce\assets\js\js-cookie\js.cookie.min.js" />
+    <Content Include="wp-content\plugins\woocommerce\assets\js\selectWoo\selectWoo.full.min.js" />
+    <Content Include="wp-content\plugins\woocommerce\packages\woocommerce-blocks\build\style.css" />
+    <Content Include="wp-content\plugins\wp-smushit\app\assets\js\smush-lazy-load.min.js" />
+    <Content Include="wp-content\plugins\yith-woocommerce-ajax-product-filter-premium\assets\css\frontend.css" />
+    <Content Include="wp-content\plugins\yith-woocommerce-ajax-product-filter-premium\assets\images\ajax-loader.gif" />
+    <Content Include="wp-content\plugins\yith-woocommerce-ajax-product-filter-premium\assets\images\checkbox_sprite.png" />
+    <Content Include="wp-content\plugins\yith-woocommerce-ajax-product-filter-premium\assets\images\cross.png" />
+    <Content Include="wp-content\plugins\yith-woocommerce-ajax-product-filter-premium\assets\images\radio_sprite.png" />
+    <Content Include="wp-content\plugins\yith-woocommerce-ajax-product-filter-premium\assets\images\select-arrow.png" />
+    <Content Include="wp-content\plugins\yith-woocommerce-ajax-product-filter-premium\assets\js\yith-wcan-frontend-premium.min.js" />
+    <Content Include="wp-content\plugins\yith-woocommerce-ajax-product-filter-premium\assets\js\yith-wcan-frontend.min.js" />
+    <Content Include="wp-content\plugins\yith-woocommerce-brands-add-on\assets\css\yith-wcbr.css" />
+    <Content Include="wp-content\plugins\yith-woocommerce-brands\assets\css\yith-wcbr.css" />
+    <Content Include="wp-content\themes\images\404-bg.html" />
+    <Content Include="wp-content\themes\rosentis\assets\css\bootstrap-rtl.min.css" />
+    <Content Include="wp-content\themes\rosentis\assets\css\rosentis.css" />
+    <Content Include="wp-content\themes\rosentis\assets\css\swiper.min.css" />
+    <Content Include="wp-content\themes\rosentis\assets\fonts\rosentis.svg" />
+    <Content Include="wp-content\themes\rosentis\assets\images\android.png" />
+    <Content Include="wp-content\themes\rosentis\assets\images\aparat.svg" />
+    <Content Include="wp-content\themes\rosentis\assets\images\blackquote-after.svg" />
+    <Content Include="wp-content\themes\rosentis\assets\images\blackquote-before.svg" />
+    <Content Include="wp-content\themes\rosentis\assets\images\brand-bg.svg" />
+    <Content Include="wp-content\themes\rosentis\assets\images\comment.svg" />
+    <Content Include="wp-content\themes\rosentis\assets\images\delivery-now.svg" />
+    <Content Include="wp-content\themes\rosentis\assets\images\delivery.svg" />
+    <Content Include="wp-content\themes\rosentis\assets\images\empty-cart.png" />
+    <Content Include="wp-content\themes\rosentis\assets\images\enamad-logo.png" />
+    <Content Include="wp-content\themes\rosentis\assets\images\facebook.svg" />
+    <Content Include="wp-content\themes\rosentis\assets\images\faq-header.jpg" />
+    <Content Include="wp-content\themes\rosentis\assets\images\faq.svg" />
+    <Content Include="wp-content\themes\rosentis\assets\images\favicon.png" />
+    <Content Include="wp-content\themes\rosentis\assets\images\features-1.svg" />
+    <Content Include="wp-content\themes\rosentis\assets\images\features-2.svg" />
+    <Content Include="wp-content\themes\rosentis\assets\images\features-3.svg" />
+    <Content Include="wp-content\themes\rosentis\assets\images\features-4.svg" />
+    <Content Include="wp-content\themes\rosentis\assets\images\features-5.svg" />
+    <Content Include="wp-content\themes\rosentis\assets\images\googleplus.svg" />
+    <Content Include="wp-content\themes\rosentis\assets\images\instagram.svg" />
+    <Content Include="wp-content\themes\rosentis\assets\images\ios.png" />
+    <Content Include="wp-content\themes\rosentis\assets\images\logo.png" />
+    <Content Include="wp-content\themes\rosentis\assets\images\notifications.svg" />
+    <Content Include="wp-content\themes\rosentis\assets\images\offers-page.svg" />
+    <Content Include="wp-content\themes\rosentis\assets\images\partners-1.svg" />
+    <Content Include="wp-content\themes\rosentis\assets\images\partners-2.svg" />
+    <Content Include="wp-content\themes\rosentis\assets\images\partners-3.svg" />
+    <Content Include="wp-content\themes\rosentis\assets\images\partners-4.svg" />
+    <Content Include="wp-content\themes\rosentis\assets\images\resane-logo.png" />
+    <Content Include="wp-content\themes\rosentis\assets\images\seller-badge.svg" />
+    <Content Include="wp-content\themes\rosentis\assets\images\shortdescription.svg" />
+    <Content Include="wp-content\themes\rosentis\assets\images\special-offer-page.png" />
+    <Content Include="wp-content\themes\rosentis\assets\images\special-offer.png" />
+    <Content Include="wp-content\themes\rosentis\assets\images\star-active.svg" />
+    <Content Include="wp-content\themes\rosentis\assets\images\star.svg" />
+    <Content Include="wp-content\themes\rosentis\assets\images\telegram.svg" />
+    <Content Include="wp-content\themes\rosentis\assets\images\twitter.svg" />
+    <Content Include="wp-content\themes\rosentis\assets\js\highcharts.js" />
+    <Content Include="wp-content\themes\rosentis\assets\js\jquery.elevateZoom.min.js" />
+    <Content Include="wp-content\themes\rosentis\assets\js\rosentis.js" />
+    <Content Include="wp-content\themes\rosentis\assets\js\remodal.js" />
+    <Content Include="wp-content\themes\rosentis\assets\js\stickyside.js" />
+    <Content Include="wp-content\themes\rosentis\assets\js\swiper.min.js" />
+    <Content Include="wp-content\themes\rosentis\style.css" />
+    <Content Include="wp-content\uploads\2018\01\3310mob-150x150.jpg" />
+    <Content Include="wp-content\uploads\2018\01\3310mob-300x300.jpg" />
+    <Content Include="wp-content\uploads\2018\01\Apple-iPhone-8-64GB-Mobile-Phone-150x150.jpg" />
+    <Content Include="wp-content\uploads\2018\01\Apple-iPhone-8-64GB-Mobile-Phone-300x300.jpg" />
+    <Content Include="wp-content\uploads\2018\01\Apple-iPhone-8-64GB-Mobile-Phone.jpg" />
+    <Content Include="wp-content\uploads\2018\01\Arayeshi-150x150.jpg" />
+    <Content Include="wp-content\uploads\2018\01\Arayeshi-300x300.jpg" />
+    <Content Include="wp-content\uploads\2018\01\Arayeshi.jpg" />
+    <Content Include="wp-content\uploads\2018\01\asus-150x150.jpg" />
+    <Content Include="wp-content\uploads\2018\01\asus-300x300.jpg" />
+    <Content Include="wp-content\uploads\2018\01\asus.jpg" />
+    <Content Include="wp-content\uploads\2018\01\Atr-1-150x150.jpg" />
+    <Content Include="wp-content\uploads\2018\01\Atr-1-300x300.jpg" />
+    <Content Include="wp-content\uploads\2018\01\Atr-1.jpg" />
+    <Content Include="wp-content\uploads\2018\01\Atr-150x150.jpg" />
+    <Content Include="wp-content\uploads\2018\01\Atr-300x300.jpg" />
+    <Content Include="wp-content\uploads\2018\01\Atr.jpg" />
+    <Content Include="wp-content\uploads\2018\01\bencer-150x150.jpg" />
+    <Content Include="wp-content\uploads\2018\01\bencer-300x300.jpg" />
+    <Content Include="wp-content\uploads\2018\01\bencer.jpg" />
+    <Content Include="wp-content\uploads\2018\01\Burnout_Paradise-300x191.jpg" />
+    <Content Include="wp-content\uploads\2018\01\Burnout_Paradise.jpg" />
+    <Content Include="wp-content\uploads\2018\01\Farsh-1-150x150.jpg" />
+    <Content Include="wp-content\uploads\2018\01\Farsh-1-300x300.jpg" />
+    <Content Include="wp-content\uploads\2018\01\Farsh-1.jpg" />
+    <Content Include="wp-content\uploads\2018\01\Farsh-150x150.jpg" />
+    <Content Include="wp-content\uploads\2018\01\Farsh-300x300.jpg" />
+    <Content Include="wp-content\uploads\2018\01\headphone-150x150.jpg" />
+    <Content Include="wp-content\uploads\2018\01\headphone-300x300.jpg" />
+    <Content Include="wp-content\uploads\2018\01\headphone.jpg" />
+    <Content Include="wp-content\uploads\2018\01\Hole-150x150.jpg" />
+    <Content Include="wp-content\uploads\2018\01\Hole-300x300.jpg" />
+    <Content Include="wp-content\uploads\2018\01\Hole.jpg" />
+    <Content Include="wp-content\uploads\2018\01\Lenovo-150x150.jpg" />
+    <Content Include="wp-content\uploads\2018\01\Lenovo-300x300.jpg" />
+    <Content Include="wp-content\uploads\2018\01\Lenovo.jpg" />
+    <Content Include="wp-content\uploads\2018\01\Nintendo_Switch-300x191.jpg" />
+    <Content Include="wp-content\uploads\2018\01\Nintendo_Switch.jpg" />
+    <Content Include="wp-content\uploads\2018\01\PATOO-150x150.jpg" />
+    <Content Include="wp-content\uploads\2018\01\PATOO-300x300.jpg" />
+    <Content Include="wp-content\uploads\2018\01\PATOO.jpg" />
+    <Content Include="wp-content\uploads\2018\01\pixel-xl-1-herocrop-300x191.jpg" />
+    <Content Include="wp-content\uploads\2018\01\pixel-xl-1-herocrop.jpg" />
+    <Content Include="wp-content\uploads\2018\01\Rimel-150x150.jpg" />
+    <Content Include="wp-content\uploads\2018\01\Rimel-300x300.jpg" />
+    <Content Include="wp-content\uploads\2018\01\Rimel.jpg" />
+    <Content Include="wp-content\uploads\2018\01\S-RAY-300x191.jpg" />
+    <Content Include="wp-content\uploads\2018\01\S-RAY.jpg" />
+    <Content Include="wp-content\uploads\2018\01\speaker-150x150.jpg" />
+    <Content Include="wp-content\uploads\2018\01\speaker-300x300.jpg" />
+    <Content Include="wp-content\uploads\2018\01\speaker.jpg" />
+    <Content Include="wp-content\uploads\2018\01\tablet-150x150.jpg" />
+    <Content Include="wp-content\uploads\2018\01\tablet-300x300.jpg" />
+    <Content Include="wp-content\uploads\2018\01\tablet.jpg" />
+    <Content Include="wp-content\uploads\2018\01\Tabletap-150x150.jpg" />
+    <Content Include="wp-content\uploads\2018\01\Tabletap-300x300.jpg" />
+    <Content Include="wp-content\uploads\2018\01\Tabletap.jpg" />
+    <Content Include="wp-content\uploads\2018\01\ThinkVision-P32U-300x191.jpg" />
+    <Content Include="wp-content\uploads\2018\01\ThinkVision-P32U.jpg" />
+    <Content Include="wp-content\uploads\2018\01\tokhm-150x150.jpg" />
+    <Content Include="wp-content\uploads\2018\01\tokhm-300x300.jpg" />
+    <Content Include="wp-content\uploads\2018\01\tokhm.jpg" />
+    <Content Include="wp-content\uploads\2018\01\Touchbeauty-150x150.jpg" />
+    <Content Include="wp-content\uploads\2018\01\Touchbeauty-300x300.jpg" />
+    <Content Include="wp-content\uploads\2018\01\Touchbeauty.jpg" />
+    <Content Include="wp-content\uploads\2018\01\zarf-150x150.jpg" />
+    <Content Include="wp-content\uploads\2018\01\zarf-300x300.jpg" />
+    <Content Include="wp-content\uploads\2018\12\IphoneXS-150x150.jpg" />
+    <Content Include="wp-content\uploads\2018\12\IphoneXS-300x300.jpg" />
+    <Content Include="wp-content\uploads\2018\12\Mainbanner3.jpg" />
+    <Content Include="wp-content\uploads\2018\12\Mainbanner5.jpg" />
+    <Content Include="wp-content\uploads\2018\12\Mainbanner6.jpg" />
+    <Content Include="wp-content\uploads\2018\12\Mainbanner7.jpg" />
+    <Content Include="wp-content\uploads\2018\12\Mainbanner8.jpg" />
+    <Content Include="wp-content\uploads\2018\12\Menu1.png" />
+    <Content Include="wp-content\uploads\2018\12\Menu2.png" />
+    <Content Include="wp-content\uploads\2018\12\Menu3.png" />
+    <Content Include="wp-content\uploads\2019\04\Adata.png" />
+    <Content Include="wp-content\uploads\2019\04\Apple.png" />
+    <Content Include="wp-content\uploads\2019\04\Panasonic.png" />
+    <Content Include="wp-content\uploads\2019\04\Parskhazar.png" />
+    <Content Include="wp-content\uploads\2019\04\RowForthBanner1.jpg" />
+    <Content Include="wp-content\uploads\2019\04\RowForthBanner2.jpg" />
+    <Content Include="wp-content\uploads\2019\04\RowForthBanner3.jpg" />
+    <Content Include="wp-content\uploads\2019\04\RowForthBanner4.jpg" />
+    <Content Include="wp-content\uploads\2019\04\RowTwoBanner1.jpg" />
+    <Content Include="wp-content\uploads\2019\04\RowTwoBanner2.jpg" />
+    <Content Include="wp-content\uploads\2019\04\Samsung.png" />
+    <Content Include="wp-content\uploads\2019\04\Shahab.png" />
+    <Content Include="wp-content\uploads\2019\04\SideBanner1.jpg" />
+    <Content Include="wp-content\uploads\2019\04\SideBanner2.jpg" />
+    <Content Include="wp-content\uploads\2019\04\slider1.jpg" />
+    <Content Include="wp-content\uploads\2019\04\slider2.jpg" />
+    <Content Include="wp-content\uploads\2019\04\slider3.jpg" />
+    <Content Include="wp-content\uploads\2019\04\slider4.jpg" />
+    <Content Include="wp-content\uploads\2019\04\slider5.jpg" />
+    <Content Include="wp-content\uploads\2019\04\TopBanner.jpg" />
+    <Content Include="wp-content\uploads\2019\04\Topbar.jpg" />
+    <Content Include="wp-content\uploads\2019\04\Xvision.png" />
+    <Content Include="wp-content\uploads\2019\08\login.png" />
+    <Content Include="wp-content\uploads\2019\08\return.png" />
+    <Content Include="wp-content\uploads\2019\08\submit-order.png" />
+    <Content Include="wp-content\uploads\2019\08\tracking.png" />
+    <Content Include="wp-content\uploads\2019\12\digital.png" />
+    <Content Include="wp-content\uploads\2019\12\health.png" />
+    <Content Include="wp-content\uploads\2019\12\home.png" />
+    <Content Include="wp-content\uploads\2019\12\other.png" />
+    <Content Include="wp-includes\css\dist\block-library\style-rtl.min.css" />
+    <Content Include="wp-includes\js\backbone.min.js" />
+    <Content Include="wp-includes\js\comment-reply.min.js" />
+    <Content Include="wp-includes\js\customize-base.min.js" />
+    <Content Include="wp-includes\js\customize-models.js" />
+    <Content Include="wp-includes\js\imgareaselect\jquery.imgareaselect.min.js" />
+    <Content Include="wp-includes\js\jquery\jquery-migrate.min.js" />
+    <Content Include="wp-includes\js\jquery\jquery.js" />
+    <Content Include="wp-includes\js\jquery\ui\core.min.js" />
+    <Content Include="wp-includes\js\jquery\ui\datepicker.min.js" />
+    <Content Include="wp-includes\js\jquery\ui\mouse.min.js" />
+    <Content Include="wp-includes\js\jquery\ui\slider.min.js" />
+    <Content Include="wp-includes\js\jquery\ui\sortable.min.js" />
+    <Content Include="wp-includes\js\jquery\ui\widget.min.js" />
+    <Content Include="wp-includes\js\underscore.min.js" />
+    <Content Include="wp-includes\js\wp-embed.min.js" />
+    <Content Include="wp-includes\js\wp-emoji-release.min.js" />
+    <Content Include="wp-includes\js\wp-util.min.js" />
+    <Content Include="wp-includes\js\zxcvbn-async.min.js" />
+    <Content Include="wp-includes\wlwmanifest.xml" />
+    <Content Include="wp-json\index.html" />
+    <Content Include="Content\toastr.scss" />
+    <Content Include="Content\toastr.less" />
+    <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\front.js" />
+    <Content Include="Scripts\jquery.cookie\component.json" />
+    <Content Include="Scripts\jquery.cookie\cookie.jquery.json" />
+    <Content Include="Scripts\jquery.cookie\jquery.cookie.js" />
+    <Content Include="Scripts\jquery.cookie\MIT-LICENSE.txt" />
+    <Content Include="Scripts\jquery\core.js" />
+    <Content Include="Scripts\jquery\jquery.js" />
+    <Content Include="Scripts\jquery\jquery.min.js" />
+    <Content Include="Scripts\jquery\jquery.slim.js" />
+    <Content Include="Scripts\jquery\jquery.slim.min.js" />
+    <Content Include="Scripts\map.js" />
+    <Content Include="Scripts\marker.png" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\owl.carousel2.thumbs\owl.carousel2.thumbs.js" />
+    <Content Include="Scripts\owl.carousel2.thumbs\owl.carousel2.thumbs.min.js" />
+    <Content Include="Scripts\owl.carousel\assets\ajax-loader.gif" />
+    <Content Include="Scripts\owl.carousel\assets\owl.carousel.css" />
+    <Content Include="Scripts\owl.carousel\assets\owl.carousel.min.css" />
+    <Content Include="Scripts\owl.carousel\assets\owl.theme.default.css" />
+    <Content Include="Scripts\owl.carousel\assets\owl.theme.default.min.css" />
+    <Content Include="Scripts\owl.carousel\assets\owl.theme.green.css" />
+    <Content Include="Scripts\owl.carousel\assets\owl.theme.green.min.css" />
+    <Content Include="Scripts\owl.carousel\assets\owl.video.play.png" />
+    <Content Include="Scripts\owl.carousel\owl.carousel.js" />
+    <Content Include="Scripts\owl.carousel\owl.carousel.min.js" />
+    <Content Include="Scripts\popper.js\esm\popper-utils.js" />
+    <Content Include="Scripts\popper.js\esm\popper-utils.min.js" />
+    <Content Include="Scripts\popper.js\esm\popper.js" />
+    <Content Include="Scripts\popper.js\esm\popper.min.js" />
+    <Content Include="Scripts\popper.js\popper-utils.js" />
+    <Content Include="Scripts\popper.js\popper-utils.min.js" />
+    <Content Include="Scripts\popper.js\popper.js" />
+    <Content Include="Scripts\popper.js\popper.min.js" />
+    <Content Include="Scripts\popper.js\umd\popper-utils.js" />
+    <Content Include="Scripts\popper.js\umd\popper-utils.min.js" />
+    <Content Include="Scripts\popper.js\umd\popper.js" />
+    <Content Include="Scripts\popper.js\umd\popper.min.js" />
+    <Content Include="Vendor\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="Vendor\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="Vendor\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="Vendor\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="Vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="Vendor\bootstrap\js\bootstrap.bundle.js" />
+    <Content Include="Vendor\bootstrap\js\bootstrap.bundle.min.js" />
+    <Content Include="Vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="Vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Vendor\bootstrap\js\coverage\dist\alert.js" />
+    <Content Include="Vendor\bootstrap\js\coverage\dist\button.js" />
+    <Content Include="Vendor\bootstrap\js\coverage\dist\carousel.js" />
+    <Content Include="Vendor\bootstrap\js\coverage\dist\collapse.js" />
+    <Content Include="Vendor\bootstrap\js\coverage\dist\dom\data.js" />
+    <Content Include="Vendor\bootstrap\js\coverage\dist\dom\eventhandler.js" />
+    <Content Include="Vendor\bootstrap\js\coverage\dist\dom\manipulator.js" />
+    <Content Include="Vendor\bootstrap\js\coverage\dist\dom\polyfill.js" />
+    <Content Include="Vendor\bootstrap\js\coverage\dist\dom\selectorengine.js" />
+    <Content Include="Vendor\bootstrap\js\coverage\dist\dropdown.js" />
+    <Content Include="Vendor\bootstrap\js\coverage\dist\modal.js" />
+    <Content Include="Vendor\bootstrap\js\coverage\dist\popover.js" />
+    <Content Include="Vendor\bootstrap\js\coverage\dist\scrollspy.js" />
+    <Content Include="Vendor\bootstrap\js\coverage\dist\tab.js" />
+    <Content Include="Vendor\bootstrap\js\coverage\dist\toast.js" />
+    <Content Include="Vendor\bootstrap\js\coverage\dist\tooltip.js" />
+    <Content Include="Vendor\bootstrap\js\coverage\dist\util.js" />
+    <Content Include="Vendor\bootstrap\js\dist\alert.js" />
+    <Content Include="Vendor\bootstrap\js\dist\button.js" />
+    <Content Include="Vendor\bootstrap\js\dist\carousel.js" />
+    <Content Include="Vendor\bootstrap\js\dist\collapse.js" />
+    <Content Include="Vendor\bootstrap\js\dist\dom\data.js" />
+    <Content Include="Vendor\bootstrap\js\dist\dom\eventhandler.js" />
+    <Content Include="Vendor\bootstrap\js\dist\dom\manipulator.js" />
+    <Content Include="Vendor\bootstrap\js\dist\dom\polyfill.js" />
+    <Content Include="Vendor\bootstrap\js\dist\dom\selectorengine.js" />
+    <Content Include="Vendor\bootstrap\js\dist\dropdown.js" />
+    <Content Include="Vendor\bootstrap\js\dist\index.js" />
+    <Content Include="Vendor\bootstrap\js\dist\modal.js" />
+    <Content Include="Vendor\bootstrap\js\dist\popover.js" />
+    <Content Include="Vendor\bootstrap\js\dist\scrollspy.js" />
+    <Content Include="Vendor\bootstrap\js\dist\tab.js" />
+    <Content Include="Vendor\bootstrap\js\dist\toast.js" />
+    <Content Include="Vendor\bootstrap\js\dist\tooltip.js" />
+    <Content Include="Vendor\bootstrap\js\dist\util.js" />
+    <Content Include="Vendor\bootstrap\js\src\alert.js" />
+    <Content Include="Vendor\bootstrap\js\src\button.js" />
+    <Content Include="Vendor\bootstrap\js\src\carousel.js" />
+    <Content Include="Vendor\bootstrap\js\src\collapse.js" />
+    <Content Include="Vendor\bootstrap\js\src\dom\data.js" />
+    <Content Include="Vendor\bootstrap\js\src\dom\eventHandler.js" />
+    <Content Include="Vendor\bootstrap\js\src\dom\manipulator.js" />
+    <Content Include="Vendor\bootstrap\js\src\dom\polyfill.js" />
+    <Content Include="Vendor\bootstrap\js\src\dom\selectorEngine.js" />
+    <Content Include="Vendor\bootstrap\js\src\dropdown.js" />
+    <Content Include="Vendor\bootstrap\js\src\index.js" />
+    <Content Include="Vendor\bootstrap\js\src\modal.js" />
+    <Content Include="Vendor\bootstrap\js\src\popover.js" />
+    <Content Include="Vendor\bootstrap\js\src\scrollspy.js" />
+    <Content Include="Vendor\bootstrap\js\src\tab.js" />
+    <Content Include="Vendor\bootstrap\js\src\toast.js" />
+    <Content Include="Vendor\bootstrap\js\src\tools\sanitizer.js" />
+    <Content Include="Vendor\bootstrap\js\src\tooltip.js" />
+    <Content Include="Vendor\bootstrap\js\src\util.js" />
+    <Content Include="Vendor\bootstrap\js\tests\browsers.js" />
+    <Content Include="Vendor\bootstrap\js\tests\index.html" />
+    <Content Include="Vendor\bootstrap\js\tests\integration\bundle.js" />
+    <Content Include="Vendor\bootstrap\js\tests\integration\index.html" />
+    <Content Include="Vendor\bootstrap\js\tests\integration\rollup.bundle.js" />
+    <Content Include="Vendor\bootstrap\js\tests\karma.conf.js" />
+    <Content Include="Vendor\bootstrap\js\tests\unit\alert.js" />
+    <Content Include="Vendor\bootstrap\js\tests\unit\button.js" />
+    <Content Include="Vendor\bootstrap\js\tests\unit\carousel.js" />
+    <Content Include="Vendor\bootstrap\js\tests\unit\collapse.js" />
+    <Content Include="Vendor\bootstrap\js\tests\unit\dom\data.js" />
+    <Content Include="Vendor\bootstrap\js\tests\unit\dom\eventHandler.js" />
+    <Content Include="Vendor\bootstrap\js\tests\unit\dom\manipulator.js" />
+    <Content Include="Vendor\bootstrap\js\tests\unit\dom\selectorEngine.js" />
+    <Content Include="Vendor\bootstrap\js\tests\unit\dropdown.js" />
+    <Content Include="Vendor\bootstrap\js\tests\unit\modal.js" />
+    <Content Include="Vendor\bootstrap\js\tests\unit\popover.js" />
+    <Content Include="Vendor\bootstrap\js\tests\unit\scrollspy.js" />
+    <Content Include="Vendor\bootstrap\js\tests\unit\tab.js" />
+    <Content Include="Vendor\bootstrap\js\tests\unit\toast.js" />
+    <Content Include="Vendor\bootstrap\js\tests\unit\tooltip.js" />
+    <Content Include="Vendor\bootstrap\js\tests\unit\util.js" />
+    <Content Include="Vendor\bootstrap\js\tests\visual\alert.html" />
+    <Content Include="Vendor\bootstrap\js\tests\visual\button.html" />
+    <Content Include="Vendor\bootstrap\js\tests\visual\carousel.html" />
+    <Content Include="Vendor\bootstrap\js\tests\visual\collapse.html" />
+    <Content Include="Vendor\bootstrap\js\tests\visual\dropdown.html" />
+    <Content Include="Vendor\bootstrap\js\tests\visual\modal.html" />
+    <Content Include="Vendor\bootstrap\js\tests\visual\popover.html" />
+    <Content Include="Vendor\bootstrap\js\tests\visual\scrollspy.html" />
+    <Content Include="Vendor\bootstrap\js\tests\visual\tab.html" />
+    <Content Include="Vendor\bootstrap\js\tests\visual\toast.html" />
+    <Content Include="Vendor\bootstrap\js\tests\visual\tooltip.html" />
+    <Content Include="Vendor\fonts\font-awesome\css\font-awesome.css" />
+    <Content Include="Vendor\fonts\font-awesome\css\font-awesome.min.css" />
+    <Content Include="Vendor\fonts\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="Vendor\fonts\font-awesome\HELP-US-OUT.txt" />
+    <Content Include="Vendor\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Vendor\fonts\iransans\style.css" />
+    <Content Include="Vendor\img\icon\favicon.ico" />
+    <Content Include="Vendor\img\logo\topLogo.png" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Scripts\popper.js\umd\poppper.js.flow" />
+    <Content Include="Vendor\bootstrap\js\.eslintrc.json" />
+    <Content Include="Vendor\bootstrap\js\bootstrap.bundle.js.map" />
+    <Content Include="Vendor\bootstrap\js\bootstrap.bundle.min.js.map" />
+    <Content Include="Vendor\bootstrap\js\bootstrap.js.map" />
+    <Content Include="Vendor\bootstrap\js\bootstrap.min.js.map" />
+    <Content Include="Vendor\bootstrap\js\coverage\dist\alert.js.map" />
+    <Content Include="Vendor\bootstrap\js\coverage\dist\button.js.map" />
+    <Content Include="Vendor\bootstrap\js\coverage\dist\carousel.js.map" />
+    <Content Include="Vendor\bootstrap\js\coverage\dist\collapse.js.map" />
+    <Content Include="Vendor\bootstrap\js\coverage\dist\dom\data.js.map" />
+    <Content Include="Vendor\bootstrap\js\coverage\dist\dom\eventhandler.js.map" />
+    <Content Include="Vendor\bootstrap\js\coverage\dist\dom\manipulator.js.map" />
+    <Content Include="Vendor\bootstrap\js\coverage\dist\dom\polyfill.js.map" />
+    <Content Include="Vendor\bootstrap\js\coverage\dist\dom\selectorengine.js.map" />
+    <Content Include="Vendor\bootstrap\js\coverage\dist\dropdown.js.map" />
+    <Content Include="Vendor\bootstrap\js\coverage\dist\modal.js.map" />
+    <Content Include="Vendor\bootstrap\js\coverage\dist\popover.js.map" />
+    <Content Include="Vendor\bootstrap\js\coverage\dist\scrollspy.js.map" />
+    <Content Include="Vendor\bootstrap\js\coverage\dist\tab.js.map" />
+    <Content Include="Vendor\bootstrap\js\coverage\dist\toast.js.map" />
+    <Content Include="Vendor\bootstrap\js\coverage\dist\tooltip.js.map" />
+    <Content Include="Vendor\bootstrap\js\coverage\dist\util.js.map" />
+    <Content Include="Vendor\bootstrap\js\dist\alert.js.map" />
+    <Content Include="Vendor\bootstrap\js\dist\button.js.map" />
+    <Content Include="Vendor\bootstrap\js\dist\carousel.js.map" />
+    <Content Include="Vendor\bootstrap\js\dist\collapse.js.map" />
+    <Content Include="Vendor\bootstrap\js\dist\dom\data.js.map" />
+    <Content Include="Vendor\bootstrap\js\dist\dom\eventhandler.js.map" />
+    <Content Include="Vendor\bootstrap\js\dist\dom\manipulator.js.map" />
+    <Content Include="Vendor\bootstrap\js\dist\dom\polyfill.js.map" />
+    <Content Include="Vendor\bootstrap\js\dist\dom\selectorengine.js.map" />
+    <Content Include="Vendor\bootstrap\js\dist\dropdown.js.map" />
+    <Content Include="Vendor\bootstrap\js\dist\index.js.map" />
+    <Content Include="Vendor\bootstrap\js\dist\modal.js.map" />
+    <Content Include="Vendor\bootstrap\js\dist\popover.js.map" />
+    <Content Include="Vendor\bootstrap\js\dist\scrollspy.js.map" />
+    <Content Include="Vendor\bootstrap\js\dist\tab.js.map" />
+    <Content Include="Vendor\bootstrap\js\dist\toast.js.map" />
+    <Content Include="Vendor\bootstrap\js\dist\tooltip.js.map" />
+    <Content Include="Vendor\bootstrap\js\dist\util.js.map" />
+    <Content Include="Vendor\bootstrap\js\tests\README.md" />
+    <Content Include="Vendor\bootstrap\js\tests\unit\.eslintrc.json" />
+    <Content Include="Vendor\fonts\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="Vendor\fonts\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Vendor\fonts\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="Vendor\fonts\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Vendor\fonts\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="Vendor\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Vendor\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Vendor\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Vendor\fonts\iransans\IRANSans.eot" />
+    <Content Include="Vendor\fonts\iransans\IRANSans.ttf" />
+    <Content Include="Vendor\fonts\iransans\IRANSans.woff" />
+    <Content Include="Vendor\fonts\iransans\IRANSans.woff2" />
+    <Content Include="Views\Cart\Index.cshtml" />
+    <Content Include="Views\Checkout\Address.cshtml" />
+    <Content Include="Views\Checkout\DoPayment.cshtml" />
+    <Content Include="Views\Checkout\Index.cshtml" />
+    <Content Include="Views\Checkout\Payment.cshtml" />
+    <Content Include="Views\Home\Slides.cshtml" />
+    <Content Include="Views\Home\test.cshtml" />
+    <Content Include="Views\Member\GetVerificationCode.cshtml" />
+    <Content Include="Views\Member\GetVerificationCodeForLogin.cshtml" />
+    <Content Include="Views\Member\ImportantDates.cshtml" />
+    <Content Include="Views\Member\Orders.cshtml" />
+    <Content Include="Views\Member\Profile.cshtml" />
+    <Content Include="Views\Member\Register.cshtml" />
+    <Content Include="Views\Member\SignIn.cshtml" />
+    <Content Include="Views\Orders\Index.cshtml" />
+    <Content Include="Views\Orders\Invoice.cshtml" />
+    <Content Include="Views\Order\_invoice.cshtml" />
+    <Content Include="Views\Partial\MainMenu.cshtml" />
+    <Content Include="Views\Products\Detail.cshtml" />
+    <Content Include="Views\Products\List.cshtml" />
+    <Content Include="Views\Products\Product.cshtml" />
+    <Content Include="Views\Shared\_ContactLayout.cshtml" />
+    <Content Include="Views\Shop\Index.cshtml" />
+    <Content Include="Views\Slides\Slides.cshtml" />
+    <Content Include="Views\Topics\Topic.cshtml" />
+    <Content Include="Views\Products\Brand.cshtml" />
+    <Content Include="wp-content\plugins\dokan-lite\assets\vendors\fonts\fontawesome-webfont3e6e.eot" />
+    <Content Include="wp-content\plugins\dokan-lite\assets\vendors\fonts\fontawesome-webfont3e6e.ttf" />
+    <Content Include="wp-content\plugins\dokan-lite\assets\vendors\fonts\fontawesome-webfont3e6e.woff" />
+    <Content Include="wp-content\plugins\dokan-lite\assets\vendors\fonts\fontawesome-webfont3e6e.woff2" />
+    <Content Include="wp-content\plugins\dokan-lite\assets\vendors\fonts\fontawesome-webfontd41d.eot" />
+    <Content Include="wp-content\plugins\js_composer\assets\fonts\vc_grid\vc_grid_v157a1.eot" />
+    <Content Include="wp-content\plugins\js_composer\assets\fonts\vc_grid\vc_grid_v157a1.ttf" />
+    <Content Include="wp-content\plugins\js_composer\assets\fonts\vc_grid\vc_grid_v157a1.woff" />
+    <Content Include="wp-content\plugins\js_composer\assets\fonts\vc_grid\vc_grid_v1d41d.eot" />
+    <Content Include="wp-content\plugins\js_composer\assets\fonts\vc_icons_v2\fonts\vcpb-plugin-iconsb82a.eot" />
+    <Content Include="wp-content\plugins\js_composer\assets\fonts\vc_icons_v2\fonts\vcpb-plugin-iconsb82a.ttf" />
+    <Content Include="wp-content\plugins\js_composer\assets\fonts\vc_icons_v2\fonts\vcpb-plugin-iconsb82a.woff" />
+    <Content Include="wp-content\plugins\woocommerce\assets\fonts\star.eot" />
+    <Content Include="wp-content\plugins\woocommerce\assets\fonts\star.ttf" />
+    <Content Include="wp-content\plugins\woocommerce\assets\fonts\star.woff" />
+    <Content Include="wp-content\plugins\woocommerce\assets\fonts\stard41d.eot" />
+    <Content Include="wp-content\plugins\woocommerce\assets\fonts\WooCommerce.eot" />
+    <Content Include="wp-content\plugins\woocommerce\assets\fonts\WooCommerce.ttf" />
+    <Content Include="wp-content\plugins\woocommerce\assets\fonts\WooCommerce.woff" />
+    <Content Include="wp-content\plugins\woocommerce\assets\fonts\WooCommerced41d.eot" />
+    <Content Include="wp-content\plugins\woocommerce\assets\js\frontend\checkout.min.js.tmp" />
+    <Content Include="wp-content\themes\rosentis\assets\fonts\eot\iranyekanwebbold.eot" />
+    <Content Include="wp-content\themes\rosentis\assets\fonts\eot\iranyekanwebboldd41d.eot" />
+    <Content Include="wp-content\themes\rosentis\assets\fonts\eot\iranyekanwebboldfanum.eot" />
+    <Content Include="wp-content\themes\rosentis\assets\fonts\eot\iranyekanwebboldfanumd41d.eot" />
+    <Content Include="wp-content\themes\rosentis\assets\fonts\eot\iranyekanweblight.eot" />
+    <Content Include="wp-content\themes\rosentis\assets\fonts\eot\iranyekanweblightd41d.eot" />
+    <Content Include="wp-content\themes\rosentis\assets\fonts\eot\iranyekanweblightfanum.eot" />
+    <Content Include="wp-content\themes\rosentis\assets\fonts\eot\iranyekanweblightfanumd41d.eot" />
+    <Content Include="wp-content\themes\rosentis\assets\fonts\eot\iranyekanwebmedium.eot" />
+    <Content Include="wp-content\themes\rosentis\assets\fonts\eot\iranyekanwebmediumd41d.eot" />
+    <Content Include="wp-content\themes\rosentis\assets\fonts\eot\iranyekanwebmediumfanum.eot" />
+    <Content Include="wp-content\themes\rosentis\assets\fonts\eot\iranyekanwebmediumfanumd41d.eot" />
+    <Content Include="wp-content\themes\rosentis\assets\fonts\eot\iranyekanwebregular.eot" />
+    <Content Include="wp-content\themes\rosentis\assets\fonts\eot\iranyekanwebregulard41d.eot" />
+    <Content Include="wp-content\themes\rosentis\assets\fonts\eot\iranyekanwebregularfanum.eot" />
+    <Content Include="wp-content\themes\rosentis\assets\fonts\eot\iranyekanwebregularfanumd41d.eot" />
+    <Content Include="wp-content\themes\rosentis\assets\fonts\eot\iranyekanwebthin.eot" />
+    <Content Include="wp-content\themes\rosentis\assets\fonts\eot\iranyekanwebthind41d.eot" />
+    <Content Include="wp-content\themes\rosentis\assets\fonts\eot\iranyekanwebthinfanum.eot" />
+    <Content Include="wp-content\themes\rosentis\assets\fonts\eot\iranyekanwebthinfanumd41d.eot" />
+    <Content Include="wp-content\themes\rosentis\assets\fonts\rosentis.eot" />
+    <Content Include="wp-content\themes\rosentis\assets\fonts\rosentis.ttf" />
+    <Content Include="wp-content\themes\rosentis\assets\fonts\rosentis.woff" />
+    <Content Include="wp-content\themes\rosentis\assets\fonts\rosentis.woff2" />
+    <Content Include="wp-content\themes\rosentis\assets\fonts\rosentis41d.eot" />
+    <Content Include="wp-content\themes\rosentis\assets\fonts\ttf\iranyekanwebbold.ttf" />
+    <Content Include="wp-content\themes\rosentis\assets\fonts\ttf\iranyekanwebboldfanum.ttf" />
+    <Content Include="wp-content\themes\rosentis\assets\fonts\ttf\iranyekanweblight.ttf" />
+    <Content Include="wp-content\themes\rosentis\assets\fonts\ttf\iranyekanweblightfanum.ttf" />
+    <Content Include="wp-content\themes\rosentis\assets\fonts\ttf\iranyekanwebmedium.ttf" />
+    <Content Include="wp-content\themes\rosentis\assets\fonts\ttf\iranyekanwebmediumfanum.ttf" />
+    <Content Include="wp-content\themes\rosentis\assets\fonts\ttf\iranyekanwebregular.ttf" />
+    <Content Include="wp-content\themes\rosentis\assets\fonts\ttf\iranyekanwebregularfanum.ttf" />
+    <Content Include="wp-content\themes\rosentis\assets\fonts\ttf\iranyekanwebthin.ttf" />
+    <Content Include="wp-content\themes\rosentis\assets\fonts\ttf\iranyekanwebthinfanum.ttf" />
+    <Content Include="wp-content\themes\rosentis\assets\fonts\woff\iranyekanwebbold.woff" />
+    <Content Include="wp-content\themes\rosentis\assets\fonts\woff\iranyekanwebboldfanum.woff" />
+    <Content Include="wp-content\themes\rosentis\assets\fonts\woff\iranyekanweblight.woff" />
+    <Content Include="wp-content\themes\rosentis\assets\fonts\woff\iranyekanweblightfanum.woff" />
+    <Content Include="wp-content\themes\rosentis\assets\fonts\woff\iranyekanwebmedium.woff" />
+    <Content Include="wp-content\themes\rosentis\assets\fonts\woff\iranyekanwebmediumfanum.woff" />
+    <Content Include="wp-content\themes\rosentis\assets\fonts\woff\iranyekanwebregular.woff" />
+    <Content Include="wp-content\themes\rosentis\assets\fonts\woff\iranyekanwebregularfanum.woff" />
+    <Content Include="wp-content\themes\rosentis\assets\fonts\woff\iranyekanwebthin.woff" />
+    <Content Include="wp-content\themes\rosentis\assets\fonts\woff\iranyekanwebthinfanum.woff" />
+    <Content Include="wp-json\oembed\1.0\embed0529.json" />
+    <Content Include="wp-json\oembed\1.0\embed1b0d" />
+    <Content Include="wp-json\oembed\1.0\embed1b2b" />
+    <Content Include="wp-json\oembed\1.0\embed1c22" />
+    <Content Include="wp-json\oembed\1.0\embed1ed5" />
+    <Content Include="wp-json\oembed\1.0\embed2314.json" />
+    <Content Include="wp-json\oembed\1.0\embed2635.json" />
+    <Content Include="wp-json\oembed\1.0\embed2ef6" />
+    <Content Include="wp-json\oembed\1.0\embed31f8" />
+    <Content Include="wp-json\oembed\1.0\embed3382.json" />
+    <Content Include="wp-json\oembed\1.0\embed3ba4.json" />
+    <Content Include="wp-json\oembed\1.0\embed515f.json" />
+    <Content Include="wp-json\oembed\1.0\embed61c9" />
+    <Content Include="wp-json\oembed\1.0\embed641a" />
+    <Content Include="wp-json\oembed\1.0\embed7192.json" />
+    <Content Include="wp-json\oembed\1.0\embed8335" />
+    <Content Include="wp-json\oembed\1.0\embed9062" />
+    <Content Include="wp-json\oembed\1.0\embed906f" />
+    <Content Include="wp-json\oembed\1.0\embed932a" />
+    <Content Include="wp-json\oembed\1.0\embed9e98.json" />
+    <Content Include="wp-json\oembed\1.0\embeda137.json" />
+    <Content Include="wp-json\oembed\1.0\embeda400.json" />
+    <Content Include="wp-json\oembed\1.0\embeda621" />
+    <Content Include="wp-json\oembed\1.0\embeda709.json" />
+    <Content Include="wp-json\oembed\1.0\embedb0cd" />
+    <Content Include="wp-json\oembed\1.0\embedb1ba.json" />
+    <Content Include="wp-json\oembed\1.0\embedb72d.json" />
+    <Content Include="wp-json\oembed\1.0\embedbdb2.json" />
+    <Content Include="wp-json\oembed\1.0\embedbf91.json" />
+    <Content Include="wp-json\oembed\1.0\embedc34a" />
+    <Content Include="wp-json\oembed\1.0\embedcd4e" />
+    <Content Include="wp-json\oembed\1.0\embedce71" />
+    <Content Include="wp-json\oembed\1.0\embedd01a" />
+    <Content Include="wp-json\oembed\1.0\embedd22e.json" />
+    <Content Include="wp-json\oembed\1.0\embede425" />
+    <Content Include="wp-json\oembed\1.0\embede824.json" />
+    <Content Include="wp-json\oembed\1.0\embede926" />
+    <Content Include="wp-json\oembed\1.0\embedeb09.json" />
+    <Content Include="wp-json\oembed\1.0\embedeef1.json" />
+    <Content Include="wp-json\oembed\1.0\embedf268" />
+    <Content Include="wp-json\oembed\1.0\embedf4db.json" />
+    <Content Include="wp-json\oembed\1.0\embedfc1a.json" />
+    <Content Include="Views\Products\ListProduct.cshtml" />
+    <Content Include="Views\Shared\_authLayout.cshtml" />
+    <Content Include="Views\Cart\test.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Vendor\fonts\font-awesome\less\" />
+    <Folder Include="Vendor\fonts\font-awesome\scss\" />
+    <Folder Include="Views\City\" />
+    <Folder Include="Views\Default\" />
+    <Folder Include="Views\Pages\" />
+    <Folder Include="Views\Profile\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Rosentis.Common\Rosentis.Common.csproj">
+      <Project>{3cd607d0-86b0-4c2c-a691-f3d8eab6edf2}</Project>
+      <Name>Rosentis.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Rosentis.Core\Rosentis.Core.csproj">
+      <Project>{aaf713a9-1c83-4b90-afe6-2a3e7fd6c536}</Project>
+      <Name>Rosentis.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Rosentis.DataContract\Rosentis.DataContract.csproj">
+      <Project>{1561c1e4-0bda-4876-89ca-527e9fe5a202}</Project>
+      <Name>Rosentis.DataContract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Rosentis.DomainModel\Rosentis.DomainModel.csproj">
+      <Project>{28BD5FE7-3F1A-4574-8240-3D3B354407E4}</Project>
+      <Name>Rosentis.DomainModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Rosentis.ServiceContract\Rosentis.ServiceContract.csproj">
+      <Project>{87e8a3f9-a482-4b82-b076-683d5bdf3a2e}</Project>
+      <Name>Rosentis.ServiceContract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Rosentis.ServiceImplementation\Rosentis.ServiceImplementation.csproj">
+      <Project>{ff5e08fd-a257-4819-9b98-e41b2f84eb58}</Project>
+      <Name>Rosentis.ServiceImplementation</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>60552</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:2350</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

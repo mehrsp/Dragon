@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewBag.Title = "test";
+}
+
+<span class="cart-discount-amount">
+	تخفیف
+	<span class="woocommerce-Price-amount amount" id="discount_@rec.Product.Id">
+		@rec.Product.PriceMoneyWithDiscount
+	</span>
+</span>
+<input type="hidden" id="discountPrice_@rec.Product.Id" value="@rec.Product.DiscountPrice" />
+<span class="cart-final-price">
+	<span class="woocommerce-Price-amount amount" id="priceMoney_@rec.Product.Id">@rec.PriceWithDiscountMoney</span>
+</span>
+

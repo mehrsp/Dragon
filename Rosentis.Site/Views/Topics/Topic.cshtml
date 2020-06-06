@@ -1,0 +1,45 @@
+﻿@model Rosentis.DataContract.Pages.PageDto
+
+@{
+    ViewBag.Title = Model.Name;
+}
+<div class="container">
+<div class="row">
+  <div data-motopress-wrapper-file="index.php" data-motopress-wrapper-type="content">
+    <div class="row">
+      <div data-motopress-type="static" data-motopress-static-file="static/static-title.php">
+        <section class="title-section">
+          <!-- BEGIN BREADCRUMBS-->
+          <ul class="breadcrumb breadcrumb__t"><li><a href="@Url.Content("~")">خانه</a></li><li class="active">@Model.Name</li></ul>			<!-- END BREADCRUMBS -->
+        </section><!-- .title-section -->
+      </div>
+    </div>
+    <div class="row">
+      <div id="content">
+        <!-- displays the tag's description from the Wordpress admin -->
+        <div class="post_wrapper">
+          <article id="@Model.Id" class="post__holder @Model.Id post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized tag-elit tag-ipsum-dolor tag-lorem cat-1-id">
+            <header class="post-header">
+              <h2 class="post-title">
+                <a href="@Url.Action("Topic",new {Id = Model.PageName})" title="@Model.Name">@Model.Name</a>
+              </h2>
+            </header>
+            @if (Model.LinkPhoto != null)
+            {
+              <figure class="featured-thumbnail"><a href="@Url.Action("Topic",new {Id = Model.PageName})" title="@Model.PageName"><img style="width: 300px" src="@Model.LinkPhoto" data-src="@Model.LinkPhoto" alt="@Model.PageName"></a></figure>
+            }
+            <!-- Post Content -->
+            <div class="post_content">
+              @Html.Raw(Model.Data)
+              <div class="clear"></div>
+            </div>
+
+            <!-- Post Meta -->
+            <!--// Post Meta -->
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  </div>

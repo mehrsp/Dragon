@@ -1,0 +1,117 @@
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.ServiceImplementation\bin\Release\Rosentis.ServiceImplementation.dll.config
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.ServiceImplementation\bin\Release\Rosentis.ServiceImplementation.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.ServiceImplementation\bin\Release\Rosentis.ServiceImplementation.pdb
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.ServiceImplementation\bin\Release\AutoMapper.Attributes.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.ServiceImplementation\bin\Release\AutoMapper.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.ServiceImplementation\bin\Release\LabXand.DomainLayer.Core.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.ServiceImplementation\bin\Release\LabXand.DomainLayer.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.ServiceImplementation\bin\Release\Microsoft.Web.Infrastructure.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.ServiceImplementation\bin\Release\PhoneNumbers.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.ServiceImplementation\bin\Release\Rosentis.Common.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.ServiceImplementation\bin\Release\Rosentis.Core.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.ServiceImplementation\bin\Release\Rosentis.DataContract.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.ServiceImplementation\bin\Release\Rosentis.DistributedServices.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.ServiceImplementation\bin\Release\Rosentis.DomainModel.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.ServiceImplementation\bin\Release\Rosentis.Persistance.Core.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.ServiceImplementation\bin\Release\Rosentis.Persistance.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.ServiceImplementation\bin\Release\Rosentis.ServiceContract.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.ServiceImplementation\bin\Release\StructureMap.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.ServiceImplementation\bin\Release\System.Buffers.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.ServiceImplementation\bin\Release\System.Collections.Immutable.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.ServiceImplementation\bin\Release\System.Memory.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.ServiceImplementation\bin\Release\System.Numerics.Vectors.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.ServiceImplementation\bin\Release\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.ServiceImplementation\bin\Release\System.ValueTuple.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.ServiceImplementation\bin\Release\WebActivatorEx.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.ServiceImplementation\bin\Release\PersianDate.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.ServiceImplementation\bin\Release\EntityFramework.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.ServiceImplementation\bin\Release\Newtonsoft.Json.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.ServiceImplementation\bin\Release\Fasterflect.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.ServiceImplementation\bin\Release\System.Linq.Dynamic.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.ServiceImplementation\bin\Release\LabXand.Security.Core.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.ServiceImplementation\bin\Release\LabXand.Core.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.ServiceImplementation\bin\Release\Rosentis.Common.pdb
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.ServiceImplementation\bin\Release\Rosentis.Common.dll.config
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.ServiceImplementation\bin\Release\Rosentis.DataContract.pdb
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.ServiceImplementation\bin\Release\Rosentis.DataContract.dll.config
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.ServiceImplementation\bin\Release\Rosentis.DistributedServices.pdb
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.ServiceImplementation\bin\Release\Rosentis.DomainModel.pdb
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.ServiceImplementation\bin\Release\Rosentis.DomainModel.dll.config
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.ServiceImplementation\bin\Release\Rosentis.Persistance.Core.pdb
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.ServiceImplementation\bin\Release\Rosentis.Persistance.Core.dll.config
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.ServiceImplementation\bin\Release\Rosentis.Persistance.pdb
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.ServiceImplementation\bin\Release\Rosentis.Persistance.dll.config
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.ServiceImplementation\bin\Release\Rosentis.ServiceContract.pdb
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.ServiceImplementation\bin\Release\Rosentis.ServiceContract.dll.config
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.ServiceImplementation\bin\Release\Rosentis.Core.pdb
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.ServiceImplementation\bin\Release\PhoneNumbers.xml
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.ServiceImplementation\bin\Release\StructureMap.xml
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.ServiceImplementation\bin\Release\System.Buffers.xml
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.ServiceImplementation\bin\Release\System.Collections.Immutable.xml
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.ServiceImplementation\bin\Release\System.Memory.xml
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.ServiceImplementation\bin\Release\System.Numerics.Vectors.xml
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.ServiceImplementation\bin\Release\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.ServiceImplementation\bin\Release\System.ValueTuple.xml
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.ServiceImplementation\bin\Release\EntityFramework.xml
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.ServiceImplementation\bin\Release\Newtonsoft.Json.xml
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.ServiceImplementation\bin\Release\Fasterflect.xml
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.ServiceImplementation\obj\Release\Rosentis.ServiceImplementation.csprojResolveAssemblyReference.cache
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.ServiceImplementation\obj\Release\Rosentis.ServiceImplementation.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.ServiceImplementation\obj\Release\Rosentis.ServiceImplementation.pdb
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.ServiceImplementation\bin\Release\Rosentis.ServiceImplementation.dll.config
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.ServiceImplementation\bin\Release\Rosentis.ServiceImplementation.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.ServiceImplementation\bin\Release\Rosentis.ServiceImplementation.pdb
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.ServiceImplementation\bin\Release\AutoMapper.Attributes.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.ServiceImplementation\bin\Release\AutoMapper.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.ServiceImplementation\bin\Release\LabXand.DomainLayer.Core.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.ServiceImplementation\bin\Release\LabXand.DomainLayer.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.ServiceImplementation\bin\Release\Microsoft.Web.Infrastructure.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.ServiceImplementation\bin\Release\PhoneNumbers.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.ServiceImplementation\bin\Release\Rosentis.Common.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.ServiceImplementation\bin\Release\Rosentis.Core.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.ServiceImplementation\bin\Release\Rosentis.DataContract.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.ServiceImplementation\bin\Release\Rosentis.DistributedServices.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.ServiceImplementation\bin\Release\Rosentis.DomainModel.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.ServiceImplementation\bin\Release\Rosentis.Persistance.Core.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.ServiceImplementation\bin\Release\Rosentis.Persistance.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.ServiceImplementation\bin\Release\Rosentis.ServiceContract.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.ServiceImplementation\bin\Release\StructureMap.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.ServiceImplementation\bin\Release\System.Buffers.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.ServiceImplementation\bin\Release\System.Collections.Immutable.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.ServiceImplementation\bin\Release\System.Memory.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.ServiceImplementation\bin\Release\System.Numerics.Vectors.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.ServiceImplementation\bin\Release\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.ServiceImplementation\bin\Release\System.ValueTuple.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.ServiceImplementation\bin\Release\WebActivatorEx.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.ServiceImplementation\bin\Release\PersianDate.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.ServiceImplementation\bin\Release\EntityFramework.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.ServiceImplementation\bin\Release\Newtonsoft.Json.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.ServiceImplementation\bin\Release\Fasterflect.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.ServiceImplementation\bin\Release\System.Linq.Dynamic.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.ServiceImplementation\bin\Release\LabXand.Security.Core.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.ServiceImplementation\bin\Release\LabXand.Core.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.ServiceImplementation\bin\Release\Rosentis.Common.pdb
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.ServiceImplementation\bin\Release\Rosentis.DataContract.pdb
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.ServiceImplementation\bin\Release\Rosentis.DistributedServices.pdb
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.ServiceImplementation\bin\Release\Rosentis.DomainModel.pdb
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.ServiceImplementation\bin\Release\Rosentis.Persistance.Core.pdb
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.ServiceImplementation\bin\Release\Rosentis.Persistance.Core.dll.config
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.ServiceImplementation\bin\Release\Rosentis.Persistance.pdb
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.ServiceImplementation\bin\Release\Rosentis.Persistance.dll.config
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.ServiceImplementation\bin\Release\Rosentis.ServiceContract.pdb
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.ServiceImplementation\bin\Release\Rosentis.ServiceContract.dll.config
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.ServiceImplementation\bin\Release\Rosentis.Core.pdb
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.ServiceImplementation\bin\Release\PhoneNumbers.xml
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.ServiceImplementation\bin\Release\StructureMap.xml
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.ServiceImplementation\bin\Release\System.Buffers.xml
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.ServiceImplementation\bin\Release\System.Collections.Immutable.xml
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.ServiceImplementation\bin\Release\System.Memory.xml
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.ServiceImplementation\bin\Release\System.Numerics.Vectors.xml
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.ServiceImplementation\bin\Release\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.ServiceImplementation\bin\Release\System.ValueTuple.xml
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.ServiceImplementation\bin\Release\EntityFramework.xml
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.ServiceImplementation\bin\Release\Newtonsoft.Json.xml
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.ServiceImplementation\bin\Release\Fasterflect.xml
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.ServiceImplementation\obj\Release\Rosentis.ServiceImplementation.csprojResolveAssemblyReference.cache
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.ServiceImplementation\obj\Release\Rosentis.ServiceImplementation.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.ServiceImplementation\obj\Release\Rosentis.ServiceImplementation.pdb

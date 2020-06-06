@@ -1,0 +1,555 @@
+﻿@using Rosentis.DataContract.Products.Dtos
+@{
+	var filterModel = ViewBag.FilterModel as Rosentis.Site.Models.FilterModel;
+}
+@section HeadContent{
+
+	<link rel="stylesheet" id="yith-wcan-frontend-css" href="@Url.Content("~/wp-content/plugins/yith-woocommerce-ajax-product-filter-premium/assets/css/frontend.css")" type="text/css" media="all">
+	<style id="yith-wcan-frontend-inline-css" type="text/css">
+		.widget h2.widget-title.with-dropdown {
+			position: relative;
+			cursor: pointer;
+		}
+
+			.widget h2.widget-title.with-dropdown .widget-dropdown {
+				border-width: 0;
+				width: 22px;
+				height: 22px;
+				background: url('../../wp-content/plugins/yith-woocommerce-ajax-product-filter-premium/assets/images/select-arrow.png') top 0px right no-repeat;
+				background-size: 95% !important;
+				position: absolute;
+				top: 0;
+				right: 0;
+			}
+
+			.widget h2.widget-title.with-dropdown.open .widget-dropdown {
+				background-position: bottom 15px right;
+			}
+	</style>
+
+	<script type="text/javascript" src="@Url.Content("~/wp-content/themes/rosentis/assets/js/stickyside.js")"></script>
+}
+<div id="content" class="site-content ">
+	<div class="container-fluid">
+		<div class="shop-page-row">
+			<div class="shop-filters-panel" style="">
+				<div class="inner-wrapper-sticky" style="position: relative;">
+					<section id="woocommerce_layered_nav_filters-3" class="widget niki-widget woocommerce widget_layered_nav_filters">
+						<div class="widget-content">
+							<h2 @{if (filterModel.TechnicalChooses.Technicals.Count != 0 || filterModel.BrandChooses.Brands.Count != 0 || filterModel.CountryChooses.Countries.Count != 0) { <text> class="widget-title" </text> } else { <text> class="hidden" </text>  } }>انتخاب شما</h2>
+							@if (filterModel.TechnicalChooses.Technicals.Count != 0 || filterModel.BrandChooses.Brands.Count != 0 || filterModel.CountryChooses.Countries.Count != 0)
+							{
+								<ul>
+									@if (filterModel.TechnicalChooses.Technicals.Count != 0)
+									{
+										foreach (var item in filterModel.TechnicalChooses.Technicals)
+										{
+											var sourceString = "&filters=" + item.Id.ToString();
+											int index = filterModel.FilterString.IndexOf(sourceString);
+											var clean = (index < 0)
+																							? sourceString
+																							: filterModel.FilterString.Remove(index, sourceString.Length);
+											;
+											<li class="chosen yith-wcan">
+												<a rel="nofollow" aria-label="پاک کردن فیلتر"
+												   href="/Products/List/?categoryId=@filterModel.CategoryId&orderBy=@filterModel.OrderBy&page=@filterModel.CurrentPage@filterModel.CountryString&inStock=@filterModel.InStock&onSale=@filterModel.OnSale@clean">
+													@item.Title
+												</a>
+											</li>
+										}
+									}
+									@if (filterModel.BrandChooses.Brands.Count != 0)
+									{
+										foreach (var item in filterModel.BrandChooses.Brands)
+										{
+											var sourceString = "&brands=" + item.Id.ToString();
+											int index = filterModel.BrandString.IndexOf(sourceString);
+											var clean = (index < 0)
+																							? sourceString
+																							: filterModel.BrandString.Remove(index, sourceString.Length);
+											;
+											<li class="chosen yith-wcan">
+												<a rel="nofollow" aria-label="پاک کردن فیلتر"
+												   href="/Products/List/?categoryId=@filterModel.CategoryId&orderBy=@filterModel.OrderBy&page=@filterModel.CurrentPage@filterModel.FilterString@filterModel.CountryString&inStock=@filterModel.InStock&onSale=@filterModel.OnSale@clean">
+													@item.Name
+												</a>
+											</li>
+										}
+									}
+									@if (filterModel.CountryChooses != null)
+									{
+										foreach (var item in filterModel.CountryChooses.Countries)
+										{
+											var sourceString = "&countries=" + item.Id.ToString();
+											int index = filterModel.CountryString.IndexOf(sourceString);
+											var clean = (index < 0)
+																							? sourceString
+																							: filterModel.CountryString.Remove(index, sourceString.Length);
+											;
+											<li class="chosen yith-wcan">
+												<a rel="nofollow" aria-label="پاک کردن فیلتر"
+												   href="/Products/List/?categoryId=@filterModel.CategoryId&orderBy=@filterModel.OrderBy&page=@filterModel.CurrentPage@filterModel.FilterString@filterModel.BrandString&inStock=@filterModel.InStock&onSale=@filterModel.OnSale@clean">
+													@item.Title
+												</a>
+											</li>
+										}
+									}
+								</ul>
+							}
+							else
+							{
+								<ul style="display:none;"></ul>
+							}
+						</div>
+					</section>
+					<section id="yith-woo-ajax-navigation-stock-on-sale-3" class="widget niki-widget yith-woocommerce-ajax-product-filter yith-wcan-stock-on-sale with-checkbox">
+						<div class="widget-content">
+							<h2 class="widget-title">فروش ویژه/موجود</h2>
+							<ul class="yith-wcan-stock-on-sale">
+								@if (filterModel.OnSale == 1)
+								{
+									<li>
+										<a href="/Products/List/?categoryId=@filterModel.CategoryId&orderBy=@filterModel.OrderBy&page=@filterModel.CurrentPage@filterModel.FilterString@filterModel.BrandString@filterModel.CountryString&inStock=@filterModel.InStock&onSale=0" class="yith-wcan-onsale-button active">فروش ویژه</a>
+									</li>
+								}
+								else
+								{
+									<li>
+										<a href="/Products/List/?categoryId=@filterModel.CategoryId&orderBy=@filterModel.OrderBy&page=@filterModel.CurrentPage@filterModel.FilterString@filterModel.BrandString&inStock=@filterModel.InStock@filterModel.CountryString&onSale=1" class="yith-wcan-onsale-button">فروش ویژه</a>
+									</li>
+								}
+								@if (filterModel.InStock == 1)
+								{
+									<li>
+										<a href="/Products/List/?categoryId=@filterModel.CategoryId&orderBy=@filterModel.OrderBy&page=@filterModel.CurrentPage@filterModel.FilterString@filterModel.BrandString@filterModel.CountryString&inStock=0&onSale=@filterModel.OnSale" class="yith-wcan-filterModel.InStock-button active">فقط کالاهای موجود</a>
+									</li>
+								}
+								else
+								{
+									<li>
+										<a href="/Products/List/?categoryId=@filterModel.CategoryId&orderBy=@filterModel.OrderBy&page=@filterModel.CurrentPage@filterModel.FilterString@filterModel.BrandString@filterModel.CountryString&onSale=@filterModel.OnSale&inStock=1" class="yith-wcan-filterModel.InStock-button">فقط کالاهای موجود</a>
+									</li>
+								}
+
+
+							</ul>
+						</div>
+					</section><section id="woocommerce_price_filter-2" class="widget niki-widget woocommerce widget_price_filter">
+						<div class="widget-content">
+							<h2 class="widget-title">محدوده قیمت موردنظر</h2>
+							<form method="get" action="https://niki-kala.ir/shop/">
+								<div class="price_slider_wrapper">
+									<div class="price_slider" style="display:none;"></div>
+									<div class="price_slider_amount" data-step="10">
+										<input type="text" id="min_price" name="min_price" value="@filterModel.MinPrice" data-min="1000" placeholder="حداقل قیمت">
+										<input type="text" id="max_price" name="max_price" value="@filterModel.MaxPrice" data-max="10000000" placeholder="حداكثر قيمت">
+
+										<div class="price_label" style="display:none;"><span class="from"></span><span class="to"></span></div>
+										<input type="hidden" name="orderby" value="menu_order">
+										<div class="clear"></div>
+										<button type="submit" class="btn-primary">اعمال محدوده قیمت</button>
+									</div>
+								</div>
+							</form>
+						</div>
+					</section>
+					<section id="yith-woo-ajax-navigation-3" class="widget niki-widget
+							yith-woocommerce-ajax-product-filter yith-woo-ajax-navigation woocommerce widget_layered_nav
+							with-checkbox">
+
+						<div class="widget-content">
+							<h2 class="widget-title">
+								فیلتر بر اساس برند
+								<span class="widget-dropdown" data-toggle="open">
+								</span>
+							</h2>
+							<ul class="yith-wcan-list yith-wcan ">
+								@foreach (var item in filterModel.Technicals.ProductCategoryTechnicals)
+								{
+									if (item.Brand != null)
+									{
+										bool isFilter = false;
+
+										var sourceBrandString = "&brands=" + item.BrandId.ToString();
+										int index = filterModel.BrandString.IndexOf(sourceBrandString);
+										if (index >= 0)
+										{
+											isFilter = true;
+										}
+
+										if (isFilter)
+										{
+											var cleanBrand = (index < 0)
+																	? sourceBrandString
+																	: filterModel.BrandString.Remove(index, sourceBrandString.Length);
+											;
+											<li class="chosen">
+												<a href="/Products/List/?categoryId=@filterModel.CategoryId&orderBy=@filterModel.OrderBy&page=@filterModel.CurrentPage@filterModel.CountryString@filterModel.FilterString&inStock=@filterModel.InStock&onSale=@filterModel.OnSale@cleanBrand">
+													@item.Brand.Name
+												</a>
+											</li>
+										}
+										else
+										{
+											<li>
+												<a href="/Products/List/?categoryId=@filterModel.CategoryId&orderBy=@filterModel.OrderBy&page=@filterModel.CurrentPage@filterModel.CountryString@filterModel.FilterString&inStock=@filterModel.InStock&onSale=@filterModel.OnSale@filterModel.BrandString&brands=@item.BrandId">
+													@item.Brand.Name
+												</a>
+											</li>
+										}
+									}
+
+								}
+							</ul>
+						</div>
+					</section>
+					<section id="yith-woo-ajax-navigation-40" class="widget niki-widget
+							yith-woocommerce-ajax-product-filter yith-woo-ajax-navigation woocommerce widget_layered_nav
+							with-checkbox">
+
+						<div class="widget-content">
+							<h2 class="widget-title">
+								فیلتر بر اساس کشور سازنده
+								<span class="widget-dropdown" data-toggle="open">
+								</span>
+							</h2>
+							<ul class="yith-wcan-list yith-wcan ">
+								@foreach (var item in filterModel.Technicals.ProductCategoryTechnicals)
+								{
+									if (item.Brand != null)
+									{
+										bool isFilter = false;
+
+										var sourceCountryString = "&countries=" + item.Brand.CountryId.ToString();
+										int index = filterModel.CountryString.IndexOf(sourceCountryString);
+										if (index >= 0)
+										{
+											isFilter = true;
+										}
+
+										if (isFilter)
+										{
+											var cleanCountry = (index < 0)
+																	? sourceCountryString
+																	: filterModel.CountryString.Remove(index, sourceCountryString.Length);
+											;
+											<li class="chosen">
+												<a href="/Products/List/?categoryId=@filterModel.CategoryId&orderBy=@filterModel.OrderBy&page=@filterModel.CurrentPage@filterModel.FilterString@filterModel.BrandString&inStock=@filterModel.InStock&onSale=@filterModel.OnSale@cleanCountry">
+													@item.Brand.Country.Title
+												</a>
+											</li>
+										}
+										else
+										{
+											<li>
+												<a href="/Products/List/?categoryId=@filterModel.CategoryId&orderBy=@filterModel.OrderBy&page=@filterModel.CurrentPage@filterModel.FilterString@filterModel.BrandString&inStock=@filterModel.InStock&onSale=@filterModel.OnSale&countries=@item.Brand.CountryId">
+													@item.Brand.Country.Title
+												</a>
+											</li>
+										}
+									}
+
+								}
+							</ul>
+						</div>
+					</section>
+					@for (var i = 0; i <= filterModel.Technicals.ProductCategoryTechnicals.Count - 1; i++)
+					{
+						if (filterModel.Technicals.ProductCategoryTechnicals[i].Technical != null)
+						{
+							<section id="yith-woo-ajax-navigation-@i" class="widget niki-widget
+								 yith-woocommerce-ajax-product-filter yith-woo-ajax-navigation woocommerce widget_layered_nav
+								 with-checkbox">
+								<div class="widget-content">
+									<h2 class="widget-title">
+										@filterModel.Technicals.ProductCategoryTechnicals[i].Technical.Title
+										<span class="widget-dropdown" data-toggle="open">
+										</span>
+									</h2>
+									<ul class="yith-wcan-list yith-wcan ">
+
+										@foreach (var item in filterModel.Technicals.ProductCategoryTechnicals[i].Technical.Children)
+										{
+											bool isFilter = false;
+
+											var sourceString = "&filters=" + item.Id.ToString();
+											int index = filterModel.FilterString.IndexOf(sourceString);
+											if (index >= 0)
+											{
+												isFilter = true;
+											}
+
+											if (isFilter)
+											{
+												var clean = (index < 0)
+																		? sourceString
+																		: filterModel.FilterString.Remove(index, sourceString.Length);
+												;
+												<li class="chosen">
+													<a href="/Products/List/?categoryId=@filterModel.CategoryId&orderBy=@filterModel.OrderBy&page=@filterModel.CurrentPage@filterModel.CountryString@filterModel.BrandString&inStock=@filterModel.InStock&onSale=@filterModel.OnSale@clean">
+														@item.Title
+													</a>
+												</li>
+											}
+											else
+											{
+												<li>
+													<a href="/Products/List/?categoryId=@filterModel.CategoryId&orderBy=@filterModel.OrderBy&page=@filterModel.CurrentPage@filterModel.BrandString@filterModel.CountryString&inStock=@filterModel.InStock&onSale=@filterModel.OnSale@filterModel.FilterString&filters=@item.Id">
+														@item.Title
+													</a>
+												</li>
+											}
+
+										}
+
+									</ul>
+								</div>
+							</section>
+						}
+					}
+				</div>
+			</div>
+
+			<div class="shop-main-panel">
+				<div id="primary" class="content-area">
+					<main id="main" class="site-main container-fluid" role="main">
+						<nav class="woocommerce-breadcrumb">
+							<a href="@Url.Content("~/")">رُزِنتیـس</a>&nbsp;&#47;&nbsp;
+							<a href="@Url.Content("~/Products/List")">فروشگاه</a>&nbsp;
+							@if (filterModel.FilterCategoryChild != null) {
+								<span>&#47;</span>
+							}
+							&nbsp;
+							@if (filterModel.FilterCategoryChild != null)
+							{
+								for (var i = filterModel.FilterCategoryChild.Categories.Count - 1; i >= 0; i--)
+								{
+									var id = filterModel.FilterCategoryChild.Categories[i].Id;
+									<a href="@Url.Content("~/Products/List/?categoryId=" + id)">@filterModel.FilterCategoryChild.Categories[i].Name</a><span>&nbsp;&#47;&nbsp;</span>
+								}
+								@filterModel.FilterCategoryChild.OriginalCategory.Name
+							}					
+						</nav>			
+						@if (filterModel.Products.Products.Count == 0)
+						{
+							<div class="shop-page-products ">
+								<p class="woocommerce-info">هیچ محصولی یافت نشد.</p>
+								<div class="c-listing js-listing">
+
+
+									<ul class="c-listing__items">
+
+
+										<div class="c-listing-not-found">
+											<p>تلاش کنید:</p>
+											<p>- تعدادی از فیلترها را حذف کنید.</p>
+											<p>- در جستجو از عبارت&zwnj;های متداول&zwnj;تر استفاده کنید.</p>
+
+										</div>
+
+									</ul>
+
+								</div>
+							</div>
+					
+								}
+								else
+								{
+								<div class="shop-page-products ">
+									<div class="shop-page-counter woocommerce-result-count" style="display: block;">@filterModel.Products.Products.Count محصول</div>
+									<div class="woocommerce-notices-wrapper"></div>
+									<div class="shop-page-header">
+										<section id="niki-woo-ajax-navigation-sort-by" class="yith-wcan-sort-by">
+											<ul class="shop-page-header-sort" data-label="مرتب سازی بر اساس: ">
+												<li><a href="/Products/List/?categoryId=@filterModel.CategoryId&orderBy=D&page=@filterModel.CurrentPage@filterModel.FilterString@filterModel.BrandString@filterModel.CountryString&onSale=@filterModel.OnSale&inStock=@filterModel.InStock" data-id="date" @{if (filterModel.OrderBy == "D") { <text> class="orderby-item is-active" </text>   } else { <text> class="orderby-item " </text>    } }>جدیدترین ها</a></li>
+												<li><a href="/Products/List/?categoryId=@filterModel.CategoryId&orderBy=S&page=@filterModel.CurrentPage@filterModel.FilterString@filterModel.BrandString@filterModel.CountryString&onSale=@filterModel.OnSale&inStock=@filterModel.InStock" data-id="popularity" @{if (filterModel.OrderBy == "S") { <text> class="orderby-item is-active" </text>   } else { <text> class="orderby-item " </text>    } }>پرفروش ترین ها</a></li>
+												<li><a href="/Products/List/?categoryId=@filterModel.CategoryId&orderBy=R&page=@filterModel.CurrentPage@filterModel.FilterString@filterModel.BrandString@filterModel.CountryString&onSale=@filterModel.OnSale&inStock=@filterModel.InStock" data-id="rating" @{if (filterModel.OrderBy == "R") { <text> class="orderby-item is-active" </text>   } else { <text> class="orderby-item " </text>    } }>محبوب ترین ها</a></li>
+											</ul>
+										</section>
+										<ul class="shop-page-header-type">
+											<li><button data-type="grid" type="button" class="header-type-btn is-active"></button></li>
+											<li><button data-type="list" type="button" class="header-type-btn "></button></li>
+										</ul>
+									</div>
+									<div class="yit-wcan-container">
+										<ul class="products shop-page-items columns-4">
+											@foreach (var item in filterModel.Products.Products)
+											{
+												bool first = item == filterModel.Products.Products.FirstOrDefault();
+												@Html.Partial(@"~/Views/Products/ListProduct.cshtml", item, new ViewDataDictionary { { "first", first } })
+											}
+										</ul><nav class="woocommerce-pagination">
+											<ul class="page-numbers">
+												@for (var i = 1; i == filterModel.PageCount; i++)
+												{
+													if (i == filterModel.CurrentPage)
+													{
+														<li><span aria-current="page" class="page-numbers current">@i</span></li>
+													}
+													else
+													{
+														<li><a class="page-numbers" href="/Products/List/?categoryId=@filterModel.CategoryId&orderBy=@filterModel.OrderBy@filterModel.FilterString@filterModel.BrandString@filterModel.CountryString&onSale=@filterModel.OnSale&inStock=@filterModel.InStock&page=@i">@i</a></li>
+													}
+												}
+												<li><a class="next page-numbers" href="/Products/List/?categoryId=@filterModel.CategoryId&orderBy=@filterModel.OrderBy@filterModel.FilterString@filterModel.BrandString@filterModel.CountryString&onSale=@filterModel.OnSale&inStock=@filterModel.InStock&page=@filterModel.CurrentPage + 1"></a></li>
+											</ul>
+										</nav>
+									</div>
+								</div>
+								}
+
+</main>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="footer-viewed-products">
+	<h3>کالاهایی که دیده اید</h3>
+	@*<div class="viewed-list">
+			<a href="https://niki-kala.ir/product/%d9%84%d9%be-%d8%aa%d8%a7%d9%be-15-%d8%a7%d9%8a%d9%86%da%86%d9%8a-%d9%84%d9%86%d9%88%d9%88-%d9%85%d8%af%d9%84-ideapad-310-s/" class="item">
+				<img data-src="https://niki-kala.ir/wp-content/uploads/2018/01/Lenovo-150x150.jpg" class=" lazyloaded" src="https://niki-kala.ir/wp-content/uploads/2018/01/Lenovo-150x150.jpg" loading="lazy"><noscript><img src="https://niki-kala.ir/wp-content/uploads/2018/01/Lenovo-150x150.jpg"></noscript>
+				<div class="name">لپ تاپ ۱۵ اينچي لنوو مدل Ideapad 310 – S</div>
+			</a>
+			<a href="https://niki-kala.ir/product/%d9%84%d9%be-%d8%aa%d8%a7%d9%be-15-%d8%a7%d9%8a%d9%86%da%86%d9%8a-%d8%a7%d9%8a%d8%b3%d9%88%d8%b3-%d9%85%d8%af%d9%84-x541uv-j/" class="item">
+				<img data-src="https://niki-kala.ir/wp-content/uploads/2018/01/asus-150x150.jpg" class=" lazyloaded" src="https://niki-kala.ir/wp-content/uploads/2018/01/asus-150x150.jpg" loading="lazy"><noscript><img src="https://niki-kala.ir/wp-content/uploads/2018/01/asus-150x150.jpg"></noscript>
+				<div class="name">لپ تاپ ۱۵ اينچي ايسوس مدل X541UV – J</div>
+			</a>
+		</div>*@
+</div>
+<!-- #page -->
+
+<div class="remodal-wrapper">
+
+</div>
+
+<div class="remodal-wrapper">
+
+</div>
+
+<div class="remodal-wrapper">
+
+</div>
+
+
+<div class="remodal-wrapper">
+
+</div>
+
+
+@section scripts
+{
+	<script type="text/javascript">
+		/* <![CDATA[ */
+		var yith_wcan = { "container": ".products", "pagination": "nav.woocommerce-pagination", "result_count": ".woocommerce-result-count", "wc_price_slider": { "wrapper": ".price_slider", "min_price": ".price_slider_amount #min_price", "max_price": ".price_slider_amount #max_price" }, "is_mobile": "", "scroll_top": ".yit-wcan-container", "scroll_top_mode": "both", "change_browser_url": "1", "avada": { "is_enabled": false, "sort_count": "ul.sort-count.order-dropdown" }, "flatsome": { "is_enabled": false, "lazy_load_enabled": false }, "yootheme": { "is_enabled": false } };
+		var yith_wcan_frontend = { "loader_url": "\/wp-content\/plugins\/yith-woocommerce-ajax-product-filter-premium\/assets\/images\/ajax-loader.gif" };
+/* ]]> */
+	</script>
+	<script type="text/javascript" src="@Url.Content("~/wp-content/plugins/yith-woocommerce-ajax-product-filter-premium/assets/js/yith-wcan-frontend.min.js")"></script>
+	<script type="text/javascript">
+		/* <![CDATA[ */
+		var yith_wcan_frontend_premium = { "ajax_wc_price_filter": "yes", "wc_price_filter_slider": "yes", "wc_price_filter_slider_in_ajax": "", "wc_price_filter_dropdown": "", "wc_price_filter_dropdown_style": "open", "wc_price_filter_dropdown_widget_class": "h2.widget-title", "widget_wrapper_class": ".widget", "price_filter_dropdown_class": "widget-dropdown", "ajax_pagination_enabled": "yes", "pagination_anchor": "nav.woocommerce-pagination a.page-numbers", "force_widget_init": "" };
+/* ]]> */
+	</script>
+	<script type="text/javascript" src="@Url.Content("~/wp-content/plugins/yith-woocommerce-ajax-product-filter-premium/assets/js/yith-wcan-frontend-premium.min.js")"></script>
+	<script type="text/javascript">
+													/* <![CDATA[ */
+		//var nikikala_ajax_actions = { "ajaxurl": "\/wp-admin\/admin-ajax.php", "loginRedirectURL": "\/shop\/?max_price=30000&orderby=menu_order", "loginRedirectVendorURL": "https:\/\/niki-kala.ir\/dashboard\/", "readmore_string": "\u0627\u062f\u0627\u0645\u0647 \u0645\u0637\u0644\u0628", "close_string": "\u0628\u0633\u062a\u0646", "moreitems_string": "\u0645\u0648\u0627\u0631\u062f \u0628\u06cc\u0634\u062a\u0631", "verybad_string": "\u062e\u06cc\u0644\u06cc \u0628\u062f", "bad_string": "\u0628\u062f", "normal_string": "\u0645\u0639\u0645\u0648\u0644\u06cc", "good_string": "\u062e\u0648\u0628", "verygood_string": "\u062e\u06cc\u0644\u06cc \u062e\u0648\u0628", "zoom_position": "10" };
+/* ]]> */
+	</script>
+	@*<script type="text/javascript" src="@Url.Content("~/wp-content/themes/rosentis/assets/js/rosentis.js")"></script>*@
+	<script type="text/javascript" src="@Url.Content("~/wp-includes/js/jquery/ui/core.min.js")"></script>
+	<script type="text/javascript" src="@Url.Content("~/wp-includes/js/jquery/ui/widget.min.js")"></script>
+	<script type="text/javascript" src="@Url.Content("~/wp-includes/js/jquery/ui/mouse.min.js")"></script>
+	<script type="text/javascript" src="@Url.Content("~/wp-includes/js/jquery/ui/slider.min.js")"></script>
+	<script type="text/javascript" src="@Url.Content("~/wp-content/plugins/woocommerce/assets/js/jquery-ui-touch-punch/jquery-ui-touch-punch.min.js")"></script>
+	<script type="text/javascript" src="@Url.Content("~/wp-content/plugins/woocommerce/assets/js/accounting/accounting.min.js")"></script>
+	<script type="text/javascript">
+		/* <![CDATA[ */
+		var woocommerce_price_slider_params = { "currency_format_num_decimals": "0", "currency_format_symbol": "\u062a\u0648\u0645\u0627\u0646", "currency_format_decimal_sep": ".", "currency_format_thousand_sep": ",", "currency_format": "%v\u00a0%s" };
+		var woocommerce_price_slider_params = { "currency_format_num_decimals": "0", "currency_format_symbol": "\u062a\u0648\u0645\u0627\u0646", "currency_format_decimal_sep": ".", "currency_format_thousand_sep": ",", "currency_format": "%v\u00a0%s" };
+/* ]]> */
+	</script>
+	<script type="text/javascript" src="@Url.Content("~/wp-content/plugins/woocommerce/assets/js/frontend/price-slider.min.js")"></script>
+
+
+}
+<div class="remodal-overlay remodal-is-closed" style="display: none;"></div><div class="remodal-wrapper remodal-is-closed" style="display: none;">
+	<div class="remodal remodal-general-information remodal-is-initialized remodal-is-closed" data-remodal-id="information" data-remodal-options="hashTracking: false" role="dialog" aria-labelledby="modal1Title" aria-describedby="modal1Desc" tabindex="-1">
+		<div class="remodal-general-information-main">
+			<div class="remodal-general-information-content">
+				<p id="remodal-general-information-text"></p>
+			</div>
+			<div class="remodal-general-information-actions">
+				<button data-remodal-action="close" class="remodal-general-information-button">باشه</button>
+			</div>
+		</div>
+	</div>
+</div><div class="remodal-wrapper remodal-is-closed" style="display: none;">
+	<div class="remodal remodal-alert remodal-is-initialized remodal-is-closed" data-remodal-id="alert" data-remodal-options="hashTracking: false" role="dialog" aria-labelledby="modal1Title" aria-describedby="modal1Desc" tabindex="-1">
+		<div class="remodal-alert-main">
+			<div class="remodal-alert-content">
+				<p>آیا از حذف مطمئن هستید؟</p>
+			</div>
+			<div class="remodal-alert-buttons">
+				<button class="remodal-alert-button remodal-alert-button-yes">بله</button>
+				<button class="remodal-alert-button remodal-alert-button-no">خیر</button>
+			</div>
+		</div>
+	</div>
+</div><div class="remodal-wrapper remodal-is-closed" style="display: none;">
+	<div class="remodal remodal-loading remodal-is-initialized remodal-is-closed" data-remodal-id="loading" data-remodal-options="hashTracking: false, closeOnOutsideClick: false" role="dialog" aria-labelledby="modal1Title" aria-describedby="modal1Desc" tabindex="-1">
+		<div class="remodal-loading-bullets">
+			<i class="remodal-loading-bullet"></i>
+			<i class="remodal-loading-bullet"></i>
+			<i class="remodal-loading-bullet"></i>
+			<i class="remodal-loading-bullet"></i>
+		</div>
+	</div>
+</div><div class="remodal-wrapper remodal-is-closed" style="display: none;">
+	<div class="remodal remodal-login remodal-is-initialized remodal-is-closed" data-remodal-id="login" data-remodal-options="hashTracking: false" role="dialog" aria-labelledby="modal1Title" aria-describedby="modal1Desc" tabindex="-1">
+		<button data-remodal-action="close" class="remodal-close" aria-label="Close"></button>
+		<div class="remodal-login-header">ورود به سایت</div>
+		<div class="remodal-login-content">
+			<form class="remodal-login-form" id="login-modal" action="login-modal" method="post">
+				<div class="remodal-login-form-title">نام کاربری</div>
+				<div class="remodal-login-form-row">
+					<div class="remodal-login-form-col">
+						<label class="remodal-login-form-input username">
+							<input class="nikikala-input" type="text" name="username" id="username" placeholder="نام کاربری را وارد کنید">
+						</label>
+					</div>
+				</div>
+				<div class="remodal-login-form-title">رمزعبور</div>
+				<div class="remodal-login-form-row">
+					<div class="remodal-login-form-col">
+						<label class="remodal-login-form-input password">
+							<input class="nikikala-input" name="password" id="password" type="password" placeholder="رمزعبور را وارد کنید">
+						</label>
+					</div>
+				</div>
+				<div class="remodal-login-form-agree">
+					<label class="login-checkbox">
+						<input type="checkbox" value="1" id="rememberme" name="rememberme"><span class="login-checkbox-check"></span>
+					</label>
+					<label for="rememberme">مرا به خاطر بسپار</label>
+				</div>
+
+				<div class="remodal-login-form-row">
+					<div class="remodal-login-form-col">
+						<button type="submit" name="submit" id="wp-submit" class="btn-login">ورود به سایت</button>
+					</div>
+				</div>
+				<div class="remodal-login-forget-link">
+					<a href="https://niki-kala.ir/my-account/lost-password/">رمزعبور را فراموش کرده ام؟</a>
+				</div>
+				<div class="shop-message-one hidden"></div>
+			</form>
+		</div>
+		<div class="remodal-login-footer is-highlighted">
+			<span>کاربر جدید هستید؟</span>
+			<a href="https://niki-kala.ir/my-account/?action=register">ثبت نام در سایت</a>
+		</div>
+	</div>
+</div><div class="dgwt-wcas-suggestions-wrapp woocommerce js-dgwt-wcas-initialized" unselectable="on" style="position: absolute; display: none; max-height: 600px; z-index: 999999999; width: 600px;"></div>

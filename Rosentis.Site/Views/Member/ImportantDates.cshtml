@@ -1,0 +1,51 @@
+﻿@model IEnumerable<Rosentis.DataContract.Users.MemberImportantDateDto>
+@{
+  var counter = 0;
+  ViewBag.Title = "تاریخ های مهم";
+}
+<div class="container profile">
+  <div class="row">
+    @Html.Partial("_UserSideBar",3)
+    <div class="col-md-9 ">
+      <div class="content-box well">
+        <div>
+          <form class="form-horizontal">
+            <div class="form-group">
+              <label>تاریخ: </label>
+              <input type="text" class="form-control" id="Shamsi" name="Shamsi"/>
+            </div>
+            <div class="form-group">
+              <label>عنوان: </label>
+              <input type="text" class="form-control" id="Title" name="Title"/>
+            </div>
+            <div class="form-group">
+              <label>شرح: </label>
+              <input type="text" class="form-control" id="Description" name="Description"/>
+            </div>
+          </form>
+        </div>
+        <table class="table">
+          <tr>
+            <th>تاریخ</th>
+            <th>عنوان</th>
+            <th>شرح</th>
+            <th></th>
+          </tr>
+            @foreach (var item in Model)
+            {
+              <tr>
+          <td>@item.DateShamsi</td>
+          <td>@item.Title</td>
+                <td>@item.Description</td>
+                <td></td>
+              </tr>
+            }
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+@section scripts{
+
+}

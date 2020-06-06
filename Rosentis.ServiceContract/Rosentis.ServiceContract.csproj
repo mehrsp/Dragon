@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{87E8A3F9-A482-4B82-B076-683D5BDF3A2E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Rosentis.ServiceContract</RootNamespace>
+    <AssemblyName>Rosentis.ServiceContract</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="StructureMap, Version=4.7.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\StructureMap.4.7.1\lib\net45\StructureMap.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AuthEntities\IPermissionApplicationService.cs" />
+    <Compile Include="AuthEntities\ITokenStoreApplicationService.cs" />
+    <Compile Include="AuthEntities\IUsersApplicationService.cs" />
+    <Compile Include="AuthEntities\IUserVerificationService.cs" />
+    <Compile Include="Blobs\IBlobApplicationService.cs" />
+    <Compile Include="Blobs\IBlobDescriptionApplicationService.cs" />
+    <Compile Include="Brands\IBrandService.cs" />
+    <Compile Include="Info\Address\ICityService.cs" />
+    <Compile Include="Info\Address\ICountryService.cs" />
+    <Compile Include="Info\Address\IProvinceService.cs" />
+    <Compile Include="Messaging\IEmailApplicationService.cs" />
+    <Compile Include="Messaging\IMessageApplicationService.cs" />
+    <Compile Include="Messaging\IMessageTypeApplicationService.cs" />
+    <Compile Include="Messaging\ISmsApplicationService.cs" />
+    <Compile Include="Notification\INotificationApplicationService.cs" />
+    <Compile Include="Notification\INotifierApplicationService.cs" />
+    <Compile Include="Products\IProductTechnicalService.cs" />
+    <Compile Include="Products\IProductCategoryTechnicalService.cs" />
+    <Compile Include="Products\ITechnicalService.cs" />
+    <Compile Include="Shop\ICartApplicationService.cs" />
+    <Compile Include="Shop\ICartItemApplicationService.cs" />
+    <Compile Include="Shop\ICustomerApplicationService.cs" />
+    <Compile Include="Shop\IInvoiceApplicationService.cs" />
+    <Compile Include="Shop\IInvoiceDetailsApplicationService.cs" />
+    <Compile Include="Shop\IProviderApplicationService.cs" />
+    <Compile Include="Shop\IPurchaseApplicationService.cs" />
+    <Compile Include="Shop\IPurchaseTypeApplicationService.cs" />
+    <Compile Include="Users\IMemberImportantDateApplicationService.cs" />
+    <Compile Include="Users\IRoleApplicationService.cs" />
+    <Compile Include="Users\IMemberService.cs" />
+    <Compile Include="Messaging\IMessageService.cs" />
+    <Compile Include="Products\IProductCatalogService.cs" />
+    <Compile Include="Products\IProductCategoryService.cs" />
+    <Compile Include="Products\IProductDetailService.cs" />
+    <Compile Include="Products\IProductImageService.cs" />
+    <Compile Include="Products\IProductRelatedService.cs" />
+    <Compile Include="Products\IProductService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Slides\ISlideShowService.cs" />
+    <Compile Include="Suppliers\ISuppliersService.cs" />
+    <Compile Include="Users\ISessionApplicationService.cs" />
+    <Compile Include="Visits\IPageUrlApplicationService.cs" />
+    <Compile Include="Visits\IVisitorApplicationService.cs" />
+    <Compile Include="Visits\IVisitorPageApplicationService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Rosentis.Core\Rosentis.Core.csproj">
+      <Project>{aaf713a9-1c83-4b90-afe6-2a3e7fd6c536}</Project>
+      <Name>Rosentis.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Rosentis.DataContract\Rosentis.DataContract.csproj">
+      <Project>{1561c1e4-0bda-4876-89ca-527e9fe5a202}</Project>
+      <Name>Rosentis.DataContract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Rosentis.DomainModel\Rosentis.DomainModel.csproj">
+      <Project>{28bd5fe7-3f1a-4574-8240-3d3b354407e4}</Project>
+      <Name>Rosentis.DomainModel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

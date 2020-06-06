@@ -1,0 +1,45 @@
+﻿@{
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section HeadContent
+{
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.4.0/leaflet.css">
+}
+@section Scripts
+{
+	<script src="@Url.Content("~/Scripts/map.js")"></script>
+}
+<div id="all">
+	<div id="content">
+		<div class="container">
+			<div class="row flex-row-reverse">
+				@RenderSection("breadCrumbContent", required: false)
+				<div class="col-lg-3">
+					<!-- PAGES MENU -->
+					<div class="card sidebar-menu mb-4">
+						<div class="card-header text-right">
+							<h3 class="h4 card-title">صفحات</h3>
+						</div>
+						<div class="card-body">
+							<ul class="nav nav-pills flex-column text-right" dir="rtl">
+								<li><a href="text.html" class="nav-link">تست</a></li>
+								<li><a href="@Url.Action("Contact","Home")" class="nav-link">تماس با ما</a></li>
+								<li><a href="faq.html" class="nav-link">راهنما</a></li>
+							</ul>
+						</div>
+					</div>
+					<!-- PAGES MENU END -->
+					<div class="banner"><a href="#"><img src=@Url.Content("~/Vendor/img/banner.jpg") alt="sales 2014" class="img-fluid"></a></div>
+				</div>
+				<div class="col-lg-9">
+					<div id="contact" class="box text-right">
+						@RenderBody()
+					</div>
+				</div>
+				<!-- /.col-md-9-->
+
+			</div>
+		</div>
+	</div>
+</div>
+

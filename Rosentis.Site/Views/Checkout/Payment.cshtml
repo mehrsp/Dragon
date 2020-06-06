@@ -1,0 +1,164 @@
+﻿@using Rosentis.DataContract.Shop
+@using Rosentis.DomainModel.Shop
+@model Rosentis.DataContract.Shop.CustomerDto
+@{
+    ViewBag.Title = "پرداخت";
+    var cart = ViewBag.Cart as CartDto;
+}
+@section HeadContent{
+
+  <link href="@Url.Content("~/wp-content/themes/theme55220/payment.css")" rel="stylesheet" />
+}
+<form method="post" action="DoPayment">
+<div class="container">
+
+  <div class="row">
+    @if (!ViewBag.IsAuthenticated)
+    {
+      <div class="col-md-7 p-sm text-center">
+        <div class="border p-sm">
+          <div>
+            <p>ورود یا ثبت کنید و 2,000 تومان ذخیره نمایید.</p>
+          </div>
+
+          <p class="checkout-login-box__links p-sm">
+            <a class="btn--small btn--alt" href="@Url.Action("SignIn", "Member")">ورود</a>
+            <span class="checkout-login-box__text">یا</span>
+            <a class="btn--small btn--alt" href="@Url.Action("Register", "Member")">ثبت نام</a>
+
+
+          </p>
+
+        </div>
+      </div>
+    }
+    <div class="@{
+                  Write(ViewBag.IsAuthenticated ? "col-md-12" : "col-md-5");
+                }">
+      <div>
+        <h3>اطلاعات پرداخت</h3>
+        <p>
+          سفارشتان را به کجا ارسال کنیم؟
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+
+  <div class="row p-sm">
+
+
+    <div class="col-md-6 p-sm" style="background-color: #F1F1F1;">
+      <strong>مشخصات تحویل گیرنده</strong>
+      <p>@Model.Name</p>
+      <p>@Model.Province.Name-@Model.City.Name-@Model.Address</p>
+      <p>@Model.Cell</p>
+    </div>
+
+
+    <div class="col-md-6 p-sm" style="margin-top: -30px;">
+      @foreach (var item in cart.CartItems)
+      {
+        <div class="row product-title">
+          <div>
+            <div class="p-sm" style="float: right">
+              <strong>@item.Product.Name</strong>
+            </div>
+            <div class="p-sm" style="float: left">
+              <strong style="padding-left: 5px;">@item.Product.PriceWithDiscountMoney</strong>
+            </div>
+          </div>
+
+        </div>
+        <div class="row p-sm product-border">
+          <div>
+            <div class="col-md-3">
+              <img src="@item.Product.Picture" />
+            </div>
+            <div class="col-md-3">
+              <span></span>
+            </div>
+            <div class="col-md-3">
+              <span style="padding-left: 5px;">اقلام اضافه</span>
+              @foreach (var vase in item.Vases)
+              {
+                <span>@vase.PriceMoney</span>
+                <i class="fa fa-check-square text-warning"></i>
+              }
+            </div>
+            <div class="col-md-3">
+              <span class="text-warning" style="padding-left: 5px;">@item.DueDateShamsi</span><i class="fa fa-calendar text-warning"></i>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 p-sm">
+            <div class="col-md-6 p-sm text-warning">
+              تحویل رایگان
+            </div>
+            <div class="col-md-6 p-sm">
+              <div style="text-align: center">
+                <span>اقلام همراه</span>
+              </div>
+              <div style="text-align: center">
+                <span>تحویل</span>
+              </div>
+              <div style="text-align: center">
+                <span>مالیات</span>
+              </div>
+              <div style="text-align: center">
+                <span>تخفیف</span>
+              </div>
+              <div style="text-align: center">
+                <span>قیمت</span>
+              </div>
+              <div style="text-align: center">
+                <strong>جمع کل</strong>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 p-sm">
+            <div>
+              <div class="col-md-6 p-sm">
+                <div style="text-align: center">
+                  <span>@cart.TotalVasesMoney</span>
+                </div>
+                <div style="text-align: center">
+                  <span>0 تومان</span>
+                </div>
+                <div style="text-align: center">
+                  <span>@(cart.TotalVatMoney)</span>
+                </div>
+                <div style="text-align: center">
+                  <span>@(cart.TotalDiscountMoney)</span>
+                </div>
+                <div style="text-align: center"><strong>@(cart.TotalPriceMoney)</strong></div>
+                <div style="text-align: center">
+                  <strong>@(cart.TotalPaymentMoney)</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      }
+
+
+
+    </div>
+
+  </div>
+
+
+  <div class="row">
+    <div class="col-md-6">
+      <button class="btn" type="submit">پرداخت از طریق درگاه بانکی</button>
+    </div>
+  </div>
+
+
+
+
+
+</div>
+</form>

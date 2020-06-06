@@ -1,0 +1,47 @@
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.ServiceContract\bin\Release\Rosentis.ServiceContract.dll.config
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.ServiceContract\bin\Release\Rosentis.ServiceContract.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.ServiceContract\bin\Release\Rosentis.ServiceContract.pdb
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.ServiceContract\bin\Release\Rosentis.Core.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.ServiceContract\bin\Release\Rosentis.DataContract.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.ServiceContract\bin\Release\Rosentis.DomainModel.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.ServiceContract\bin\Release\StructureMap.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.ServiceContract\bin\Release\Newtonsoft.Json.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.ServiceContract\bin\Release\Fasterflect.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.ServiceContract\bin\Release\System.Linq.Dynamic.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.ServiceContract\bin\Release\Rosentis.Common.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.ServiceContract\bin\Release\PersianDate.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.ServiceContract\bin\Release\Rosentis.Core.pdb
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.ServiceContract\bin\Release\Rosentis.DataContract.pdb
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.ServiceContract\bin\Release\Rosentis.DataContract.dll.config
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.ServiceContract\bin\Release\Rosentis.DomainModel.pdb
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.ServiceContract\bin\Release\Rosentis.DomainModel.dll.config
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.ServiceContract\bin\Release\StructureMap.xml
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.ServiceContract\bin\Release\Newtonsoft.Json.xml
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.ServiceContract\bin\Release\Fasterflect.xml
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.ServiceContract\bin\Release\Rosentis.Common.pdb
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.ServiceContract\bin\Release\Rosentis.Common.dll.config
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.ServiceContract\obj\Release\Rosentis.ServiceContract.csprojResolveAssemblyReference.cache
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.ServiceContract\obj\Release\Rosentis.ServiceContract.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.ServiceContract\obj\Release\Rosentis.ServiceContract.pdb
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.ServiceContract\bin\Release\Rosentis.ServiceContract.dll.config
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.ServiceContract\bin\Release\Rosentis.ServiceContract.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.ServiceContract\bin\Release\Rosentis.ServiceContract.pdb
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.ServiceContract\bin\Release\Rosentis.Core.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.ServiceContract\bin\Release\Rosentis.DataContract.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.ServiceContract\bin\Release\Rosentis.DomainModel.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.ServiceContract\bin\Release\StructureMap.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.ServiceContract\bin\Release\Newtonsoft.Json.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.ServiceContract\bin\Release\Fasterflect.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.ServiceContract\bin\Release\System.Linq.Dynamic.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.ServiceContract\bin\Release\Rosentis.Common.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.ServiceContract\bin\Release\PersianDate.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.ServiceContract\bin\Release\Rosentis.Core.pdb
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.ServiceContract\bin\Release\Rosentis.DataContract.pdb
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.ServiceContract\bin\Release\Rosentis.DomainModel.pdb
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.ServiceContract\bin\Release\StructureMap.xml
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.ServiceContract\bin\Release\Newtonsoft.Json.xml
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.ServiceContract\bin\Release\Fasterflect.xml
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.ServiceContract\bin\Release\Rosentis.Common.pdb
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.ServiceContract\obj\Release\Rosentis.ServiceContract.csprojResolveAssemblyReference.cache
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.ServiceContract\obj\Release\Rosentis.ServiceContract.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.ServiceContract\obj\Release\Rosentis.ServiceContract.pdb

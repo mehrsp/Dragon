@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{28BD5FE7-3F1A-4574-8240-3D3B354407E4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Rosentis.DomainModel</RootNamespace>
+    <AssemblyName>Rosentis.DomainModel</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LabXand.DomainLayer">
+      <HintPath>..\..\..\..\..\..\..\Sepid Programs\Projects\Onion\IMas.Communications\IMas.Communications.DomainModel\bin\Debug\LabXand.DomainLayer.dll</HintPath>
+    </Reference>
+    <Reference Include="LabXand.DomainLayer.Core">
+      <HintPath>..\..\..\..\..\..\..\Sepid Programs\Projects\Onion\IMas.Communications\IMas.Communications.DomainService.Core\bin\Debug\LabXand.DomainLayer.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ComponentModel.Annotations.4.7.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AuthEntities\NullObjects\NullPermission.cs" />
+    <Compile Include="AuthEntities\NullObjects\NullUser.cs" />
+    <Compile Include="AuthEntities\NullObjects\NullUserToken.cs" />
+    <Compile Include="AuthEntities\NullObjects\NullUserVerification.cs" />
+    <Compile Include="AuthEntities\Permission.cs" />
+    <Compile Include="AuthEntities\RolePermission.cs" />
+    <Compile Include="AuthEntities\User.cs" />
+    <Compile Include="AuthEntities\UserPermission.cs" />
+    <Compile Include="AuthEntities\UserToken.cs" />
+    <Compile Include="AuthEntities\UserVerification.cs" />
+    <Compile Include="Base\City.cs" />
+    <Compile Include="Base\Country.cs" />
+    <Compile Include="Base\NullObjects\NullNotification.cs" />
+    <Compile Include="Base\NullObjects\NullNotifier.cs" />
+    <Compile Include="Base\Province.cs" />
+    <Compile Include="Blobs\Blob.cs" />
+    <Compile Include="Blobs\BlobDescription.cs" />
+    <Compile Include="Blobs\NullObjects\NullBlob.cs" />
+    <Compile Include="Blobs\NullObjects\NullBlobDescription.cs" />
+    <Compile Include="Brands\Brand.cs" />
+    <Compile Include="Brands\NullObjects\NullBrand.cs" />
+    <Compile Include="Exceptions\Exception.cs" />
+    <Compile Include="Exceptions\ExceptionCategory.cs" />
+    <Compile Include="Messaging\Email.cs" />
+    <Compile Include="Messaging\Message.cs" />
+    <Compile Include="Messaging\MessageType.cs" />
+    <Compile Include="Messaging\NullObjects\NullEmail.cs" />
+    <Compile Include="Messaging\NullObjects\NullMessage.cs" />
+    <Compile Include="Messaging\NullObjects\NullMessageType.cs" />
+    <Compile Include="Messaging\NullObjects\NullSms.cs" />
+    <Compile Include="Messaging\Sms.cs" />
+    <Compile Include="Notification\Notification.cs" />
+    <Compile Include="Notification\Notifier.cs" />
+    <Compile Include="Pages\NullObjects\NullPage.cs" />
+    <Compile Include="Pages\Page.cs" />
+    <Compile Include="Products\Comment.cs" />
+    <Compile Include="Products\Product.cs" />
+    <Compile Include="Products\ProductCatalog.cs" />
+    <Compile Include="Products\ProductCategory.cs" />
+    <Compile Include="Products\ProductImage.cs" />
+    <Compile Include="Products\ProductRelated.cs" />
+    <Compile Include="Products\ProductCategoryTechnical.cs" />
+    <Compile Include="Products\Technical.cs" />
+    <Compile Include="Products\ProductTechnical.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\LineChart.cs" />
+    <Compile Include="Reports\PieChart.cs" />
+    <Compile Include="Shop\Cart.cs" />
+    <Compile Include="Shop\CartItem.cs" />
+    <Compile Include="Shop\Customer.cs" />
+    <Compile Include="Shop\Invoice.cs" />
+    <Compile Include="Shop\InvoiceDetails.cs" />
+    <Compile Include="Shop\NullObjects\NullCart.cs" />
+    <Compile Include="Shop\NullObjects\NullCartItem.cs" />
+    <Compile Include="Shop\NullObjects\NullCustomer.cs" />
+    <Compile Include="Shop\NullObjects\NullInvoice.cs" />
+    <Compile Include="Shop\NullObjects\NullInvoiceDetails.cs" />
+    <Compile Include="Shop\NullObjects\NullProductInvoiceType.cs" />
+    <Compile Include="Shop\NullObjects\NullProvider.cs" />
+    <Compile Include="Shop\NullObjects\NullPurchase.cs" />
+    <Compile Include="Shop\NullObjects\NullPurchaseType.cs" />
+    <Compile Include="Shop\ProductInvoiceType.cs" />
+    <Compile Include="Shop\Provider.cs" />
+    <Compile Include="Shop\Purchase.cs" />
+    <Compile Include="Shop\PurchaseType.cs" />
+    <Compile Include="Slides\NullObjects\NullSlideShow.cs" />
+    <Compile Include="Slides\SlideShow.cs" />
+    <Compile Include="Tags\NullObjects\NullTag.cs" />
+    <Compile Include="Tags\NullObjects\NullTagType.cs" />
+    <Compile Include="Tags\Tag.cs" />
+    <Compile Include="Tags\TagType.cs" />
+    <Compile Include="Users\Member.cs" />
+    <Compile Include="Users\MemberImportantDate.cs" />
+    <Compile Include="Users\Role.cs" />
+    <Compile Include="Users\Session.cs" />
+    <Compile Include="Users\Supplier.cs" />
+    <Compile Include="Visits\NullObjects\NullPageUrl.cs" />
+    <Compile Include="Visits\NullObjects\NullVisitor.cs" />
+    <Compile Include="Visits\NullObjects\NullVisitorPage.cs" />
+    <Compile Include="Visits\PageUrl.cs" />
+    <Compile Include="Visits\Visitor.cs" />
+    <Compile Include="Visits\VisitorPage.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Rosentis.Common\Rosentis.Common.csproj">
+      <Project>{3cd607d0-86b0-4c2c-a691-f3d8eab6edf2}</Project>
+      <Name>Rosentis.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Products\NullObjects\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

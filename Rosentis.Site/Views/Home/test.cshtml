@@ -1,0 +1,134 @@
+﻿@using Rosentis.DataContract.Products
+@{
+    ViewBag.Title = "Home Page";
+    var flowersNew = ViewBag.FlowersNew as ProductDtos;
+    var flowersSells = ViewBag.FlowersSells as ProductDtos;
+    var flowersPopulars = ViewBag.FlowersPopulars as ProductDtos;
+}
+<div>
+    <div data-motopress-wrapper-file="page-home.php" data-motopress-wrapper-type="content">
+        <div>
+            <div data-motopress-type="static" data-motopress-static-file="static/static-slider.php">
+                <div class="slider_off"><!--slider off--></div>
+            </div>
+        </div>
+        <div>
+            <div data-motopress-type="loop" data-motopress-loop-file="loop/loop-page.php">
+                <div id="post-203" class="page post-203 type-page status-publish hentry">
+
+
+
+
+                    <div class="banner_wrapper">
+                        <div class="banner_wrapper_wrap_inner">
+
+
+
+                            <div class="content_box  ">
+                                <div class="banner-wrap custom_banner2 box3"><a href="@Url.Content("~/Topics/Topic/کیک_2")" title="Love &amp; romance"><figure class="featured-thumbnail"><img src="@Url.Content("~/wp-content/uploads/2015/07/banner3.jpg")" title="Love &amp; romance" alt="" /></figure><div class="caption"><h5>عشق و عاشقانه</h5><p>نمونه های جدید</p></div></a></div><!-- .banner-wrap (end) -->
+                                <div class="banner-wrap custom_banner2 box4">
+                                    <a href="@Url.Content("~/Topics/Topic/لاله")" title="Fresh tulips">
+                                        <figure class="featured-thumbnail"><img src="@Url.Content("~/wp-content/uploads/2015/07/banner4.jpg")" title="Fresh tulips" alt="" /></figure><div class="caption">
+                                            <h5>لاله های تازه</h5><p>
+                                                بیش از 15 رنگ<br />
+                                                15درصد صرفه جویی در هزینه
+                                            </p>
+                                        </div>
+                                    </a>
+                                </div><!-- .banner-wrap (end) -->
+                                <div class="banner-wrap custom_banner1 box3"><a href="@Url.Content("~/Products/List/?categoryId=4")" title=""><p>گل های عروسی <strong>25درصد تخفیف بگیرید</strong></p></a></div><!-- .banner-wrap (end) -->
+                                <div class="banner-wrap custom_banner1 box4"><a href="@Url.Content("~/Products/List/?categoryId=4")" title=""><p>گیاهان <strong>در این هفته 25درصد تخفیف بگیرید</strong></p></a></div><!-- .banner-wrap (end) -->
+                                <div class="clear"></div>
+                            </div><!-- .content_box (end) -->
+                            <div class="content_box  ">
+                                <div class="banner-wrap custom_banner1 box1">
+                                    <a href="@Url.Content("~/Products/List/?categoryId=4")" title="">
+                                        <p>
+                                            <em>روز ولنتاین</em><br />
+                                            گل ها <strong>نمونه های جدید</strong>
+                                        </p>
+                                    </a>
+                                </div><!-- .banner-wrap (end) -->
+                                <div class="banner-wrap custom_banner1 box2"><a href="@Url.Content("~/Products/List/?categoryId=4")" title=""><p>دسته های منحصربه فرد<strong>پیشنهاد ویژه</strong></p></a></div><!-- .banner-wrap (end) -->
+                                <div class="banner-wrap custom_banner2 cap_box1"><a href="@Url.Content("~/Products/List/?categoryId=4")" title="New ideas for"><figure class="featured-thumbnail"><img src="@Url.Content("~/wp-content/uploads/2015/07/banner1.jpg")" title="New ideas for" alt="" /></figure><div class="caption"><h5>ایده های جدید برای</h5><p>دسته گل های تولد</p></div></a></div><!-- .banner-wrap (end) -->
+                                <div class="banner-wrap custom_banner2 box2">
+                                    <a href="@Url.Content("~/Topics/Topic/ارکیده_من")" title="Orchids">
+                                        <figure class="featured-thumbnail"><img src="@Url.Content("~/wp-content/uploads/2015/07/banner2.jpg")" title="Orchids" alt="" /></figure><div class="caption">
+                                            <h5>ارکیده</h5><p>
+                                                بیش از 25 نوع<br />
+                                                15درصد صرفه جویی در هزینه
+                                            </p>
+                                        </div>
+                                    </a>
+                                </div><!-- .banner-wrap (end) -->
+                                <div class="clear"></div>
+                            </div><!-- .content_box (end) -->
+
+
+
+                            <div class="banner-wrap custom_banner_more"><a href="@Url.Content("~/Products/List/?categoryId=4")" title="Fast same day delivery"><figure class="featured-thumbnail"><img src="@Url.Content("~/wp-content/uploads/2015/07/banner5.jpg")" title="Fast same day delivery" alt="" /></figure><div class="caption"><h5>تحویل سریع در همان روز</h5><p>این پیشنهاد در تمام فروشگاه های ما معتبر است</p><div class="link-align banner-btn"><a href="@Url.Content("~/Products/List/?categoryId=4")" title="click here" class="btn btn-link" target="_self">اینجا کلیک کنید</a></div></div></a></div><!-- .banner-wrap (end) -->
+                        </div>
+                    </div>
+                    <div class="product_wrapper">
+                        <div class="product_wrapper_wrap_inner">
+                            <div class="tabs-wrapper tabbable tabs-top">
+                                <ul class="nav nav-tabs"><li class="active tab-1"><a href="#tab-1-1401384774" data-toggle="tab">نمونه های جدید</a></li><li class="tab-2"><a href="#tab-2-1401384774" data-toggle="tab">برگزیده ها</a></li><li class="tab-3"><a href="#tab-3-1401384774" data-toggle="tab">بیشترین فروش</a></li></ul><div class="tab-content">
+                                    <div id="tab-1-1401384774" class="tab-pane fade in active">
+                                        <div class="woocommerce ">
+                                            <ul class="products">
+                                                @foreach (var item in flowersNew.Products)
+                                                {
+                                                    bool first = item == flowersNew.Products.FirstOrDefault();
+                                                    @Html.Partial(@"~/Views/Products/Product.cshtml", item, new ViewDataDictionary { { "first", first } })
+                                                }
+                                            </ul>
+                                        </div>
+                                    </div><!-- .tab (end) -->
+                                    <div id="tab-2-1401384774" class="tab-pane fade ">
+                                        <div class="woocommerce columns-4">
+                                            <ul class="products">
+                                                @foreach (var item in flowersPopulars.Products)
+                                                {
+                                                    bool first = item == flowersNew.Products.FirstOrDefault();
+                                                    @Html.Partial(@"~/Views/Products/Product.cshtml", item, new ViewDataDictionary { { "first", first } })
+                                                }
+                                            </ul>
+                                        </div>
+                                    </div><!-- .tab (end) -->
+                                    <div id="tab-3-1401384774" class="tab-pane fade ">
+                                        <div class="woocommerce columns-4">
+                                            <ul class="products">
+                                                @foreach (var item in flowersSells.Products)
+                                                {
+                                                    bool first = item == flowersNew.Products.FirstOrDefault();
+                                                    @Html.Partial(@"~/Views/Products/Product.cshtml", item, new ViewDataDictionary { { "first", first } })
+                                                }
+                                            </ul>
+                                        </div>
+                                    </div><!-- .tab (end) -->
+                                </div><!-- .tab-content (end) -->
+                            </div><!-- .tabs-wrapper (end) -->
+                        </div>
+                    </div>
+                    <div class="banner_wrapper2">
+                        <div class="banner_wrapper2_wrap_inner">
+                            <div class="banner-wrap ">
+                                <a href="@Url.Content("~/Products/List/?categoryId=4")" title="Decorative <strong>Wedding Flowers</strong>">
+                                    <figure class="featured-thumbnail"><img style="width:100%" src="@Url.Content("~/wp-content/uploads/2015/07/banner6.jpg")" title="Decorative <strong>Wedding Flowers</strong>" alt="" /></figure><div class="caption">
+                                        <h5>تزئینی <strong>گل های عروسی</strong></h5><p>
+                                            گیاهان تزئینی<br />
+                                            دسته گل های تولد
+                                        </p><div class="link-align banner-btn"><a href="@Url.Content("~/Products/List/?categoryId=4")" title="click here" class="btn btn-link" target="_self">اینجا کلیک کنید</a></div>
+                                    </div>
+                                </a>
+                            </div><!-- .banner-wrap (end) -->
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                    <!--.pagination-->
+                </div><!--post-->
+            </div>
+        </div>
+    </div>
+</div>
+

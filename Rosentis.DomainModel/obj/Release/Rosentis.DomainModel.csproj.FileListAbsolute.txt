@@ -1,0 +1,28 @@
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.DomainModel\bin\Release\Rosentis.DomainModel.dll.config
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.DomainModel\bin\Release\Rosentis.DomainModel.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.DomainModel\bin\Release\Rosentis.DomainModel.pdb
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.DomainModel\bin\Release\LabXand.DomainLayer.Core.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.DomainModel\bin\Release\LabXand.DomainLayer.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.DomainModel\bin\Release\Rosentis.Common.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.DomainModel\bin\Release\System.ComponentModel.Annotations.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.DomainModel\bin\Release\LabXand.Security.Core.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.DomainModel\bin\Release\LabXand.Core.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.DomainModel\bin\Release\Newtonsoft.Json.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.DomainModel\bin\Release\Rosentis.Common.pdb
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.DomainModel\bin\Release\Rosentis.Common.dll.config
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.DomainModel\obj\Release\Rosentis.DomainModel.csprojResolveAssemblyReference.cache
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.DomainModel\obj\Release\Rosentis.DomainModel.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.DomainModel\obj\Release\Rosentis.DomainModel.pdb
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.DomainModel\bin\Release\Rosentis.DomainModel.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.DomainModel\bin\Release\Rosentis.DomainModel.pdb
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.DomainModel\bin\Release\LabXand.DomainLayer.Core.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.DomainModel\bin\Release\LabXand.DomainLayer.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.DomainModel\bin\Release\Rosentis.Common.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.DomainModel\bin\Release\System.ComponentModel.Annotations.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.DomainModel\bin\Release\LabXand.Security.Core.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.DomainModel\bin\Release\LabXand.Core.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.DomainModel\bin\Release\Newtonsoft.Json.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.DomainModel\bin\Release\Rosentis.Common.pdb
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.DomainModel\obj\Release\Rosentis.DomainModel.csprojResolveAssemblyReference.cache
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.DomainModel\obj\Release\Rosentis.DomainModel.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.DomainModel\obj\Release\Rosentis.DomainModel.pdb

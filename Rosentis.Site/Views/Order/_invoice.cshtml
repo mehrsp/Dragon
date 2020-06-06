@@ -1,0 +1,135 @@
+﻿
+@using Rosentis.DataContract.Shop
+@using Rosentis.DomainModel.Shop
+@using PersianDate
+@model Rosentis.DataContract.Shop.InvoiceDto
+@{
+  Layout = null;
+  decimal totalPrice = 0;
+  decimal totalDiscount = 0;
+  decimal total = 0;
+  int itemRow = 0;
+  ICollection<InvoiceDetailsDto> list = Model.InvoiceDetails;
+  var logoUrl = "http://" + System.Web.HttpContext.Current.Request.Url.Authority + "/frontend/Images/Site/Logo.png";
+  var request = HttpContext.Current.Request;
+  var appUrl = HttpRuntime.AppDomainAppVirtualPath;
+
+  if (!string.IsNullOrWhiteSpace(appUrl)) { appUrl += "/"; }
+
+  var baseUrl = string.Format("{0}://{1}{2}", request.Url.Scheme, request.Url.Authority, appUrl);
+
+}
+<div class="container">
+  <div class="row">
+    <div class="alert alert-success" style="display: block;">
+      <button class="close" data-close="alert"></button>
+      کاربر گرامی محصول شما با موفقیت خریداری گردید.
+      @if (Session["IsWantToSend"] != null && (bool)Session["IsWantToSend"])
+      {
+        <br />
+        <span>بسته پستی محصول نیز در مدت 2 روز آینده از طریق پست به صورت رایگان برای شما ارسال خواهد شد</span>
+      }
+      <br />
+      <strong>کد رهگیری: @Model.InvoiceNumber</strong>
+    </div>
+    <div class="invoice">
+      <div class="row invoice-logo">
+        <div class="col-xs-6 invoice-logo-space">
+          <img src="@logoUrl" class="img-responsive" alt="" />
+        </div>
+        <div class="col-xs-6">
+          <p>
+            #@Model.InvoiceNumber / @Model.CreatedDate.ToFaWithTime() <span class="muted">
+              لوتوس
+            </span>
+          </p>
+        </div>
+      </div>
+      <hr />
+      <div class="row">
+        <div class="col-xs-12">
+          <table class="table table-striped table-hover">
+            <thead>
+            <tr>
+              <th>
+                #
+              </th>
+              <th>
+                نام محصول
+              </th>
+              <th>
+                قیمت واحد
+              </th>
+              <th>
+                تخفیف
+              </th>
+              <th>
+                قیمت کل
+              </th>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach (var item in list)
+            {
+              total += item.TotalWithDiscount;
+              totalPrice += item.Price;
+              totalDiscount += item.TotalDiscount;
+              <tr>
+                <td class="time">@(++itemRow)</td>
+                <td class="details">
+                  @item.ProductName
+                </td>
+                <td class="details">
+                  @item.PriceMoney
+                </td>
+                <td class="details">
+                  @item.TotalDiscountMoney
+                </td>
+                <td class="details">
+                  @item.TotalWithDiscountMoney
+                </td>
+              </tr>
+            }
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-4">
+          <div class="well">
+            <address>
+              <strong>@Model.Customer.Name</strong><br />
+              @Model.Customer.Address
+              <br />
+              <abbr title="Phone">شماره تماس:</abbr><span dir="ltr">@Model.Customer.Phone</span>
+              <br />
+              <a href="mailto:#">
+                @Model.Customer.Email
+              </a>
+            </address>
+          </div>
+        </div>
+        <div class="col-xs-8 invoice-block">
+          <ul class="list-unstyled amounts">
+            <li>
+              <strong>مجموع قیمت:</strong> @Model.NetTotalMoney
+            </li>
+            <li>
+              <strong>تخفیف:</strong> @Model.TotalDiscountMoney
+            </li>
+            <li>
+              <strong>مالیات:</strong> -----
+            </li>
+            <li>
+              <strong>خالص پرداختی:</strong> @Model.TotalToPayMoney
+            </li>
+          </ul>
+          <br />
+          <a class="btn btn-lg blue hidden-print margin-bottom-5" onclick="javascript:window.print();">
+            چاپ <i class="fa fa-print"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

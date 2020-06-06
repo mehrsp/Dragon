@@ -1,0 +1,8 @@
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.DistributedServices\bin\Release\Rosentis.DistributedServices.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.DistributedServices\bin\Release\Rosentis.DistributedServices.pdb
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.DistributedServices\obj\Release\Rosentis.DistributedServices.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.DistributedServices\obj\Release\Rosentis.DistributedServices.pdb
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.DistributedServices\bin\Release\Rosentis.DistributedServices.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.DistributedServices\bin\Release\Rosentis.DistributedServices.pdb
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.DistributedServices\obj\Release\Rosentis.DistributedServices.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.DistributedServices\obj\Release\Rosentis.DistributedServices.pdb

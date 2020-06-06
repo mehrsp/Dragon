@@ -1,0 +1,86 @@
+﻿@model Rosentis.DataContract.Messaging.MessageDto
+@{
+	var message = ViewBag.Message as Rosentis.DataContract.Messaging.MessageDto;
+}
+@{
+	Layout = "~/Views/Shared/_ContactLayout.cshtml";
+}
+
+<h1>ارتباط با رُزِنتــیس</h1>
+<hr>
+<div class="row">
+	<div class="col-md-4">
+		<h3><i class="fa fa-map-marker"></i>آدرس</h3>
+		<p>،تهران<br>خیابان آزادی<br>نبش اسکندری شمالی<br>پلاک 159<br><strong>طبقه دوم، واحد 91</strong></p>
+	</div>
+	<!-- /.col-sm-4-->
+	<div class="col-md-4">
+		<h3><i class="fa fa-phone"></i>تلفن های تماس</h3>
+		<p class="text-muted"></p>
+		<p><strong>(+98) 21 669 061 05</strong></p>
+	</div>
+	<!-- /.col-sm-4-->
+	<div class="col-md-4">
+		<h3><i class="fa fa-envelope"></i>پست الکترونیک</h3>
+		<p class="text-muted"></p>
+		<ul>
+			<li><strong><a href="#">info@@rosentis.ir</a></strong></li>
+			<li><strong><a href="#">rosentis.co@@gmail.com</a></strong></li>
+		</ul>
+	</div>
+	<!-- /.col-sm-4-->
+</div>
+<!-- /.row-->
+<hr>
+<div id="map"></div>
+<hr>
+<h2>فرم تماس با ما</h2>
+@if (!string.IsNullOrWhiteSpace(ViewBag.Message))
+{
+	<div class="row">
+		<div class="alert alert-danger">
+			<strong>عملیات ناموفق: </strong> @ViewBag.Message
+		</div>
+	</div>
+}
+@using (Html.BeginForm("SendMessage", "Messaging", FormMethod.Post))
+{
+	<div class="row">
+		<div class="col-md-6">
+			<input type="submit" id="btnSubmit" style="display: none" />
+			<div class="form-group">
+				<label for="firstname">نام</label>
+				@Html.TextBoxFor(x => x.Name, new { @class = "form-control", required = true, id = "Name" })
+			</div>
+		</div>
+		<div class="col-md-6">
+			<div class="form-group">
+				<label for="lastname">نام خانوادگی</label>
+				@Html.TextBoxFor(x => x.LastName, new { @class = "form-control", required = true, id = "LastName" })
+			</div>
+		</div>
+		<div class="col-md-6">
+			<div class="form-group">
+				<label for="email">ایمیل</label>
+				@Html.TextBoxFor(x => x.Email, new { @class = "form-control", type = "email", required = true, id = "Email" })
+			</div>
+		</div>
+		<div class="col-md-6">
+			<div class="form-group">
+				<label for="subject">موضوع</label>
+				@Html.TextBoxFor(x => x.Subject, new { @class = "form-control", id = "Subject" })
+
+			</div>
+		</div>
+		<div class="col-md-12">
+			<div class="form-group">
+				<label for="message">پیام</label>
+				<textarea id="message" class="form-control"></textarea>
+			</div>
+		</div>
+		<div class="col-md-12 text-center">
+			<button type="submit" onclick="submitForm()" class="btn btn-primary"><i class="fa fa-envelope-o"></i>ارسال پیام</button>
+		</div>
+	</div>
+
+}

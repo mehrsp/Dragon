@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1561C1E4-0BDA-4876-89CA-527E9FE5A202}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Rosentis.DataContract</RootNamespace>
+    <AssemblyName>Rosentis.DataContract</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PersianDate, Version=3.5.6587.38230, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\PersianDate.3.5.5\lib\net35\PersianDate.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ComponentModel.Annotations.4.7.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Reflection.TypeExtensions, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Reflection.TypeExtensions.4.5.0\lib\net461\System.Reflection.TypeExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AuthEntities\ChangePasswordRequestDto.cs" />
+    <Compile Include="AuthEntities\ClientDto.cs" />
+    <Compile Include="AuthEntities\PermissionDto.cs" />
+    <Compile Include="AuthEntities\PermissionDtos.cs" />
+    <Compile Include="AuthEntities\RefreshTokenDto.cs" />
+    <Compile Include="AuthEntities\RegisterUserDto.cs" />
+    <Compile Include="AuthEntities\UserDto.cs" />
+    <Compile Include="AuthEntities\UserTokenDto.cs" />
+    <Compile Include="AuthEntities\UserVerifyDto.cs" />
+    <Compile Include="Base\BaseDto.cs" />
+    <Compile Include="Base\DropBoxDto.cs" />
+    <Compile Include="Base\DtoResponse.cs" />
+    <Compile Include="Base\Dtos\DropBoxDtos.cs" />
+    <Compile Include="Blobs\BlobDescriptionDto.cs" />
+    <Compile Include="Blobs\BlobDescriptionDtos.cs" />
+    <Compile Include="Blobs\BlobDto.cs" />
+    <Compile Include="Blobs\BlobDtos.cs" />
+    <Compile Include="Brands\BrandDto.cs" />
+    <Compile Include="Brands\Dtos\BrandDtos.cs" />
+    <Compile Include="ExceptionModel\ExceptionModel.cs" />
+    <Compile Include="Info\Address\CityDto.cs" />
+    <Compile Include="Info\Address\CountryDto.cs" />
+    <Compile Include="Info\Address\Dtos\CityDtos.cs" />
+    <Compile Include="Info\Address\Dtos\CountryDtos.cs" />
+    <Compile Include="Info\Address\Dtos\ProvinceDtos.cs" />
+    <Compile Include="Info\Address\ProvinceDto.cs" />
+    <Compile Include="Messaging\EmailDto.cs" />
+    <Compile Include="Messaging\EmailDtos.cs" />
+    <Compile Include="Messaging\MessageDtos.cs" />
+    <Compile Include="Messaging\MessageTypeDto.cs" />
+    <Compile Include="Messaging\MessageTypeDtos.cs" />
+    <Compile Include="Messaging\SmsDto.cs" />
+    <Compile Include="Messaging\SmsDtos.cs" />
+    <Compile Include="Notification\NotificationDto.cs" />
+    <Compile Include="Notification\NotifierDto.cs" />
+    <Compile Include="Products\Dtos\TechnicalChildDtos.cs" />
+    <Compile Include="Products\Dtos\TechnicalDtos.cs" />
+    <Compile Include="Products\Dtos\ProductCategoryTechnicalDtos.cs" />
+    <Compile Include="Products\Dtos\ProductTechnicalDtos.cs" />
+    <Compile Include="Products\ProductCategoryTechnicalDto.cs" />
+    <Compile Include="Products\TechnicalChildDto.cs" />
+    <Compile Include="Products\TechnicalDto.cs" />
+    <Compile Include="Products\ProductTechnicalDto.cs" />
+    <Compile Include="Shop\AddToCartRequestDto.cs" />
+    <Compile Include="Shop\CartDto.cs" />
+    <Compile Include="Shop\CartDtos.cs" />
+    <Compile Include="Shop\CartItemCakeDetailDto.cs" />
+    <Compile Include="Shop\CartItemDto.cs" />
+    <Compile Include="Shop\CartItemDtos.cs" />
+    <Compile Include="Shop\CartItemFlowerDetailDto.cs" />
+    <Compile Include="Shop\CartItemGiftDetailDto.cs" />
+    <Compile Include="Shop\CustomerDto.cs" />
+    <Compile Include="Shop\CustomerDtos.cs" />
+    <Compile Include="Shop\InvoiceDetailsCakeDto.cs" />
+    <Compile Include="Shop\InvoiceDetailsDto.cs" />
+    <Compile Include="Shop\InvoiceDetailsDtos.cs" />
+    <Compile Include="Shop\InvoiceDetailsFlowerDto.cs" />
+    <Compile Include="Shop\InvoiceDetailsGiftDto.cs" />
+    <Compile Include="Shop\InvoiceDto.cs" />
+    <Compile Include="Shop\InvoiceDtos.cs" />
+    <Compile Include="Shop\ProductInvoiceTypeDto.cs" />
+    <Compile Include="Shop\ProductInvoiceTypeDtos.cs" />
+    <Compile Include="Shop\ProviderDto.cs" />
+    <Compile Include="Shop\ProviderDtos.cs" />
+    <Compile Include="Shop\PurchaseDto.cs" />
+    <Compile Include="Shop\PurchaseDtos.cs" />
+    <Compile Include="Shop\PurchaseTypeDto.cs" />
+    <Compile Include="Shop\PurchaseTypeDtos.cs" />
+    <Compile Include="Users\Dtos\MemberDtos.cs" />
+    <Compile Include="Users\Dtos\SupplierDtos.cs" />
+    <Compile Include="Users\MemberDto.cs" />
+    <Compile Include="Users\MemberImportantDateDto.cs" />
+    <Compile Include="Users\Dtos\MemberImportantDateDtos.cs" />
+    <Compile Include="Users\RoleDto.cs" />
+    <Compile Include="Users\Dtos\RoleDtos.cs" />
+    <Compile Include="Users\SessionDto.cs" />
+    <Compile Include="Users\SupplierDto.cs" />
+    <Compile Include="Messaging\Dtos\MessageDtos.cs" />
+    <Compile Include="Messaging\MessageDto.cs" />
+    <Compile Include="Products\CommentDto.cs" />
+    <Compile Include="Products\Dtos\ProductCatalogDtos.cs" />
+    <Compile Include="Products\Dtos\ProductCategoryDataDtos.cs" />
+    <Compile Include="Products\Dtos\ProductCategoryDtos.cs" />
+    <Compile Include="Products\Dtos\ProductDetailDtos.cs" />
+    <Compile Include="Products\Dtos\ProductDtos.cs" />
+    <Compile Include="Products\Dtos\ProductImageDtos.cs" />
+    <Compile Include="Products\Dtos\ProductRelatedDtos.cs" />
+    <Compile Include="Products\ProductCatalogDto.cs" />
+    <Compile Include="Products\ProductCategoryDataDto.cs" />
+    <Compile Include="Products\ProductCategoryDto.cs" />
+    <Compile Include="Products\ProductDetailDto.cs" />
+    <Compile Include="Products\ProductDto.cs" />
+    <Compile Include="Products\ProductImageDto.cs" />
+    <Compile Include="Products\ProductRelatedDto.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Slides\Dtos\SlideShowDtos.cs" />
+    <Compile Include="Slides\SlideShowDto.cs" />
+    <Compile Include="Tags\Dtos\TagDtos.cs" />
+    <Compile Include="Tags\TagDto.cs" />
+    <Compile Include="Tags\TagTypeDto.cs" />
+    <Compile Include="Visits\PageUrlDto.cs" />
+    <Compile Include="Visits\VisitorDto.cs" />
+    <Compile Include="Visits\VisitorPageDto.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Rosentis.Common\Rosentis.Common.csproj">
+      <Project>{3cd607d0-86b0-4c2c-a691-f3d8eab6edf2}</Project>
+      <Name>Rosentis.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="file1.ts" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

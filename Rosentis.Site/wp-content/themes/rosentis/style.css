@@ -1,0 +1,195 @@
+/*
+Theme Name: NikiKala
+Theme URI: https://Niki-Kala.ir
+Author: NikanCo
+Author URI: https://Nikanadv.ir
+Description: Woocommerce theme by NikanCo
+Version: 6.6
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: nikanshop
+Tags: nikikala, nikitheme, nikantheme, nikanadv
+
+*/
+
+/* Wordpress */
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	height: 1px;
+	overflow: hidden;
+	position: absolute !important;
+	width: 1px;
+	word-wrap: normal !important; /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+}
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	-webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: 700;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000; /* Above WP toolbar. */
+}
+.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 1.5em;
+}
+
+.alignright {
+	display: inline;
+	float: right;
+	margin-left: 1.5em;
+}
+
+.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* Wordpress */
+
+/* VC */
+.vc_figure {
+	border-radius:5px;
+	overflow: hidden;
+	box-shadow: 0 2px 4px 0 rgba(0,0,0,.1);
+}
+.wpb_single_image.wpb_content_element {
+    margin-bottom: 15px;
+}
+.no-left-padding .vc_column-inner {
+	padding-left:0 !important;
+}
+.no-right-padding .vc_column-inner {
+	padding-right:0 !important;
+}
+.vc_row-o-equal-height .wpb_wrapper {
+	height: 100%;
+}
+/* VC */
+
+/* Empty Page */
+.other-pages {
+    box-shadow: 0 12px 12px 0 hsla(0,0%,71%,.11);
+    background-color: #fff;
+    border: 1px solid #dedede;
+    margin: 14px auto;
+    padding-bottom: 60px;
+    line-height: 22px;
+}
+.other-pages-content {
+    padding: 5px 50px;
+}
+.other-pages-title {
+    font-size: 27px;
+    line-height: 1.63;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    color: #555;
+}
+.other-pages-content {
+    width: 100%;
+}
+.other-pages-content p {
+    font-size: 14px;
+    line-height: 2.5;
+    color: #535353;
+}
+/* Empty Page */
+
+/* 404 page */
+.error404 {
+    background: url(../images/404-bg.html) repeat;
+    background-size: auto 100%;
+}
+.page-404 {
+    padding: 68px 0;
+    text-align: center;
+    line-height: 22px;
+}
+.page-404-title {
+    text-align: center;
+}
+.page-404-title h1 {
+	font-size: 36px;
+    line-height: 1.222;
+	margin: .67em 0;
+}
+.page-404-links {
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    margin: auto;
+}
+.page-404-link {
+    border-radius: 8px;
+    padding: 10px 20px;
+    color: #fff;
+    border: none;
+    min-width: 161px;
+    margin: 10px 19.5px 46px;
+    text-decoration: none;
+	position: relative;
+    overflow: hidden;
+}
+.page-404-link:hover {
+    color: #fff;
+}
+.page-404-link-primary {
+    background-color: #6ab946;
+    border: 1px solid #4aa42e;
+}
+.page-404-link:before {
+    transition: all .3s ease-in-out;
+    width: 200%;
+    height: 200%;
+    position: absolute;
+    right: -50%;
+    top: -50%;
+    background: hsla(0,0%,100%,.21);
+    content: "";
+    opacity: 0;
+}
+.page-404-link:hover:before {
+    opacity: 1;
+}
+.page-404-image {
+    width: 90%;
+    max-width: 677px;
+    margin: auto;
+}
+.page-404-image img {
+    width: 100%;
+}
+/* 404 page */
+
+/* Breadcrumbs */
+#nikanshop_breadcrumbs {
+	margin-top:10px !important;
+}
+#nikanshop_breadcrumbs a {
+	margin-left:10px;
+	padding-left: 10px;
+	position: relative;
+}
+#nikanshop_breadcrumbs a:after {
+	content: '/';
+	position: absolute;
+	left: -4px;
+	top: 0px;
+}
+/* Breadcrumbs */

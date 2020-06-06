@@ -1,0 +1,95 @@
+﻿
+@{
+	Layout = "~/Views/Shared/_authLayout.cshtml";
+}
+<div id="content" class="site-content no-margin">
+	<div class="container-fluid main-warp">
+
+		<div class="woocommerce">
+			<div class="woocommerce-notices-wrapper"></div>
+
+			<div class="account-page-layout">
+				<section class="account-page-box">
+					<div class="account-box">
+						<a href="https://niki-kala.ir/" class="account-box-logo"><img alt="نیکی کالا" data-src="https://niki-kala.ir/wp-content/themes/Nikikala/assets/images/logo.png" class=" ls-is-cached lazyloaded" src="https://niki-kala.ir/wp-content/themes/Nikikala/assets/images/logo.png" loading="lazy"><noscript><img src="https://niki-kala.ir/wp-content/themes/Nikikala/assets/images/logo.png" alt="نیکی کالا"></noscript></a>
+						<div class="account-box-header">ورود</div>
+						<div class="account-box-content">
+						@using (Html.BeginForm("SignIn", "Member", FormMethod.Post, new { id = "frmSubmit", @class = "woocommerce-form woocommerce-form-login login" }))
+						{
+							<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide username">
+								<label for="username">آدرس ایمیل&nbsp;<span class="required">*</span></label>
+								<input dir="ltr" type="text" class="woocommerce-Input woocommerce-Input--text input-text"
+									   name="username" id="username" autocomplete="username" value=""
+									   placeholder="آدرس ایمیل خود را وارد کنید" tabindex="1">
+							</p>
+								<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide password">
+									<label for="password">
+										گذرواژه&nbsp;<span class="required">*</span>
+										<a class="btn-link-border" href="https://niki-kala.ir/my-account/lost-password/">گذرواژه خود را فراموش کرده اید؟</a>
+									</label>
+									<span class="password-input">
+									<input class="woocommerce-Input woocommerce-Input--text input-text" type="password" name="password" id="password" autocomplete="current-password" placeholder="رمزعبور را وارد کنید" tabindex="2"><span class="show-password-input"></span></span>
+								</p>
+								
+								<p class="form-row">
+									<input type="hidden" id="woocommerce-login-nonce" name="woocommerce-login-nonce" value="315fa1ce2c">
+									<input type="hidden" name="_wp_http_referer" value="/my-account/">
+									<button type="submit" class="btn-login" name="login" value="ورود" tabindex="3">ورود</button>
+								</p><div class="remodal-login-form-agree">
+									<label class="login-checkbox">
+										<input type="checkbox" id="rememberme" name="rememberme" value="forever"><span class="login-checkbox-check"></span>
+									</label>
+									<label for="rememberme">مرا به خاطر بسپار</label>
+								</div>
+						}
+						</div>
+						<div class="account-box-footer is-highlighted">
+							<span>کاربر جدید هستید؟</span>
+							<a href="https://niki-kala.ir/my-account/?action=register" class="btn-link-border">ثبت نام در سایت</a>
+						</div>
+					</div>
+				</section>
+			</div>
+
+
+		</div>
+
+		<!-- #main -->
+
+
+	</div><!-- .container main -->
+
+</div>
+@section scripts
+{
+  <script>
+    var
+      mobileReg = /(0|\+98)?([ ]|-|[()]){0,2}9[0|1|2|3|4]([ ]|-|[()]){0,2}(?:[0-9]([ ]|-|[()]){0,2}){8}/ig,
+      junkReg = /[^\d]/ig,
+      persinNum = [/۰/gi, /۱/gi, /۲/gi, /۳/gi, /۴/gi, /۵/gi, /۶/gi, /۷/gi, /۸/gi, /۹/gi],
+      num2en = function(str) {
+        for (var i = 0; i < 10; i++) {
+          str = str.replace(persinNum[i], i);
+        }
+        return str;
+      },
+      getMobiles = function(str) {
+        var mobiles = num2en(str + '').match(mobileReg) || [];
+        mobiles.forEach(function(value, index, arr) {
+          arr[index] = value.replace(junkReg, '');
+          arr[index][0] === '0' || (arr[index] = '0' + arr[index]);
+        });
+        return mobiles;
+      };
+
+    function submitForm() {
+		if ((getMobiles($('#username').val())).length) {
+			$('#username').val((getMobiles($('#username').val())));
+      } else {
+        alert("شماره همراه به درستی وارد نشده است");
+      }
+      //return;
+      $('.submit').click();
+    }
+  </script>
+}

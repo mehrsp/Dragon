@@ -1,0 +1,211 @@
+﻿@model Rosentis.DataContract.Products.Dtos.ProductCategoryDataDtos
+@using Rosentis.Site.Models;
+@{
+	Layout = null;
+	Rosentis.DataContract.Products.Dtos.ProductCategoryDataDtos categories = ViewBag.Categories;
+	var user = ViewBag.User as LoginModel;
+	var cart = ViewBag.Cart as Rosentis.DataContract.Shop.CartDto;
+}
+
+<div class="container-fluid">
+
+	<div class="row align-items-center header-row">
+		<div class="col-md-2 header-logo">
+			<a href="index.html" class="header-logo-img"><img alt="رزِنتیس" width="156px" height="58px" src="@Url.Content("~/wp-content/themes/rosentis/assets/images/logo.png")" class="lazyload" alt="رزِنتیس" width="156px" height="58px"></noscript></a>
+		</div>
+
+		<div class="col-md-6 header-search">
+
+			<div class="dgwt-wcas-search-wrapp woocommerce dgwt-wcas-has-submit" data-wcas-context="24e8">
+				<form class="dgwt-wcas-search-form" role="search" action="https://rosentis.ir/" method="get">
+					<div class="dgwt-wcas-sf-wrapp">
+
+						<label class="screen-reader-text">جستجو محصولات</label>
+
+						<input type="search"
+							   class="dgwt-wcas-search-input"
+							   name="s"
+							   value=""
+							   placeholder="نام کالا یا برند یا دسته موردنظر را وارد کنید..." />
+						<div class="dgwt-wcas-preloader"></div>
+
+						<button type="submit" class="dgwt-wcas-search-submit">
+							<svg version="1.1" class="dgwt-wcas-ico-magnifier" xmlns="http://www.w3.org/2000/svg"
+								 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+								 viewBox="0 0 51.539 51.361" enable-background="new 0 0 51.539 51.361" xml:space="preserve">
+							<path d="M51.539,49.356L37.247,35.065c3.273-3.74,5.272-8.623,5.272-13.983c0-11.742-9.518-21.26-21.26-21.26
+			  S0,9.339,0,21.082s9.518,21.26,21.26,21.26c5.361,0,10.244-1.999,13.983-5.272l14.292,14.292L51.539,49.356z M2.835,21.082
+			  c0-10.176,8.249-18.425,18.425-18.425s18.425,8.249,18.425,18.425S31.436,39.507,21.26,39.507S2.835,31.258,2.835,21.082z" />
+	</svg>
+						</button>
+
+						<input type="hidden" name="post_type" value="product" />
+						<input type="hidden" name="dgwt_wcas" value="1" />
+
+					</div>
+				</form>
+			</div>
+		</div>
+			<div  @{if (user == null) { <text> class="col-md-4 header-user"</text> } else { <text> class="header-user" </text>  } } >
+					@if (user == null)
+					{
+						<div class="header-user-container">
+							<div class="header-user-container-profile">
+								<a class="header-user-container-btn not-logged-in" href="@Url.Action("SignIn", "Member")">ورود به حساب کاربری</a>
+							</div>
+						</div>
+					}
+					else
+					{
+						<div class="header-user-container">
+							<div class="header-user-container-profile">
+								<a class="header-user-container-btn" id="user-toggle"></a>
+								<div class="header-profile-dropdown" id="user-menu">
+									<div class="header-profile-dropdown-account-container">
+										<div class="header-profile-dropdown-user">
+											<div class="header-profile-dropdown-user-img">
+												<img data-src="https://niki-kala.ir/wp-content/themes/Nikikala/assets/images/profile-avatar.svg" class=" lazyloading" src="https://niki-kala.ir/wp-content/themes/Nikikala/assets/images/profile-avatar.svg" loading="lazy"><noscript><img src="https://niki-kala.ir/wp-content/themes/Nikikala/assets/images/profile-avatar.svg"></noscript>
+											</div>
+											<div class="header-profile-dropdown-user-info">
+												<p class="header-profile-dropdown-user-name">@user.username</p>
+												<span class="header-profile-dropdown-user-profile-link">مشاهده حساب کاربری</span>
+											</div>
+										</div>
+
+
+										<div class="header-profile-dropdown-account">
+											<div class="header-profile-dropdown-account-item">
+												<a class="header-profile-dropdown-account-item-title header-profile-dropdown-account-item-title-link" href="https://niki-kala.ir/my-account/my-points/">
+													<span class="header-profile-dropdown-account-item-title">امتیاز</span>
+													<span class="header-profile-dropdown-account-item-amount">
+														<span class="header-profile-dropdown-account-item-amount-number">0</span> امتیاز
+													</span>
+												</a>
+											</div>
+										</div>
+
+										<a href="https://niki-kala.ir/my-account/" class="header-profile-dropdown-user-profile-full-link"></a>
+									</div>
+
+									<div class="header-profile-dropdown-actions">
+										<div class="header-profile-dropdown-action-container">
+											<a href="https://niki-kala.ir/my-account/orders/" class="header-profile-dropdown-action header-profile-dropdown-action-orders ">سفارش های من</a>
+										</div>
+										<div class="header-profile-dropdown-action-container">
+											<a href="https://niki-kala.ir/wp-login.php?action=logout&amp;redirect_to=https%3A%2F%2Fniki-kala.ir%2Fmy-account&amp;_wpnonce=1698f9a2d6" class="header-profile-dropdown-action header-profile-dropdown-action-logout">خروج از حساب</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					}
+				@if(cart.CartItems.Count == 0)
+				{
+				<div id="mini-cart" class="header-user-container">
+					<div class="header-btn-cart-container">
+						<a class="header-cart-btn no-drop-down" data-counter="0" href="cart/index.html">
+							<span class="cart-counts-number" data-counter="0">سبد خرید</span>
+						</a>
+					</div>
+				</div>
+				}else{
+
+				<div id="mini-cart" class="header-user-container">
+					<div class="header-btn-cart-container">
+						<a class="header-cart-btn " data-counter="@cart.CartItemCount" id="cart-toggle"><span class="cart-counts-number" data-counter="@cart.CartItems.Count">سبد خرید</span></a>
+						<div class="header-list-dropdown header-list-dropdown-basket" id="cart-box">
+							<div class="header-list-dropdown-basket-header">
+								<div class="header-list-dropdown-basket-header-total">@cart.CartItemCount کالا</div>
+								<a href="@Url.Action("Index","Cart")" class="header-list-dropdown-basket-link">
+									<span>مشاهده سبد خرید</span>
+									<div class="header-list-dropdown-basket-arrow"></div>
+								</a>
+							</div>
+							<ul class="header-basket-list">
+								@foreach (var item in cart.CartItems)
+								{
+									if (item.ParentId == Guid.Empty)
+									{
+										<li class="header-basket-list-item-box">
+											<a href="@Url.Action("Detail","Products",new {Id=item.Product.Id})" class="header-basket-list-item">
+												<div class="header-basket-list-item-content">
+													<div class="header-basket-list-item-image">
+														<img alt="@item.Product.Name" src="@item.Product.Picture">
+													</div>
+													<div class="header-basket-list-item-details">
+														<div class="header-basket-list-item-title">@item.Product.Name</div>
+														<div class="header-basket-list-item-params">
+															<div class="header-basket-list-item-props">
+																<span>@item.Quantity مورد</span>
+															</div>
+														</div>
+													</div>
+												</div>
+											</a>
+											<button class="header-basket-list-item-remove" data-key="@item.Id"></button>
+
+										</li>
+									}
+								}								
+							</ul>
+
+
+							<div class="header-cart-info-footer">
+								<div class="header-cart-info-total">
+									<span class="header-cart-info-total-text">مبلغ کل خرید:</span>
+									<p class="header-cart-info-total-amount">
+										<span class="header-cart-info-total-amount-number">@cart.TotalPriceMoney</span>
+									</p>
+								</div>
+
+								<div>
+									<a href="https://niki-kala.ir/checkout/" class="header-basket-submit">ثبت سفارش</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				}		
+				</div>
+
+	</div>
+</div>
+
+
+<nav class="niki-menu-new">
+
+	<div class="container-fluid">
+		<div class="row no-gutters">
+			<ul class="niki-menu-list-new">
+				<li class="niki-menu-list-items-new">
+					<div class="niki-menu-list-items-new-main">
+						<span>دسته بندی محصولات</span>
+						<div class="niki-menu-list-main-sublist">
+							<ul id="menu-%d9%85%d9%86%d9%88-%d8%a7%d8%b5%d9%84%db%8c" class="niki-menu-list-items-item-new">
+
+								@Html.Raw(ViewBag.Menus)
+								@foreach (var item in categories.data.First().model.Children)
+								{
+									@item
+								}
+							</ul>
+						</div>
+					</div>
+					<ul id="menu-%d9%85%d9%86%d9%88-%d8%a8%d8%a7%d9%84%d8%a7" class="niki-top-menu-new">
+						<li id="menu-item-1798" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1798"><a href="#">راهنما</a></li>
+						<li id="menu-item-1812" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1812"><a href="#">فروشنده ها</a></li>
+					</ul>
+				</li>
+
+				<li class="niki-menu-list-promotions-new">
+					<ul class="niki-menu-list-promotions-item-new">
+						<li>
+							<a href="#">فروش ویـــــژه</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>
+

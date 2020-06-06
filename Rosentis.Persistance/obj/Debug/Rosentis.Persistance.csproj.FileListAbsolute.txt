@@ -1,0 +1,8 @@
+C:\Users\SepidPc\Documents\visual studio 2017\Projects\Rosentis\Rosentis.Persistance\obj\Debug\Rosentis.Persistance.Migrations.nevergiveup.resources
+C:\Users\SepidPc\Documents\visual studio 2017\Projects\Rosentis\Rosentis.Persistance\obj\Debug\Rosentis.Persistance.Migrations.addlogotobrands.resources
+C:\Users\SepidPc\Documents\visual studio 2017\Projects\Rosentis\Rosentis.Persistance\obj\Debug\Rosentis.Persistance.Migrations.createoffer.resources
+C:\Users\SepidPc\Documents\visual studio 2017\Projects\Rosentis\Rosentis.Persistance\obj\Debug\Rosentis.Persistance.Migrations.changeprice.resources
+C:\Users\SepidPc\Documents\visual studio 2017\Projects\Rosentis\Rosentis.Persistance\obj\Debug\Rosentis.Persistance.Migrations.chanfe.resources
+C:\Users\SepidPc\Documents\visual studio 2017\Projects\Rosentis\Rosentis.Persistance\obj\Debug\Rosentis.Persistance.Migrations.d.resources
+C:\Users\SepidPc\Documents\visual studio 2017\Projects\Rosentis\Rosentis.Persistance\obj\Debug\Rosentis.Persistance.csproj.GenerateResource.Cache
+C:\Users\SepidPc\Documents\visual studio 2017\Projects\Rosentis\Rosentis.Persistance\obj\Debug\Rosentis.Persistance.csprojResolveAssemblyReference.cache

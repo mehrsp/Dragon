@@ -1,0 +1,283 @@
+﻿@using Rosentis.DataContract.Products.Dtos
+@{
+	ViewBag.Title = "Rosentis";
+	var productsNew = ViewBag.productsNew as ProductDtos;
+	var ProductsPopulars = ViewBag.ProductsPopulars as ProductDtos;
+	var slides = ViewBag.Slides as Rosentis.DataContract.Slides.Dtos.SlideShowDtos;
+	var specialBrands = ViewBag.SpecialBrands as Rosentis.DataContract.Brands.Dtos.BrandDtos;
+}
+
+
+<div id="content" class="site-content ">
+	<div class="container-fluid main-warp">
+		<main id="main" class="site-main" role="main">
+
+			<article id="post-35" class="post-35 page type-page status-publish hentry">
+				<div class="vc_row wpb_row vc_row-fluid">
+					<div class="wpb_column vc_column_container vc_col-sm-4/5">
+						<div class="vc_column-inner">
+							<div class="wpb_wrapper">
+								 @Html.Partial(@"~/Views/Home/Slides.cshtml", slides) 
+							</div>
+						</div>
+					</div>
+
+				</div>
+	
+			<div class="vc_row wpb_row vc_row-fluid">
+					<div class="wpb_column vc_column_container vc_col-sm-12">
+						<div class="vc_column-inner">
+							<div class="wpb_wrapper">
+								<div class="vc_row wpb_row vc_inner vc_row-fluid">
+								</div>
+								@*<div class="vc_row wpb_row vc_inner vc_row-fluid">
+									<div class="wpb_column vc_column_container vc_col-sm-12">
+										<div class="vc_column-inner">
+											<div class="wpb_wrapper">
+												<div class="wpb_single_image wpb_content_element vc_align_center">
+
+													<figure class="wpb_wrapper vc_figure">
+														<a href="http://nikanadv.ir" target="_self" class="vc_single_image-wrapper   vc_box_border_grey"><img width="1656" height="210" alt="" data-srcset="https://niki-kala.ir/wp-content/uploads/2018/12/Mainbanner3.jpg 1656w, https://niki-kala.ir/wp-content/uploads/2018/12/Mainbanner3-300x38.jpg 300w, https://niki-kala.ir/wp-content/uploads/2018/12/Mainbanner3-768x97.jpg 768w, https://niki-kala.ir/wp-content/uploads/2018/12/Mainbanner3-1024x130.jpg 1024w, https://niki-kala.ir/wp-content/uploads/2018/12/Mainbanner3-58x7.jpg 58w, https://niki-kala.ir/wp-content/uploads/2018/12/Mainbanner3-24x3.jpg 24w, https://niki-kala.ir/wp-content/uploads/2018/12/Mainbanner3-36x5.jpg 36w, https://niki-kala.ir/wp-content/uploads/2018/12/Mainbanner3-48x6.jpg 48w, https://niki-kala.ir/wp-content/uploads/2018/12/Mainbanner3-600x76.jpg 600w, https://niki-kala.ir/wp-content/uploads/2018/12/Mainbanner3-64x8.jpg 64w" sizes="(max-width: 1656px) 100vw, 1656px" data-src="https://niki-kala.ir/wp-content/uploads/2018/12/Mainbanner3.jpg" class="vc_single_image-img attachment-full lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img width="1656" height="210" src="https://niki-kala.ir/wp-content/uploads/2018/12/Mainbanner3.jpg" class="vc_single_image-img attachment-full" alt="" srcset="https://niki-kala.ir/wp-content/uploads/2018/12/Mainbanner3.jpg 1656w, https://niki-kala.ir/wp-content/uploads/2018/12/Mainbanner3-300x38.jpg 300w, https://niki-kala.ir/wp-content/uploads/2018/12/Mainbanner3-768x97.jpg 768w, https://niki-kala.ir/wp-content/uploads/2018/12/Mainbanner3-1024x130.jpg 1024w, https://niki-kala.ir/wp-content/uploads/2018/12/Mainbanner3-58x7.jpg 58w, https://niki-kala.ir/wp-content/uploads/2018/12/Mainbanner3-24x3.jpg 24w, https://niki-kala.ir/wp-content/uploads/2018/12/Mainbanner3-36x5.jpg 36w, https://niki-kala.ir/wp-content/uploads/2018/12/Mainbanner3-48x6.jpg 48w, https://niki-kala.ir/wp-content/uploads/2018/12/Mainbanner3-600x76.jpg 600w, https://niki-kala.ir/wp-content/uploads/2018/12/Mainbanner3-64x8.jpg 64w" sizes="(max-width: 1656px) 100vw, 1656px" /></noscript></a>
+													</figure>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>*@
+								<div class="vc_row wpb_row vc_inner vc_row-fluid">
+									<div class="wpb_column vc_column_container vc_col-sm-12">
+										<div class="vc_column-inner">
+											<div class="wpb_wrapper">
+
+												<section class="products-swiper">
+													<div class="object-headline">
+														<span>جدیدترین کالاها</span>
+													</div>
+													<div class="products-swiper-box">
+														<div class="swiper-container swiper-container-products5" dir="rtl" lang="fa-IR">
+															<div class="swiper-wrapper">
+																@foreach (var item in productsNew.Products)
+																{
+																	bool first = item == productsNew.Products.FirstOrDefault();
+																	@Html.Partial(@"~/Views/Products/Product.cshtml", item, new ViewDataDictionary { { "first", first } })
+																}
+															</div>
+															<div class="swiper-button-prev js-swiper-button-prev"></div>
+															<div class="swiper-button-next js-swiper-button-next"></div>
+														</div>
+													</div>
+												</section>
+
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="vc_row wpb_row vc_row-fluid">
+									<div class="wpb_column vc_column_container vc_col-sm-12">
+										<div class="vc_column-inner">
+											<div class="wpb_wrapper">
+												<div class="vc_row wpb_row vc_inner vc_row-fluid vc_custom_1555945811263">
+													<div class="wpb_column vc_column_container vc_col-sm-3">
+														<div class="vc_column-inner">
+															<div class="wpb_wrapper">
+																<div class="wpb_single_image wpb_content_element vc_align_center">
+
+																	<figure class="wpb_wrapper vc_figure">
+																		<a href="http://nikanadv.ir" target="_self" class="vc_single_image-wrapper   vc_box_border_grey"><img width="400" height="300" alt="" data-srcset="https://niki-kala.ir/wp-content/uploads/2019/04/RowForthBanner4.jpg 400w, https://niki-kala.ir/wp-content/uploads/2019/04/RowForthBanner4-300x225.jpg 300w, https://niki-kala.ir/wp-content/uploads/2019/04/RowForthBanner4-40x30.jpg 40w, https://niki-kala.ir/wp-content/uploads/2019/04/RowForthBanner4-58x44.jpg 58w, https://niki-kala.ir/wp-content/uploads/2019/04/RowForthBanner4-24x18.jpg 24w, https://niki-kala.ir/wp-content/uploads/2019/04/RowForthBanner4-36x27.jpg 36w, https://niki-kala.ir/wp-content/uploads/2019/04/RowForthBanner4-48x36.jpg 48w, https://niki-kala.ir/wp-content/uploads/2019/04/RowForthBanner4-64x48.jpg 64w" sizes="(max-width: 400px) 100vw, 400px" data-src="https://niki-kala.ir/wp-content/uploads/2019/04/RowForthBanner4.jpg" class="vc_single_image-img attachment-full lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img width="400" height="300" src="https://niki-kala.ir/wp-content/uploads/2019/04/RowForthBanner4.jpg" class="vc_single_image-img attachment-full" alt="" srcset="https://niki-kala.ir/wp-content/uploads/2019/04/RowForthBanner4.jpg 400w, https://niki-kala.ir/wp-content/uploads/2019/04/RowForthBanner4-300x225.jpg 300w, https://niki-kala.ir/wp-content/uploads/2019/04/RowForthBanner4-40x30.jpg 40w, https://niki-kala.ir/wp-content/uploads/2019/04/RowForthBanner4-58x44.jpg 58w, https://niki-kala.ir/wp-content/uploads/2019/04/RowForthBanner4-24x18.jpg 24w, https://niki-kala.ir/wp-content/uploads/2019/04/RowForthBanner4-36x27.jpg 36w, https://niki-kala.ir/wp-content/uploads/2019/04/RowForthBanner4-48x36.jpg 48w, https://niki-kala.ir/wp-content/uploads/2019/04/RowForthBanner4-64x48.jpg 64w" sizes="(max-width: 400px) 100vw, 400px" /></noscript></a>
+																	</figure>
+																</div>
+															</div>
+														</div>
+													</div><div class="wpb_column vc_column_container vc_col-sm-3">
+														<div class="vc_column-inner">
+															<div class="wpb_wrapper">
+																<div class="wpb_single_image wpb_content_element vc_align_center">
+
+																	<figure class="wpb_wrapper vc_figure">
+																		<a href="http://nikanadv.ir" target="_self" class="vc_single_image-wrapper   vc_box_border_grey"><img width="400" height="300" alt="" data-srcset="https://niki-kala.ir/wp-content/uploads/2019/04/RowForthBanner3.jpg 400w, https://niki-kala.ir/wp-content/uploads/2019/04/RowForthBanner3-300x225.jpg 300w, https://niki-kala.ir/wp-content/uploads/2019/04/RowForthBanner3-40x30.jpg 40w, https://niki-kala.ir/wp-content/uploads/2019/04/RowForthBanner3-58x44.jpg 58w, https://niki-kala.ir/wp-content/uploads/2019/04/RowForthBanner3-24x18.jpg 24w, https://niki-kala.ir/wp-content/uploads/2019/04/RowForthBanner3-36x27.jpg 36w, https://niki-kala.ir/wp-content/uploads/2019/04/RowForthBanner3-48x36.jpg 48w, https://niki-kala.ir/wp-content/uploads/2019/04/RowForthBanner3-64x48.jpg 64w" sizes="(max-width: 400px) 100vw, 400px" data-src="https://niki-kala.ir/wp-content/uploads/2019/04/RowForthBanner3.jpg" class="vc_single_image-img attachment-full lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img width="400" height="300" src="https://niki-kala.ir/wp-content/uploads/2019/04/RowForthBanner3.jpg" class="vc_single_image-img attachment-full" alt="" srcset="https://niki-kala.ir/wp-content/uploads/2019/04/RowForthBanner3.jpg 400w, https://niki-kala.ir/wp-content/uploads/2019/04/RowForthBanner3-300x225.jpg 300w, https://niki-kala.ir/wp-content/uploads/2019/04/RowForthBanner3-40x30.jpg 40w, https://niki-kala.ir/wp-content/uploads/2019/04/RowForthBanner3-58x44.jpg 58w, https://niki-kala.ir/wp-content/uploads/2019/04/RowForthBanner3-24x18.jpg 24w, https://niki-kala.ir/wp-content/uploads/2019/04/RowForthBanner3-36x27.jpg 36w, https://niki-kala.ir/wp-content/uploads/2019/04/RowForthBanner3-48x36.jpg 48w, https://niki-kala.ir/wp-content/uploads/2019/04/RowForthBanner3-64x48.jpg 64w" sizes="(max-width: 400px) 100vw, 400px" /></noscript></a>
+																	</figure>
+																</div>
+															</div>
+														</div>
+													</div><div class="wpb_column vc_column_container vc_col-sm-3">
+														<div class="vc_column-inner">
+															<div class="wpb_wrapper">
+																<div class="wpb_single_image wpb_content_element vc_align_center">
+
+																	<figure class="wpb_wrapper vc_figure">
+																		<a href="http://nikanadv.ir" target="_self" class="vc_single_image-wrapper   vc_box_border_grey"><img width="400" height="300" alt="" data-srcset="https://niki-kala.ir/wp-content/uploads/2019/04/RowForthBanner2.jpg 400w, https://niki-kala.ir/wp-content/uploads/2019/04/RowForthBanner2-300x225.jpg 300w, https://niki-kala.ir/wp-content/uploads/2019/04/RowForthBanner2-40x30.jpg 40w, https://niki-kala.ir/wp-content/uploads/2019/04/RowForthBanner2-58x44.jpg 58w, https://niki-kala.ir/wp-content/uploads/2019/04/RowForthBanner2-24x18.jpg 24w, https://niki-kala.ir/wp-content/uploads/2019/04/RowForthBanner2-36x27.jpg 36w, https://niki-kala.ir/wp-content/uploads/2019/04/RowForthBanner2-48x36.jpg 48w, https://niki-kala.ir/wp-content/uploads/2019/04/RowForthBanner2-64x48.jpg 64w" sizes="(max-width: 400px) 100vw, 400px" data-src="https://niki-kala.ir/wp-content/uploads/2019/04/RowForthBanner2.jpg" class="vc_single_image-img attachment-full lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img width="400" height="300" src="https://niki-kala.ir/wp-content/uploads/2019/04/RowForthBanner2.jpg" class="vc_single_image-img attachment-full" alt="" srcset="https://niki-kala.ir/wp-content/uploads/2019/04/RowForthBanner2.jpg 400w, https://niki-kala.ir/wp-content/uploads/2019/04/RowForthBanner2-300x225.jpg 300w, https://niki-kala.ir/wp-content/uploads/2019/04/RowForthBanner2-40x30.jpg 40w, https://niki-kala.ir/wp-content/uploads/2019/04/RowForthBanner2-58x44.jpg 58w, https://niki-kala.ir/wp-content/uploads/2019/04/RowForthBanner2-24x18.jpg 24w, https://niki-kala.ir/wp-content/uploads/2019/04/RowForthBanner2-36x27.jpg 36w, https://niki-kala.ir/wp-content/uploads/2019/04/RowForthBanner2-48x36.jpg 48w, https://niki-kala.ir/wp-content/uploads/2019/04/RowForthBanner2-64x48.jpg 64w" sizes="(max-width: 400px) 100vw, 400px" /></noscript></a>
+																	</figure>
+																</div>
+															</div>
+														</div>
+													</div><div class="wpb_column vc_column_container vc_col-sm-3">
+														<div class="vc_column-inner">
+															<div class="wpb_wrapper">
+																<div class="wpb_single_image wpb_content_element vc_align_center">
+
+																	<figure class="wpb_wrapper vc_figure">
+																		<a href="http://nikanadv.ir" target="_self" class="vc_single_image-wrapper   vc_box_border_grey"><img width="400" height="300" alt="" data-srcset="https://niki-kala.ir/wp-content/uploads/2019/04/RowForthBanner1.jpg 400w, https://niki-kala.ir/wp-content/uploads/2019/04/RowForthBanner1-300x225.jpg 300w, https://niki-kala.ir/wp-content/uploads/2019/04/RowForthBanner1-40x30.jpg 40w, https://niki-kala.ir/wp-content/uploads/2019/04/RowForthBanner1-58x44.jpg 58w, https://niki-kala.ir/wp-content/uploads/2019/04/RowForthBanner1-24x18.jpg 24w, https://niki-kala.ir/wp-content/uploads/2019/04/RowForthBanner1-36x27.jpg 36w, https://niki-kala.ir/wp-content/uploads/2019/04/RowForthBanner1-48x36.jpg 48w, https://niki-kala.ir/wp-content/uploads/2019/04/RowForthBanner1-64x48.jpg 64w" sizes="(max-width: 400px) 100vw, 400px" data-src="https://niki-kala.ir/wp-content/uploads/2019/04/RowForthBanner1.jpg" class="vc_single_image-img attachment-full lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img width="400" height="300" src="https://niki-kala.ir/wp-content/uploads/2019/04/RowForthBanner1.jpg" class="vc_single_image-img attachment-full" alt="" srcset="https://niki-kala.ir/wp-content/uploads/2019/04/RowForthBanner1.jpg 400w, https://niki-kala.ir/wp-content/uploads/2019/04/RowForthBanner1-300x225.jpg 300w, https://niki-kala.ir/wp-content/uploads/2019/04/RowForthBanner1-40x30.jpg 40w, https://niki-kala.ir/wp-content/uploads/2019/04/RowForthBanner1-58x44.jpg 58w, https://niki-kala.ir/wp-content/uploads/2019/04/RowForthBanner1-24x18.jpg 24w, https://niki-kala.ir/wp-content/uploads/2019/04/RowForthBanner1-36x27.jpg 36w, https://niki-kala.ir/wp-content/uploads/2019/04/RowForthBanner1-48x36.jpg 48w, https://niki-kala.ir/wp-content/uploads/2019/04/RowForthBanner1-64x48.jpg 64w" sizes="(max-width: 400px) 100vw, 400px" /></noscript></a>
+																	</figure>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="vc_row wpb_row vc_inner vc_row-fluid">
+									<div class="wpb_column vc_column_container vc_col-sm-12">
+										<div class="vc_column-inner">
+											<div class="wpb_wrapper">
+
+												<section class="products-swiper">
+													<div class="object-headline">
+														<span>محبوب ترین ها</span>
+													</div>
+													<div class="products-swiper-box">
+														<div class="swiper-container swiper-container-products5" dir="rtl" lang="fa-IR">
+															<div class="swiper-wrapper">
+																@foreach (var item in ProductsPopulars.Products)
+																{
+																	bool first = item == ProductsPopulars.Products.FirstOrDefault();
+																	@Html.Partial(@"~/Views/Products/Product.cshtml", item, new ViewDataDictionary { { "first", first } })
+}
+															</div>
+															<div class="swiper-button-prev js-swiper-button-prev"></div>
+															<div class="swiper-button-next js-swiper-button-next"></div>
+														</div>
+													</div>
+												</section>
+
+											</div>
+										</div>
+									</div>
+								</div>
+
+
+								<div class="vc_row wpb_row vc_inner vc_row-fluid">
+									@*<div class="wpb_column vc_column_container vc_col-sm-6">
+										<div class="vc_column-inner">
+											<div class="wpb_wrapper">
+												<div class="wpb_single_image wpb_content_element vc_align_center">
+
+													<figure class="wpb_wrapper vc_figure">
+														<a href="http://nikanadv.ir" target="_self" class="vc_single_image-wrapper   vc_box_border_grey"><img width="820" height="300" alt="" data-srcset="https://niki-kala.ir/wp-content/uploads/2019/04/RowTwoBanner2.jpg 820w, https://niki-kala.ir/wp-content/uploads/2019/04/RowTwoBanner2-600x220.jpg 600w, https://niki-kala.ir/wp-content/uploads/2019/04/RowTwoBanner2-300x110.jpg 300w, https://niki-kala.ir/wp-content/uploads/2019/04/RowTwoBanner2-768x281.jpg 768w, https://niki-kala.ir/wp-content/uploads/2019/04/RowTwoBanner2-82x30.jpg 82w, https://niki-kala.ir/wp-content/uploads/2019/04/RowTwoBanner2-58x21.jpg 58w, https://niki-kala.ir/wp-content/uploads/2019/04/RowTwoBanner2-24x9.jpg 24w, https://niki-kala.ir/wp-content/uploads/2019/04/RowTwoBanner2-36x13.jpg 36w, https://niki-kala.ir/wp-content/uploads/2019/04/RowTwoBanner2-48x18.jpg 48w, https://niki-kala.ir/wp-content/uploads/2019/04/RowTwoBanner2-64x23.jpg 64w" sizes="(max-width: 820px) 100vw, 820px" data-src="https://niki-kala.ir/wp-content/uploads/2019/04/RowTwoBanner2.jpg" class="vc_single_image-img attachment-full lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img width="820" height="300" src="https://niki-kala.ir/wp-content/uploads/2019/04/RowTwoBanner2.jpg" class="vc_single_image-img attachment-full" alt="" srcset="https://niki-kala.ir/wp-content/uploads/2019/04/RowTwoBanner2.jpg 820w, https://niki-kala.ir/wp-content/uploads/2019/04/RowTwoBanner2-600x220.jpg 600w, https://niki-kala.ir/wp-content/uploads/2019/04/RowTwoBanner2-300x110.jpg 300w, https://niki-kala.ir/wp-content/uploads/2019/04/RowTwoBanner2-768x281.jpg 768w, https://niki-kala.ir/wp-content/uploads/2019/04/RowTwoBanner2-82x30.jpg 82w, https://niki-kala.ir/wp-content/uploads/2019/04/RowTwoBanner2-58x21.jpg 58w, https://niki-kala.ir/wp-content/uploads/2019/04/RowTwoBanner2-24x9.jpg 24w, https://niki-kala.ir/wp-content/uploads/2019/04/RowTwoBanner2-36x13.jpg 36w, https://niki-kala.ir/wp-content/uploads/2019/04/RowTwoBanner2-48x18.jpg 48w, https://niki-kala.ir/wp-content/uploads/2019/04/RowTwoBanner2-64x23.jpg 64w" sizes="(max-width: 820px) 100vw, 820px" /></noscript></a>
+													</figure>
+												</div>
+											</div>
+										</div>
+									</div>*@
+								@*<div class="wpb_column vc_column_container vc_col-sm-6">
+										<div class="vc_column-inner">
+											<div class="wpb_wrapper">
+												<div class="wpb_single_image wpb_content_element vc_align_center">
+
+													<figure class="wpb_wrapper vc_figure">
+														<a href="http://nikanadv.ir" target="_self" class="vc_single_image-wrapper   vc_box_border_grey"><img width="820" height="300" alt="" data-srcset="https://niki-kala.ir/wp-content/uploads/2019/04/RowTwoBanner1.jpg 820w, https://niki-kala.ir/wp-content/uploads/2019/04/RowTwoBanner1-600x220.jpg 600w, https://niki-kala.ir/wp-content/uploads/2019/04/RowTwoBanner1-300x110.jpg 300w, https://niki-kala.ir/wp-content/uploads/2019/04/RowTwoBanner1-768x281.jpg 768w, https://niki-kala.ir/wp-content/uploads/2019/04/RowTwoBanner1-82x30.jpg 82w, https://niki-kala.ir/wp-content/uploads/2019/04/RowTwoBanner1-58x21.jpg 58w, https://niki-kala.ir/wp-content/uploads/2019/04/RowTwoBanner1-24x9.jpg 24w, https://niki-kala.ir/wp-content/uploads/2019/04/RowTwoBanner1-36x13.jpg 36w, https://niki-kala.ir/wp-content/uploads/2019/04/RowTwoBanner1-48x18.jpg 48w, https://niki-kala.ir/wp-content/uploads/2019/04/RowTwoBanner1-64x23.jpg 64w" sizes="(max-width: 820px) 100vw, 820px" data-src="https://niki-kala.ir/wp-content/uploads/2019/04/RowTwoBanner1.jpg" class="vc_single_image-img attachment-full lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img width="820" height="300" src="https://niki-kala.ir/wp-content/uploads/2019/04/RowTwoBanner1.jpg" class="vc_single_image-img attachment-full" alt="" srcset="https://niki-kala.ir/wp-content/uploads/2019/04/RowTwoBanner1.jpg 820w, https://niki-kala.ir/wp-content/uploads/2019/04/RowTwoBanner1-600x220.jpg 600w, https://niki-kala.ir/wp-content/uploads/2019/04/RowTwoBanner1-300x110.jpg 300w, https://niki-kala.ir/wp-content/uploads/2019/04/RowTwoBanner1-768x281.jpg 768w, https://niki-kala.ir/wp-content/uploads/2019/04/RowTwoBanner1-82x30.jpg 82w, https://niki-kala.ir/wp-content/uploads/2019/04/RowTwoBanner1-58x21.jpg 58w, https://niki-kala.ir/wp-content/uploads/2019/04/RowTwoBanner1-24x9.jpg 24w, https://niki-kala.ir/wp-content/uploads/2019/04/RowTwoBanner1-36x13.jpg 36w, https://niki-kala.ir/wp-content/uploads/2019/04/RowTwoBanner1-48x18.jpg 48w, https://niki-kala.ir/wp-content/uploads/2019/04/RowTwoBanner1-64x23.jpg 64w" sizes="(max-width: 820px) 100vw, 820px" /></noscript></a>
+													</figure>
+												</div>
+											</div>
+										</div>
+									</div>*@
+								</div>
+								<div class="vc_row wpb_row vc_inner vc_row-fluid">
+									<div class="wpb_column vc_column_container vc_col-sm-12">
+										<div class="vc_column-inner">
+											<div class="wpb_wrapper">
+												<section class="products-swiper">
+													<div class="object-headline">
+														<span>برندهای ویژه</span>
+													</div>
+													<div class="products-swiper-box brands-swiper">
+														<div class="swiper-container swiper-container-products5" dir="rtl" lang="fa-IR">
+															<div class="swiper-wrapper">
+																@foreach (var item in specialBrands.Brands)
+																{
+																	bool first = item == specialBrands.Brands.FirstOrDefault();
+																	@Html.Partial(@"~/Views/Products/Brand.cshtml", item, new ViewDataDictionary { { "first", first } })
+                                                                }
+															</div>											
+
+																<div class="swiper-button-prev js-swiper-button-prev"></div>
+																<div class="swiper-button-next js-swiper-button-next"></div>
+															</div>
+
+													</div>
+												</section>
+												
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</article><!-- #post-## -->
+
+		</main><!-- #main -->
+	</div><!-- .container main -->
+</div>
+@section scripts
+{
+	
+<script type='text/javascript' src="@Url.Content("~/wp-content/plugins/dokan-lite/assets/vendors/form-validate/form-validate.js")"></script>
+<script type='text/javascript' src="@Url.Content("~/wp-content/plugins/dokan-lite/assets/js/speakingurl.min.js")"></script>
+<script type='text/javascript' src="@Url.Content("~/wp-content/plugins/dokan-lite/assets/vendors/i18n/jed.js")"></script> 
+<script type='text/javascript' src="@Url.Content("~/wp-content/plugins/dokan-lite/assets/js/vendor-registration.js")"></script>
+<script type='text/javascript' src="@Url.Content("~/wp-includes/js/imgareaselect/jquery.imgareaselect.min.js")"></script> 
+<script type='text/javascript' src="@Url.Content("~/wp-includes/js/customize-base.min.js")"></script>
+<script type='text/javascript' src="@Url.Content("~/wp-includes/js/backbone.min.js")"></script>
+<script type='text/javascript' src="@Url.Content("~/wp-includes/js/customize-models.js")"></script>
+<script type='text/javascript' src="@Url.Content("~/wp-content/plugins/dokan-lite/assets/js/dokan.js")"></script>
+<script type='text/javascript' src="@Url.Content("~/wp-content/plugins/dokan-lite/assets/vendors/select2/select2.full.min.js")"></script>
+<script type='text/javascript' src="@Url.Content("~/wp-content/plugins/dokan-lite/assets/vendors/magnific/jquery.magnific-popup.min.js")"></script>
+<script type='text/javascript' src="@Url.Content("~/wp-content/plugins/dokan-lite/assets/js/login-form-popup.js")"></script>
+<script type='text/javascript' src="@Url.Content("~/wp-content/plugins/dokan-pro/assets/js/single-product-shipping.js")"></script>
+<script type='text/javascript' src="@Url.Content("~/wp-includes/js/wp-embed.min.js")"></script>
+	@*<script>
+    function addFavorite(id) {
+      $.ajax({
+        type: "POST",
+        url: "@Url.Action("DoFavorite","Products")",
+        data: {id:id},
+        success: function(data) {
+          if (data === "0") {
+            alert("برای اضافه کردن به علاقه مندی ها ابتدا باید عضو شوید");
+          }
+          else if (data === "1") {
+            alert("به لیست علاقه مندی ها اضافه شد");
+
+          }
+          else if (data === "2") {
+            alert("از لیست علاقه مندی های حذف شد");
+
+          }
+        },
+      });
+          }
+    function addLike(id) {
+      $.ajax({
+        type: "POST",
+        url: "@Url.Action("DoLike","Products")",
+        data: {id:id},
+        success: function(data) {
+          if (data === "0") {
+            alert("برای پسندیدن ابتدا باید عضو شوید");
+          }
+          else if (data === "1") {
+            alert("پسندیده شد");
+
+          }
+          else if (data === "2") {
+            alert("نپسندیدم");
+
+          }
+        },
+      });
+    }
+	</script>*@
+}

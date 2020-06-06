@@ -1,0 +1,545 @@
+﻿@using Rosentis.DomainModel.Shop
+@model Rosentis.DataContract.Shop.CartDto
+@{
+}
+@section HeadContent{
+
+}
+
+<div class="woocommerce-cart  woocommerce-page woocommerce-js">
+	<div id="content" class="site-content ">
+		<div class="container-fluid main-warp">
+
+			<div class="woocommerce">
+				<div id="cart-tabs" class="cart-tabs-container ui-tabs ui-widget ui-widget-content ui-corner-all">
+					<ul class="cart-tabs-row ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all" role="tablist">
+						<li class="cart-tabs-row-item ui-state-default ui-corner-top ui-tabs-active ui-state-active" role="tab" tabindex="0" aria-controls="base-cart" aria-labelledby="ui-id-1" aria-selected="true" aria-expanded="true">
+							<a href="#base-cart" data-tab-name="base-cart" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-1">
+								سبد خرید
+								@if (Model.CartItems.Count != 0)
+								{
+									<span class="cart-tabs-row-item-counter tab-cart-count">@Model.CartItems.Count</span>
+								}
+							</a>
+						</li>
+						@*<li class="cart-tabs-row-item ui-state-default ui-corner-top" role="tab" tabindex="-1" aria-controls="next-list" aria-labelledby="ui-id-2" aria-selected="false" aria-expanded="false">
+								<a href="#next-list" data-tab-name="next-list" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-2">
+									لیست خرید بعدی
+								</a>
+							</li>*@
+					</ul>
+
+					<div class="cart-tabs-content">
+
+						<div id="base-cart" aria-labelledby="ui-id-1" class="ui-tabs-panel ui-widget-content ui-corner-bottom" role="tabpanel" aria-hidden="false">
+
+							@*<div class="woocommerce-notices-wrapper">
+									<div class="woocommerce-message" role="alert">
+										سبد خرید به روز شد
+									</div>
+
+								</div>*@
+							@if (Model.CartItems.Count != 0)
+							{
+								<div class="cart-sections-container">
+
+									<div class="cart-main-section">
+
+										<form class="woocommerce-cart-form" action="https://niki-kala.ir/cart/" method="post">
+
+											<table class="shop_table shop_table_responsive cart woocommerce-cart-form__contents" cellspacing="0">
+												<thead>
+													<tr>
+														<th class="product-remove">&nbsp;</th>
+														<th class="product-thumbnail">&nbsp;</th>
+														<th class="product-name">محصول</th>
+														<th class="product-price">قیمت</th>
+														<th class="product-quantity">تعداد</th>
+														<th class="product-subtotal"> قیمت کل </th>
+													</tr>
+												</thead>
+												<tbody>
+													@foreach (var rec in Model.CartItems)
+													{
+														<tr class="woocommerce-cart-form__cart-item cart_item">
+
+															<!--<td class="product-remove">
+																<a href="https://niki-kala.ir/cart/?remove_item=06138bc5af6023646ede0e1f7c1eac75&#038;_wpnonce=0c3d61dc59" class="remove" aria-label="پاک کردن این آیتم" data-product_id="269" data-product_sku="NKP-421246">&times;</a>											</td>-->
+
+															<td class="product-thumbnail">
+																<a href="">
+																	<img width="300" height="300" alt=""
+																		 data-srcset="@rec.Product.Picture 300w,
+																 @rec.Product.Picture 100w, @rec.Product.Picture 150w,
+																 @rec.Product.Picture 20w, @rec.Product.Picture 30w,
+																 @rec.Product.Picture 40w" sizes="(max-width: 300px) 100vw, 300px"
+																		 data-src="@rec.Product.Picture"
+																		 class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail ls-is-cached lazyloaded"
+																		 src="@rec.Product.Picture" loading="lazy"
+																		 srcset="@rec.Product.Picture 300w,
+																 @rec.Product.Picture 100w, @rec.Product.Picture 150w,
+																 @rec.Product.Picture 20w, @rec.Product.Picture 30w,
+																 @rec.Product.Picture 40w"><noscript>
+																		<img width="300" height="300"
+																			 src="@rec.Product.Picture"
+																			 class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt=""
+																			 srcset="@rec.Product.Picture 300w, @rec.Product.Picture 100w,
+																@rec.Product.Picture 150w, @rec.Product.Picture 20w,
+																@rec.Product.Picture 30w,@rec.Product.Picture 40w" sizes="(max-width: 300px) 100vw, 300px" />
+																	</noscript>
+																</a>
+															</td>
+
+															<td class="product-name" data-title="محصول">
+																<a href="">
+																	@Html.Raw(rec.Product.Name)
+																	<br />
+
+																</a>
+																<dl class="variation">
+																	<dd class="variation-seller-name">
+
+
+																		<p><span class="nikikala-cart-seller-name">رزنتیس</span></p>
+																	</dd>
+																</dl>
+																<div class="nikikala-cart-qty">
+																	<div class="nikikala-qty-row item-key-06138bc5af6023646ede0e1f7c1eac75">
+																		<div class="quantity">
+																			<button type="button" class="qty-plus" onclick="checkQuantity(document.getElementById('quantity_@rec.Product.Id'), @rec.Product.Id,@rec.Product.Price, @rec.Product.Discount);"></button>
+																			<label class="screen-reader-text" for="quantity_@rec.Product.Id">@rec.Product.Name</label>
+																			<input type="number" id="quantity_@rec.Product.Id"
+																				   class="input-text qty text" step="1" min="0" max=""
+																				   name="cart[@rec.Product.Id][qty]" value="@rec.Quantity"
+																				   title="تعداد" size="4" placeholder="" inputmode="numeric">
+																			<button type="button" class="qty-minus"
+																					onclick="reduceTheAmount(document.getElementById('quantity_@rec.Product.Id'), @rec.Product.Id,@rec.Price, @rec.Product.Discount);"></button>
+																		</div>
+																		<a class="remove remove-from-cart hidden-required" data-pid="269"
+																		   data-key="@rec.Id" data-vid="0"></a>
+																	</div>
+
+																	@*<a class="add-to-next-list" data-remodal-target="login">ذخیره در لیست خرید بعدی</a>*@
+
+																</div>
+															</td>
+
+															<td class="product-price" data-title="قیمت">
+																<span class="woocommerce-Price-amount amount">155,000&nbsp;<span class="woocommerce-Price-currencySymbol">تومان</span></span>
+															</td>
+
+															<td class="product-quantity" data-title="تعداد"></td>
+															<td class="product-subtotal" data-title=" قیمت کل ">
+																@if (rec.Product.Discount != 0)
+																{
+																	<span class="cart-discount-amount">
+																		تخفیف
+																		<span class="woocommerce-Price-amount amount" id="discount_@rec.Product.Id">
+																			@rec.Product.PriceMoneyWithDiscount
+																		</span>
+																	</span>
+																	<input type="hidden" id="discountPrice_@rec.Product.Id" value="@rec.Product.DiscountPrice" />
+																	<span class="cart-final-price">
+																		<span class="woocommerce-Price-amount amount" id="priceMoney_@rec.Product.Id">@rec.Product.PriceWithDiscountMoney</span>
+																	</span>			}
+																else
+																{
+																	<span class="woocommerce-Price-amount amount" id="priceMoney_@rec.Product.Id">@rec.Product.PriceWithDiscountMoney</span>		}
+																<input type="hidden" id="price_@rec.Product.Id" value="@rec.PriceWithDiscount" />
+															</td>
+														</tr>
+
+
+													}
+
+													<tr>
+														<td colspan="6" class="actions">
+
+															<div class="coupon">
+																<label for="coupon_code">کوپن:</label> <input type="text" name="coupon_code" class="input-text" id="coupon_code" value="" placeholder="كد تخفیف:"> <button type="submit" class="button" name="apply_coupon" value="اعمال تخفیف">اعمال تخفیف</button>
+															</div>
+
+															<button type="submit" class="button" name="update_cart" value="به روزرسانی سبد" disabled="">به روزرسانی سبد</button>
+
+
+															<a href="https://niki-kala.ir/checkout/" class="checkout-button button alt wc-forward">
+																اقدام به پرداخت
+															</a>
+
+															<input type="hidden" id="woocommerce-cart-nonce" name="woocommerce-cart-nonce" value="0c3d61dc59"><input type="hidden" name="_wp_http_referer" value="/cart/">
+														</td>
+													</tr>
+
+												</tbody>
+											</table>
+
+										</form>
+									</div>
+
+									<div class="cart-side-section">
+										<div class="inner-wrapper-sticky" style="position: relative;">
+
+
+											<div class="cart-collaterals">
+												<div class="cart_totals">
+
+													<table cellspacing="0" class="shop_table shop_table_responsive nikikala-cart-total-table">
+														<tbody>
+															<tr class="cart-niktotal">
+																<th>قیمت کالاها (@Model.CartItems.Count)</th>
+																<td data-title="قیمت کالاها">
+																	<span class="woocommerce-Price-amount amount">
+																		<span id="price_amount_money">@ViewBag.TotalPriceWithoutDiscountStr</span>
+																	</span>
+																	<input type="hidden" id="price_amount" value="@ViewBag.TotalPriceWithoutDiscount" />
+																</td>
+															</tr>
+															@if (ViewBag.DiscountPrice != 0)
+															{
+																<tr class="cart-discount">
+																	<th>تخفیف کالاها</th>
+																	<td data-title="تخفیف کالاها">
+																		<span class="woocommerce-Price-amount amount" id="discount_amount_money">
+																			@ViewBag.DiscountPriceStr
+																			<span class="woocommerce-Price-currencySymbol">تومان</span>
+																		</span>
+																		<input type="hidden" id="discount_amount" value="@ViewBag.DiscountPrice" />
+																	</td>
+																</tr>		}
+														</tbody>
+													</table>
+
+													<table cellspacing="0" class="shop_table shop_table_responsive">
+
+														<tbody>
+															<tr class="cart-subtotal">
+																<th> قیمت کل </th>
+
+																<td data-title=" قیمت کل ">
+																	<span class="woocommerce-Price-amount amount" id="total_amount_price">@ViewBag.TotalPriceStr</span>
+																</td>
+															</tr>
+
+
+
+
+															<tr class="woocommerce-shipping-totals shipping">
+																<th>حمل و نقل:  رزنتیس</th>
+																<td data-title="حمل و نقل: رزنتیس">
+																	<ul id="shipping_method" class="woocommerce-shipping-methods">
+																		<li>
+																			<input type="radio" name="shipping_method[0]" data-index="0" id="shipping_method_0_free_shipping2" value="free_shipping:2" class="shipping_method" checked="checked"><label for="shipping_method_0_free_shipping2">ارسال رایگان (سفارشات بالای 100 هزار تومان)</label>
+																		</li>
+																		<li>
+																			<input type="radio" name="shipping_method[0]" data-index="0" id="shipping_method_0_flat_rate1" value="flat_rate:1" class="shipping_method"><label for="shipping_method_0_flat_rate1">هزینه ارسال: <span class="woocommerce-Price-amount amount">15,000&nbsp;<span class="woocommerce-Price-currencySymbol">تومان</span></span></label>
+																		</li>
+																	</ul>
+																	<p class="woocommerce-shipping-destination">
+																		حمل و نقل به <strong>تهران</strong>.
+																	</p>
+
+
+																</td>
+															</tr>
+
+
+
+
+
+														</tbody>
+													</table>
+
+
+													<div class="order-total">
+														<div>مبلغ قابل پرداخت</div>
+														<div>
+															<strong>
+																<input type="hidden" value="@ViewBag.TotalPrice" id="total" />
+																<span class="woocommerce-Price-amount amount" id="totalPrice">@ViewBag.TotalPriceStr</span>
+															</strong>
+														</div>
+													</div>
+
+
+													<div class="wc-proceed-to-checkout">
+													</div>
+
+													<div class="cart-notice">
+														<span>محصولات موجود در سبد شما ثبت و رزرو نشده اند، برای ثبت سفارش مراحل بعدی را تکمیل کنید.</span>
+														<span class="niki-tooltip-holder">
+															<span class="niki-tooltip-sign"></span>
+															<div class="niki-tooltip-container is-right">
+																<div class="niki-tooltip-arrow"></div>
+																<p class="niki-tooltip-text">محصولات موجود در سبد خرید شما تنها در صورت ثبت و پرداخت سفارش برای شما رزرو می شوند. در صورت عدم ثبت سفارش ما هیچگونه مسئولیتی در قبال تغییر قیمت یا موجودی این کالاها نداریم.</p>
+															</div>
+														</span>
+													</div>
+
+													<div class="cart-points">
+														<span class="cart-points-title">
+															@*<img width="24" height="24" data-src="https://niki-kala.ir/wp-content/themes/Nikikala/assets/images/points.png" class="cart-points-coin ls-is-cached lazyloaded" src="https://niki-kala.ir/wp-content/themes/Nikikala/assets/images/points.png" loading="lazy"><noscript><img class="cart-points-coin" src="https://niki-kala.ir/wp-content/themes/Nikikala/assets/images/points.png" width="24" height="24"></noscript>
+																امتیاز سفارش
+																<span class="niki-tooltip-holder">
+																	<span class="niki-tooltip-sign"></span>
+																	<div class="niki-tooltip-container is-right">
+																		<div class="niki-tooltip-arrow"></div>
+																		<p class="niki-tooltip-text">با استفاده از امتیازات خود می توانید در سفارش های خود تخفیف دریافت کنید.</p>
+																	</div>
+																</span>*@
+														</span>
+
+														<span class="cart-points-point">
+															@*310<span class="cart-points-unit"> امتیاز</span>*@
+														</span>
+													</div>
+
+												</div>
+											</div>
+
+										</div>
+									</div>
+
+								</div>
+
+							}
+							else
+							{
+								<div class="nikikala-cart-empty-container">
+									<section class="nikikala-cart-empty-container-main">
+										<div class="nikikala-cart-empty">
+											<div class="woocommerce-notices-wrapper"></div>							<div class="nikikala-cart-empty-icon"></div>
+											<div class="nikikala-cart-empty-title">
+												سبد خرید شما خالی است!
+											</div>
+											<div class="nikikala-cart-empty-content">
+												<p>برای مشاهده محصولات بیشتر می توانید به این صفحات مراجعه کنید</p>
+												<div class="nikikala-cart-empty-links">
+													<a href="@Url.Action("List","Products")">فروش ویــژه ها</a>
+													<a href="@Url.Action("List","Products")">رفتن به فروشگاه</a>
+												</div>
+											</div>
+										</div>
+									</section>
+
+									<aside class="nikikala-next-list-side-container">
+										<a href="https://niki-kala.ir/my-account/">
+											<div class="nikikala-next-list-side side-login">
+												<div class="nikikala-next-list-side-login-header">ورود به حساب کاربری</div>
+												<div class="nikikala-next-list-side-login-desc">برای مشاهده محصولات موجود در سبد خرید خود لطفا وارد شوید.</div>
+											</div>
+										</a>
+									</aside>
+								</div>
+							}
+
+
+						</div>
+
+						<div id="next-list" aria-labelledby="ui-id-2" class="ui-tabs-panel ui-widget-content ui-corner-bottom" role="tabpanel" aria-hidden="true" style="display: none;">
+
+							<div class="nikikala-next-list-container">
+								<section class="nikikala-next-list-container-main">
+									<div class="nikikala-next-list-empty">
+										<div class="nikikala-next-list-empty-icon"></div>
+										<div class="nikikala-next-list-empty-title">
+											لیست خرید بعدی شما خالی است!
+										</div>
+										<p class="nikikala-next-list-empty-content">
+											شما می توانید محصولاتی که به سبد خرید خود افزوده اید و موقتا قصد خرید آن&zwnj;ها را ندارید، در لیست خرید بعدی خود قرار داده و هر زمان مایل بودید آن&zwnj;ها را مجددا به سبد خرید اضافه کرده و خرید آن&zwnj;ها را تکمیل کنید.
+										</p>
+									</div>
+								</section>
+								<aside class="nikikala-next-list-side-container">
+									<a href="https://niki-kala.ir/my-account/">
+										<div class="nikikala-next-list-side side-login">
+											<div class="nikikala-next-list-side-login-header">ورود به حساب کاربری</div>
+											<div class="nikikala-next-list-side-login-desc">برای مشاهده محصولات موجود در سبد خرید خود لطفا وارد شوید.</div>
+										</div>
+									</a>
+								</aside>
+							</div>
+
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- #main -->
+
+
+		</div><!-- .container main -->
+
+	</div>
+	<div class="footer-viewed-products">
+		<h3>کالاهایی که دیده اید</h3>
+		<div class="viewed-list">
+			<a href="https://niki-kala.ir/product/%d8%a7%d8%af%d9%88-%d9%be%d8%b1%d9%81%d9%8a%d9%88%d9%85-%d8%b2%d9%86%d8%a7%d9%86%d9%87-%d9%be%d9%88%da%86%d9%8a%d9%86%d9%8a-%d9%85%d8%af%d9%84-le-rouge-%d8%ad%d8%ac%d9%85-100-%d9%85%d9%8a%d9%84%d9%8a/" class="item">
+				<img data-src="https://niki-kala.ir/wp-content/uploads/2018/01/Atr-1-300x300.jpg" class=" ls-is-cached lazyloaded" src="https://niki-kala.ir/wp-content/uploads/2018/01/Atr-1-300x300.jpg" loading="lazy"><noscript><img src="https://niki-kala.ir/wp-content/uploads/2018/01/Atr-1-300x300.jpg"></noscript>
+				<div class="name">ادو پرفيوم زنانه پوچيني مدل Le Rouge حجم ۱۰۰ ميلي ليتر</div>
+			</a>
+		</div>
+	</div>
+</div>
+
+
+
+@section scripts
+{
+	<script>
+	function checkQuantity(a, id, price, discount) {
+					var valueOfUserQuantity = a.value;
+					var nextValue = (parseInt(a.value) + 1).toString();
+					var priceInt = parseInt(document.getElementById('price_' + id.toString() + '').value);
+
+					jQuery.ajax({
+						type: "POST",
+						url: "@Url.Action("CheckQuantity", "Products")",
+						data: { id: id},
+						success: function (data) {
+							if (parseInt(nextValue) > parseInt(data)) {
+								alert('مقدار انتخابی بیشتر از موجودی انبار می باشد');
+								a.value = data;
+							} else {
+								a.value = nextValue;
+								//set hidden item price
+								priceInt = parseInt(price) * parseInt(nextValue);
+								priceInt = findDiscountValue(priceInt, discount);							
+								document.getElementById('price_' + id.toString() + '').value = priceInt;
+
+								//set show item price for user
+								thousandsPrice(priceInt, 'priceMoney_' + id.toString() + '');
+
+								//set offer value
+								if (discount != 0) {
+									var totalDiscount = parseInt(price) * parseInt(nextValue);
+									var discountValue = totalDiscount * (discount / 100);
+									document.getElementById('discountPrice_' + id.toString() + '').value = discountValue;
+
+									thousandsPrice(discountValue, 'discount_' + id.toString() + '');
+
+									//total discount 
+									var discountPrice = parseInt(document.getElementById('discount_amount').value);
+									var newDiscount = parseInt(discountPrice) + (parseInt(price) * (discount / 100));
+									document.getElementById('discount_amount').value = newDiscount;
+
+									//add value of discount for user
+									thousandsPrice(newDiscount, 'discount_amount_money');
+								}
+
+								//total price without discount
+								var amountPrice = parseInt(document.getElementById('price_amount').value);
+								var newAmount = parseInt(amountPrice) + parseInt(price);
+								document.getElementById('price_amount').value = newAmount;
+
+								//add value of price without discount for user
+								thousandsPrice(newAmount, 'price_amount_money');
+								
+								
+								//get hidden int value
+
+								var total = parseInt(document.getElementById('total').value);
+								var newPrice = parseInt(total) + parseInt(price);
+								var test = document.getElementById('discount_amount').value
+								if (discount != 0) {
+									newPrice = newAmount - test;
+								}
+								document.getElementById('total').value = newPrice;
+
+								//set show value for user
+								var str = newPrice.toString().replace(/,/g, "");
+								var t = str.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+								document.getElementById('totalPrice').innerHTML = t + " تومان";
+								document.getElementById('total_amount_price').innerHTML = t + " تومان";
+
+								//add to parent quantity
+								var parent = parseInt(document.getElementById('Quantity').value);
+								document.getElementById('Quantity').value = parent + 1;
+							}
+						},
+					});
+
+					};
+
+				function reduceTheAmount(a, id, price, discount) {
+					var valueOfUserQuantity = a.value;
+					var priceInt = parseInt(document.getElementById('price_' + id.toString() + '').value);
+					var nextValue = (parseInt(a.value) - 1).toString();
+					if (valueOfUserQuantity != 0) {
+
+						if (valueOfUserQuantity == 1) {
+						} else {
+							a.value = nextValue;
+
+							//set hidden item price
+							priceInt = parseInt(price) * parseInt(nextValue);
+							priceInt = findDiscountValue(priceInt, discount);;
+							document.getElementById('price_' + id.toString() + '').value = priceInt;
+
+							//set offer value
+							if (discount != 0) {
+								var totalDiscount = parseInt(price) * parseInt(nextValue);
+								var discountValue = totalDiscount * (discount / 100);
+								document.getElementById('discountPrice_' + id.toString() + '').value = discountValue;
+
+								thousandsPrice(discountValue, 'discount_' + id.toString() + '');
+
+								//total discount 
+								var discountPrice = parseInt(document.getElementById('discount_amount').value);
+								var newDiscount = parseInt(discountPrice) - (parseInt(price) * (discount / 100));
+								document.getElementById('discount_amount').value = newDiscount;
+
+								//add value of discount for user
+								thousandsPrice(newDiscount, 'discount_amount_money');
+
+							}
+
+							//total price without discount
+							var amountPrice = parseInt(document.getElementById('price_amount').value);
+							var newAmount = parseInt(amountPrice) - parseInt(price);
+							document.getElementById('price_amount').value = newAmount;
+
+							//add value of price without discount for user
+							thousandsPrice(newAmount, 'price_amount_money');
+
+							//set show item price for user
+							thousandsPrice(priceInt, 'priceMoney_' + id.toString() + '');
+
+							//get hidden int value
+
+							var total = parseInt(document.getElementById('total').value);
+							var newPrice = parseInt(total) + parseInt(price);
+							var test = document.getElementById('discount_amount').value
+							if (discount != 0) {
+								newPrice = newAmount - test;
+							}
+							document.getElementById('total').value = newPrice;
+
+							//set show value for user
+							var str = newPrice.toString().replace(/,/g, "");
+							var t = str.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+							document.getElementById('totalPrice').innerHTML = t + " تومان";
+							document.getElementById('total_amount_price').innerHTML = t + " تومان";
+
+							//remove from parent quantity
+							var parent = parseInt(document.getElementById('Quantity').value);
+							document.getElementById('Quantity').value = parent - 1;
+						}
+					
+					}
+					}
+
+				function thousandsPrice(price, doc) {
+					var str = price.toString().replace(/,/g, "");
+					var separateStr = str.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+					document.getElementById(doc).innerHTML = separateStr + " تومان";
+				}
+
+				function findDiscountValue(price, discount) {
+					return  (price - (price * (discount / 100)));
+				}
+	</script>
+	<script type="text/javascript">
+				
+	</script>
+}

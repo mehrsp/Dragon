@@ -1,0 +1,232 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FF5E08FD-A257-4819-9B98-E41B2F84EB58}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Rosentis.ServiceImplementation</RootNamespace>
+    <AssemblyName>Rosentis.ServiceImplementation</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <DebugSymbols>true</DebugSymbols>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper, Version=8.0.0.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\AutoMapper.8.0.0\lib\net461\AutoMapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AutoMapper.Attributes, Version=6.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Desktop\New folder\Rosentis.ServiceImplementation\bin\Debug\AutoMapper.Attributes.dll</HintPath>
+    </Reference>
+    <Reference Include="LabXand.DomainLayer">
+      <HintPath>..\..\..\..\..\..\..\Sepid Programs\Projects\Onion\IMas.Communications\IMas.Communications.ServiceImplementation\bin\Debug\LabXand.DomainLayer.dll</HintPath>
+    </Reference>
+    <Reference Include="LabXand.DomainLayer.Core">
+      <HintPath>..\..\..\..\..\..\..\Sepid Programs\Projects\Onion\IMas.Communications\IMas.Communications.ServiceImplementation\bin\Debug\LabXand.DomainLayer.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="PhoneNumbers, Version=8.11.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\libphonenumber-csharp.8.11.2\lib\net46\PhoneNumbers.dll</HintPath>
+    </Reference>
+    <Reference Include="StructureMap, Version=4.7.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\StructureMap.4.7.1\lib\net45\StructureMap.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.4.0\lib\netstandard1.1\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.Immutable, Version=1.2.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Collections.Immutable.1.6.0\lib\netstandard1.3\System.Collections.Immutable.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.3\lib\netstandard1.1\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.4.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.2\lib\netstandard1.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net461\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WebActivatorEx, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebActivatorEx.2.2.0\lib\net40\WebActivatorEx.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AuthEntities\Mapper\PermissionMapper.cs" />
+    <Compile Include="AuthEntities\Mapper\UserMapper.cs" />
+    <Compile Include="AuthEntities\Mapper\UserTokenMapper.cs" />
+    <Compile Include="AuthEntities\PermissionApplicationService.cs" />
+    <Compile Include="AuthEntities\Registry\AuthEntityRegistry.cs" />
+    <Compile Include="AuthEntities\Registry\PermissionRegistry.cs" />
+    <Compile Include="AuthEntities\TokenStoreApplicationService.cs" />
+    <Compile Include="AuthEntities\UsersApplicationService.cs" />
+    <Compile Include="AuthEntities\UserVerificationService.cs" />
+    <Compile Include="AutoMapperConfig.cs" />
+    <Compile Include="Base\CountryApplicationService.cs" />
+    <Compile Include="Base\Mapper\CountryMapper.cs" />
+    <Compile Include="Base\Registry\CountryRegistry.cs" />
+    <Compile Include="Brands\BrandApplicationService.cs" />
+    <Compile Include="Brands\Registry\BrandRegistry.cs" />
+    <Compile Include="Base\CityApplicationService.cs" />
+    <Compile Include="Base\ProvinceApplicationService.cs" />
+    <Compile Include="Base\Mapper\CityMapper.cs" />
+    <Compile Include="Base\Mapper\ProvinceMapper.cs" />
+    <Compile Include="Base\Registry\CityRegistry.cs" />
+    <Compile Include="Base\Registry\ProvinceRegistry.cs" />
+    <Compile Include="Products\ProductCategoryTechnicalApplicationService.cs" />
+    <Compile Include="Products\Registry\ProductCategoryTechnicalRegistry.cs" />
+    <Compile Include="Products\Registry\TechnicalRegistry.cs" />
+    <Compile Include="Products\TechnicalApplicationService.cs" />
+    <Compile Include="Products\ProcuctTechnicalApplicationService.cs" />
+    <Compile Include="Products\Registry\ProductCatgalogRegistry.cs" />
+    <Compile Include="Products\Registry\ProductTechnicalRegistry.cs" />
+    <Compile Include="Products\Registry\ProductImageRegistry.cs" />
+    <Compile Include="Suppliers\Registry\SupplierRegistry.cs" />
+    <Compile Include="Users\Mapper\MemberImportantDateMapper.cs" />
+    <Compile Include="Users\Mapper\MemberMapper.cs" />
+    <Compile Include="Users\Mapper\RoleMapper.cs" />
+    <Compile Include="Users\Mapper\SessionMapper.cs" />
+    <Compile Include="Users\MemberApplicationService.cs" />
+    <Compile Include="Messaging\EmailApplicationService.cs" />
+    <Compile Include="Messaging\Mapper\EmailMapper.cs" />
+    <Compile Include="Messaging\Mapper\MessageMapper.cs" />
+    <Compile Include="Messaging\Mapper\MessageTypeMapper.cs" />
+    <Compile Include="Messaging\Mapper\SmsMapper.cs" />
+    <Compile Include="Messaging\MessageApplicationService.cs" />
+    <Compile Include="Messaging\MessageTypeApplicationService.cs" />
+    <Compile Include="Messaging\Registry\EmailRegistry.cs" />
+    <Compile Include="Messaging\Registry\MessageRegistry.cs" />
+    <Compile Include="Messaging\Registry\MessageTypeRegistry.cs" />
+    <Compile Include="Messaging\Registry\SmsRegistry.cs" />
+    <Compile Include="Messaging\SmsApplicationService.cs" />
+    <Compile Include="Products\ProcuctRelatedApplicationService.cs" />
+    <Compile Include="Products\ProductApplicationService.cs" />
+    <Compile Include="Products\ProductCatalogApplicationService.cs" />
+    <Compile Include="Products\ProductCategoryApplicationService.cs" />
+    <Compile Include="Products\ProductImageApplicationService.cs" />
+    <Compile Include="Products\Registry\ProductCategoryRegistry.cs" />
+    <Compile Include="Products\Registry\ProductRegistry.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Shop\CartApplicationService.cs" />
+    <Compile Include="Shop\CartItemApplicationService.cs" />
+    <Compile Include="Shop\CustomerApplicationService.cs" />
+    <Compile Include="Shop\InvoiceApplicationService.cs" />
+    <Compile Include="Shop\InvoiceDetailsApplicationService.cs" />
+    <Compile Include="Shop\Mapper\CartItemMapper.cs" />
+    <Compile Include="Shop\Mapper\CartMapper.cs" />
+    <Compile Include="Shop\Mapper\CustomerMapper.cs" />
+    <Compile Include="Shop\Mapper\InvoiceDetailsMapper.cs" />
+    <Compile Include="Shop\Mapper\InvoiceMapper.cs" />
+    <Compile Include="Shop\Mapper\ProviderMapper.cs" />
+    <Compile Include="Shop\Mapper\PurchaseMapper.cs" />
+    <Compile Include="Shop\Mapper\PurchaseTypeMapper.cs" />
+    <Compile Include="Shop\ProviderApplicationService.cs" />
+    <Compile Include="Shop\PurchaseApplicationService.cs" />
+    <Compile Include="Shop\PurchaseTypeApplicationService.cs" />
+    <Compile Include="Shop\Registry\CartItemRegistry.cs" />
+    <Compile Include="Shop\Registry\CartRegistry.cs" />
+    <Compile Include="Shop\Registry\CustomerRegistry.cs" />
+    <Compile Include="Shop\Registry\InvoiceDetailsRegistry.cs" />
+    <Compile Include="Shop\Registry\InvoiceRegistry.cs" />
+    <Compile Include="Shop\Registry\ProviderRegistry.cs" />
+    <Compile Include="Shop\Registry\PurchaseRegistry.cs" />
+    <Compile Include="Shop\Registry\PurchaseTypeRegistry.cs" />
+    <Compile Include="SlideShow\Mapper\SlideShowMapper.cs" />
+    <Compile Include="SlideShow\Registry\SlideShowRegistry.cs" />
+    <Compile Include="SlideShow\SlideShowApplicationService.cs" />
+    <Compile Include="Startup.cs" />
+    <Compile Include="Suppliers\SupplierApplicationService.cs" />
+    <Compile Include="Users\MemberImportantDateApplicationService.cs" />
+    <Compile Include="Users\Registry\MemberImportantDateRegistry.cs" />
+    <Compile Include="Users\Registry\MemberRegistry.cs" />
+    <Compile Include="Users\Registry\UsersRegistry.cs" />
+    <Compile Include="Users\RoleApplicationService.cs" />
+    <Compile Include="Users\SessionApplicationService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Products\Mapper\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Rosentis.Common\Rosentis.Common.csproj">
+      <Project>{3cd607d0-86b0-4c2c-a691-f3d8eab6edf2}</Project>
+      <Name>Rosentis.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Rosentis.Core\Rosentis.Core.csproj">
+      <Project>{aaf713a9-1c83-4b90-afe6-2a3e7fd6c536}</Project>
+      <Name>Rosentis.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Rosentis.DataContract\Rosentis.DataContract.csproj">
+      <Project>{1561c1e4-0bda-4876-89ca-527e9fe5a202}</Project>
+      <Name>Rosentis.DataContract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Rosentis.DistributedServices\Rosentis.DistributedServices.csproj">
+      <Project>{53c260b0-0643-4955-9d42-a8163e46678a}</Project>
+      <Name>Rosentis.DistributedServices</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Rosentis.DomainModel\Rosentis.DomainModel.csproj">
+      <Project>{28bd5fe7-3f1a-4574-8240-3d3b354407e4}</Project>
+      <Name>Rosentis.DomainModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Rosentis.Persistance.Core\Rosentis.Persistance.Core.csproj">
+      <Project>{B2016A8A-B8C2-4274-8878-961147D31C71}</Project>
+      <Name>Rosentis.Persistance.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Rosentis.Persistance\Rosentis.Persistance.csproj">
+      <Project>{d9b5f24b-7930-4341-ba81-199a42cb2bd4}</Project>
+      <Name>Rosentis.Persistance</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Rosentis.ServiceContract\Rosentis.ServiceContract.csproj">
+      <Project>{87e8a3f9-a482-4b82-b076-683d5bdf3a2e}</Project>
+      <Name>Rosentis.ServiceContract</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AutoMapper.Attributes.dll" />
+    <Content Include="AutoMapper.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

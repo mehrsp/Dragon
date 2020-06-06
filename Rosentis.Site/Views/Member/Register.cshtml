@@ -1,0 +1,97 @@
+﻿
+@{
+    ViewBag.Title = "ثبت نام";
+}
+@section HeadContent{
+
+  <link href="@Url.Content("~/wp-content/themes/theme55220/address.css")" rel="stylesheet" />
+}
+<div class="container">
+  <div class="row">
+    <div>
+      <div>
+        <h3>ثبت نام در سایت</h3>
+        <p>
+          ثبت نام کنید و 20,000 ریال ذخیره نمایید.
+        </p>
+      </div>
+    </div>
+  </div>
+  @if (!string.IsNullOrWhiteSpace(ViewBag.Message))
+  {
+    <div class="row">
+      <div class="alert alert-danger">
+        <strong>عملیات ناموفق: </strong> @ViewBag.Message
+      </div>
+    </div>
+  }
+@using (Html.BeginForm("Register", "Member", FormMethod.Post, new { id = "frmSubmit" }))
+{
+  <div class="row p-sm" style="border-bottom: 1px #eee solid;"> 
+    <label class="p-sm" style="margin-right: -30px;">فرم ثبت نام</label>
+    <div class="row">
+      <div class="col-md-6" style="padding: 0px; padding-right: 5px;">
+        <div><label>شماره تماس</label>
+        </div>
+        <div><input id="Phone" name="Phone" type="tel" class="form-control" required/>
+        </div>
+      </div>
+
+    </div>
+    <div class="row">
+      <div class="col-md-6" style="padding: 0px; padding-left: 5px;">
+        <div>
+          <label>ایمیل</label>
+        </div>
+        <div>
+          <input id="Email" name="Email" type="email" class="form-control" required />
+        </div>
+      </div>
+    </div>
+  </div>
+  <input type="submit" class="submit" style="display:none;">
+} 
+<div class="row p-sm"  style="border-top: 1px #eee solid;">
+  <div class="col-md-1">
+    <a class="text-warning">
+      <button class="btn" onclick="submitForm()">
+        ادامه جهت اعتبار سنجی ...
+
+      </button>
+    </a>
+  </div>
+</div>
+</div>
+@section scripts
+{
+  <script>
+    var
+      mobileReg = /(0|\+98)?([ ]|-|[()]){0,2}9[0|1|2|3|4]([ ]|-|[()]){0,2}(?:[0-9]([ ]|-|[()]){0,2}){8}/ig,
+      junkReg = /[^\d]/ig,
+      persinNum = [/۰/gi, /۱/gi, /۲/gi, /۳/gi, /۴/gi, /۵/gi, /۶/gi, /۷/gi, /۸/gi, /۹/gi],
+      num2en = function(str) {
+        for (var i = 0; i < 10; i++) {
+          str = str.replace(persinNum[i], i);
+        }
+        return str;
+      },
+      getMobiles = function(str) {
+        var mobiles = num2en(str + '').match(mobileReg) || [];
+        mobiles.forEach(function(value, index, arr) {
+          arr[index] = value.replace(junkReg, '');
+          arr[index][0] === '0' || (arr[index] = '0' + arr[index]);
+        });
+        return mobiles;
+      };
+
+    function submitForm() {
+      if ((getMobiles($('#Phone').val())).length) {
+        $('#Phone').val((getMobiles($('#Phone').val())));
+      } else {
+        alert("شماره همراه به درستی وارد نشده است");
+      }
+      //return;
+      $('.submit').click();
+    }
+  </script>
+}

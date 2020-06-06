@@ -1,0 +1,5 @@
+C:\Users\SepidPc\Documents\visual studio 2017\Projects\Rosentis\Rosentis.DistributedServices\bin\Debug\Rosentis.DistributedServices.dll
+C:\Users\SepidPc\Documents\visual studio 2017\Projects\Rosentis\Rosentis.DistributedServices\bin\Debug\Rosentis.DistributedServices.pdb
+C:\Users\SepidPc\Documents\visual studio 2017\Projects\Rosentis\Rosentis.DistributedServices\obj\Debug\Rosentis.DistributedServices.csprojResolveAssemblyReference.cache
+C:\Users\SepidPc\Documents\visual studio 2017\Projects\Rosentis\Rosentis.DistributedServices\obj\Debug\Rosentis.DistributedServices.dll
+C:\Users\SepidPc\Documents\visual studio 2017\Projects\Rosentis\Rosentis.DistributedServices\obj\Debug\Rosentis.DistributedServices.pdb

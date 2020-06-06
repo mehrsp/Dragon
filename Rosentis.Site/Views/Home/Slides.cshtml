@@ -1,0 +1,24 @@
+﻿@model Rosentis.DataContract.Slides.Dtos.SlideShowDtos
+@{
+	var slides = Model.SlideShows;
+}
+
+<div class="vc_row wpb_row vc_inner vc_row-fluid">
+	<div class="wpb_column vc_column_container vc_col-sm-12">
+		<div class="vc_column-inner">
+			<div class="wpb_wrapper">
+				<div id="nikanhomeslider" class="swiper-container swiper-wrapper-home" dir="rtl" lang="fa-IR">
+					<div class="swiper-wrapper">
+						@foreach (var rec in slides)
+						{
+							<a href="" class="swiper-slide" style="background-image:url(@Url.Content(rec.Photo))"></a>
+						}
+					</div>
+					<div class="swiper-pagination"></div>
+					<div class="swiper-button-prev"></div>
+					<div class="swiper-button-next"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

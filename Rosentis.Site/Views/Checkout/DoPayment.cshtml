@@ -1,0 +1,10 @@
+﻿@model Rosentis.DataContract.Shop.InvoiceDto
+@{
+  ViewBag.Title = "فاکتور";
+  ViewBag.Description = "شماره " + Model.InvoiceNumber;
+}
+<div class="row">
+  <div class="col-md-12">
+    @Html.Partial("_Invoice", Model)
+  </div>
+</div>

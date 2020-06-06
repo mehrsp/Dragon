@@ -1,0 +1,47 @@
+﻿@model Rosentis.DataContract.Products.ProductDto
+@{
+}
+<li class="product type-product post-269 status-publish first instock product_cat-@Model.ProductCategoryId has-post-thumbnail shipping-taxable purchasable product-type-simple" data-id="@Model.Id"  data-title-fa="@Model.Name">
+	<div class="single-p-box">
+		<div class="single-p-box-seller">
+		<span class="main-seller"><span class="main-seller-label">فروشنده: </span>
+			@if (Model.SupplierId != null || Model.SupplierId != 0)
+			{
+			   @*@Model.Supplier.*@
+			}else {
+				<p>رُزِنتیس</p>				
+			}
+			</span></div>
+		<a href="@Url.Action("Detail","Products",new {Id=Model.Id})" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
+			<img width="300" height="300" alt="" data-srcset="@Model.Picture 300w,
+				@Model.Picture 100w, 
+				 @Model.Picture 150w,
+				@Model.Picture 20w, @Model.Picture 30w, @Model.Picture 40w" sizes="(max-width: 300px) 100vw, 300px" 
+				 data-src="@Model.Picture" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail ls-is-cached lazyloaded" src="@Model.Picture" loading="lazy" 
+				 srcset="@Model.Picture 300w,@Model.Picture 100w,@Model.Picture 150w, @Model.Picture 20w,
+				 @Model.Picture 30w, 
+				 @Model.Picture 40w"><noscript>
+			<img width="300" height="300" src="@Model.Picture" 
+				 class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" 
+				 srcset="@Model.Picture
+				 300w, @Model.Picture 100w,
+				 @Model.Picture 150w, 
+				 @Model.Picture 20w, 
+				 @Model.Picture 30w,
+				 @Model.Picture 40w" 
+				 sizes="(max-width: 300px) 100vw, 300px" /></noscript><div class="single-p-box-content">
+				<h2 class="woocommerce-loop-product__title">@Model.Name</h2><div class="single-p-box-title-en">Puccini Le Rouge Eau De Parfum For Women 100ml</div><div class="single-p-box-price">
+					<span class="price"><span class="woocommerce-Price-amount amount">@Model.Price&nbsp;<span class="woocommerce-Price-currencySymbol">تومان</span></span></span>
+				</div><div class="single-p-box-footer"><div class="single-p-box-footer-container"><div class="fake-product-badge"></div><span class="shop-tag shop-tag-rate">@Model.Ranking</span></div><ul class="single-p-box-seller-list"><li class="main-seller-label">رُزِنتیس</li></ul></div>
+			</div><div class="single-p-box-features">
+			<span>ویژگی ها</span>
+			@Html.Raw(@Model.Specifications)
+			
+			</div>
+		</a><a href="?add-to-cart=269" data-quantity="1" 
+			   class="button product_type_simple add_to_cart_button ajax_add_to_cart" 
+			   data-product_id="@Model.Id" data-product_sku="NKP-421246" 
+			   aria-label="@Model.Name" 
+			   rel="nofollow">افزودن به سبد خرید</a>
+	</div>
+</li>

@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D9B5F24B-7930-4341-BA81-199A42CB2BD4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Rosentis.Persistance</RootNamespace>
+    <AssemblyName>Rosentis.Persistance</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="LabXand.Infrastructure.Data.EF">
+      <HintPath>..\..\..\..\..\..\..\Sepid Programs\Projects\Onion\IMas.Communications\IMas.Communications.DomainService\bin\Debug\LabXand.Infrastructure.Data.EF.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Common, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.Common.4.3.0\lib\net451\System.Data.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SqlClient, Version=4.6.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SqlClient.4.8.0\lib\net461\System.Data.SqlClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Facade\RosentisContext.cs" />
+    <Compile Include="Facade\RosentisContextInitializer.cs" />
+    <Compile Include="Mapping\AuthEntities\PermissionMap.cs" />
+    <Compile Include="Mapping\AuthEntities\UserMap.cs" />
+    <Compile Include="Mapping\AuthEntities\UserTokenMap.cs" />
+    <Compile Include="Mapping\AuthEntities\UserVerificationMap.cs" />
+    <Compile Include="Mapping\Base\CityMap.cs" />
+    <Compile Include="Mapping\Base\CountryMap.cs" />
+    <Compile Include="Mapping\Base\ProvinceMap.cs" />
+    <Compile Include="Mapping\Blobs\BlobDescriptionMap.cs" />
+    <Compile Include="Mapping\Blobs\BlobMap.cs" />
+    <Compile Include="Mapping\Brands\BrandMap.cs" />
+    <Compile Include="Mapping\Exceptions\ExceptionCategoryMap.cs" />
+    <Compile Include="Mapping\Exceptions\ExceptionMap.cs" />
+    <Compile Include="Mapping\Messaging\EmailMap.cs" />
+    <Compile Include="Mapping\Messaging\MessageMap.cs" />
+    <Compile Include="Mapping\Messaging\MessageTypeMap.cs" />
+    <Compile Include="Mapping\Messaging\SmsMap.cs" />
+    <Compile Include="Mapping\Notifications\NotificationMap.cs" />
+    <Compile Include="Mapping\Pages\PageMap.cs" />
+    <Compile Include="Mapping\Products\CommentMap.cs" />
+    <Compile Include="Mapping\Products\ProductCatalogMap.cs" />
+    <Compile Include="Mapping\Products\ProductCategoryTechnicalMap.cs" />
+    <Compile Include="Mapping\Products\ProductCategoryMap.cs" />
+    <Compile Include="Mapping\Products\ProductImageMap.cs" />
+    <Compile Include="Mapping\Products\ProductMap.cs" />
+    <Compile Include="Mapping\Products\TechnicalMap.cs" />
+    <Compile Include="Mapping\Products\ProductTechnicalMap.cs" />
+    <Compile Include="Mapping\Products\ProductRelatedMap.cs" />
+    <Compile Include="Mapping\Shop\CartItemMap.cs" />
+    <Compile Include="Mapping\Shop\CartMap.cs" />
+    <Compile Include="Mapping\Shop\CustomerMap.cs" />
+    <Compile Include="Mapping\Shop\InvoiceDetailsMap.cs" />
+    <Compile Include="Mapping\Shop\InvoiceMap.cs" />
+    <Compile Include="Mapping\Shop\ProductInvoiceTypeMap.cs" />
+    <Compile Include="Mapping\Shop\ProviderMap.cs" />
+    <Compile Include="Mapping\Shop\PurchaseMap.cs" />
+    <Compile Include="Mapping\Shop\PurchaseTypeMap.cs" />
+    <Compile Include="Mapping\Slides\SlideShowMap.cs" />
+    <Compile Include="Mapping\Tags\TagMap.cs" />
+    <Compile Include="Mapping\Tags\TagTypeMap.cs" />
+    <Compile Include="Mapping\Users\MemberImportantDate.cs" />
+    <Compile Include="Mapping\Users\MemberMap.cs" />
+    <Compile Include="Mapping\Users\RoleMap.cs" />
+    <Compile Include="Mapping\Users\SessionMap.cs" />
+    <Compile Include="Mapping\Visits\PageUrlMap.cs" />
+    <Compile Include="Mapping\Visits\VisitorMap.cs" />
+    <Compile Include="Mapping\Visits\VisitorPageMap.cs" />
+    <Compile Include="Migrations\202005011229107_never-give-up!.cs" />
+    <Compile Include="Migrations\202005011229107_never-give-up!.Designer.cs">
+      <DependentUpon>202005011229107_never-give-up!.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202005020458597_remove-map-of-parent.cs" />
+    <Compile Include="Migrations\202005020458597_remove-map-of-parent.Designer.cs">
+      <DependentUpon>202005020458597_remove-map-of-parent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\AuthEntities\PermissionRepository.cs" />
+    <Compile Include="Repository\AuthEntities\TokenStoreRepository.cs" />
+    <Compile Include="Repository\AuthEntities\UsersRepository.cs" />
+    <Compile Include="Repository\AuthEntities\UserVerificationRepository.cs" />
+    <Compile Include="Repository\GenericRepository.cs" />
+    <Compile Include="Repository\Products\ProductRepository.cs" />
+    <Compile Include="Repository\UnitOfWork.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Rosentis.Core\Rosentis.Core.csproj">
+      <Project>{aaf713a9-1c83-4b90-afe6-2a3e7fd6c536}</Project>
+      <Name>Rosentis.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Rosentis.DomainModel\Rosentis.DomainModel.csproj">
+      <Project>{28bd5fe7-3f1a-4574-8240-3d3b354407e4}</Project>
+      <Name>Rosentis.DomainModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Rosentis.Persistance.Core\Rosentis.Persistance.Core.csproj">
+      <Project>{b2016a8a-b8c2-4274-8878-961147d31c71}</Project>
+      <Name>Rosentis.Persistance.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202005011229107_never-give-up!.resx">
+      <DependentUpon>202005011229107_never-give-up!.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005020458597_remove-map-of-parent.resx">
+      <DependentUpon>202005020458597_remove-map-of-parent.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

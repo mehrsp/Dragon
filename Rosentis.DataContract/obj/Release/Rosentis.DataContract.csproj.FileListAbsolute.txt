@@ -1,0 +1,26 @@
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.DataContract\bin\Release\Rosentis.DataContract.dll.config
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.DataContract\bin\Release\Rosentis.DataContract.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.DataContract\bin\Release\Rosentis.DataContract.pdb
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.DataContract\bin\Release\Newtonsoft.Json.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.DataContract\bin\Release\PersianDate.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.DataContract\bin\Release\Rosentis.Common.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.DataContract\bin\Release\System.ComponentModel.Annotations.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.DataContract\bin\Release\System.Reflection.TypeExtensions.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.DataContract\bin\Release\Rosentis.Common.pdb
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.DataContract\bin\Release\Rosentis.Common.dll.config
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.DataContract\bin\Release\Newtonsoft.Json.xml
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.DataContract\obj\Release\Rosentis.DataContract.csprojResolveAssemblyReference.cache
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.DataContract\obj\Release\Rosentis.DataContract.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.DataContract\obj\Release\Rosentis.DataContract.pdb
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.DataContract\bin\Release\Rosentis.DataContract.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.DataContract\bin\Release\Rosentis.DataContract.pdb
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.DataContract\bin\Release\Newtonsoft.Json.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.DataContract\bin\Release\PersianDate.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.DataContract\bin\Release\Rosentis.Common.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.DataContract\bin\Release\System.ComponentModel.Annotations.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.DataContract\bin\Release\System.Reflection.TypeExtensions.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.DataContract\bin\Release\Rosentis.Common.pdb
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.DataContract\bin\Release\Newtonsoft.Json.xml
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.DataContract\obj\Release\Rosentis.DataContract.csprojResolveAssemblyReference.cache
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.DataContract\obj\Release\Rosentis.DataContract.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.DataContract\obj\Release\Rosentis.DataContract.pdb

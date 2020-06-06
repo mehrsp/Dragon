@@ -1,0 +1,921 @@
+﻿@using WebGrease.Css.Extensions
+@model Rosentis.DataContract.Products.ProductDto
+@{
+	ViewBag.Title = Model.Name;
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section HeadContent{
+
+	<style>
+		.wpb_content_element {
+			display: inline-block;
+		}
+
+		.wpb_wrapper {
+			display: inline;
+		}
+	</style>
+
+	<script>(function (html) { html.className = html.className.replace(/\bno-js\b/, 'js') })(document.documentElement);</script>
+	<title>Dental | Store</title>
+	<link rel='dns-prefetch' href='//s.w.org' />
+	<link rel="alternate" type="application/rss+xml" title="نیکی کالا &raquo; خوراک" href="https://niki-kala.ir/feed/" />
+	<link rel="alternate" type="application/rss+xml" title="نیکی کالا &raquo; خوراک دیدگاه‌ها" href="https://niki-kala.ir/comments/feed/" />
+	<link rel="alternate" type="application/rss+xml" title="نیکی کالا &raquo; گوشی موبایل اپل مدل Apple iPhone XS خوراک دیدگاه‌ها" href="https://niki-kala.ir/product/%da%af%d9%88%d8%b4%db%8c-%d9%85%d9%88%d8%a8%d8%a7%db%8c%d9%84-%d8%a7%d9%be%d9%84-%d9%85%d8%af%d9%84-apple-iphone-xs/feed/" />
+	@*<script type="text/javascript">
+			window._wpemojiSettings = { "baseUrl": "https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/", "ext": ".png", "svgUrl": "https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/", "svgExt": ".svg", "source": { "concatemoji": "https:\/\/niki-kala.ir\/wp-includes\/js\/wp-emoji-release.min.js" } };
+			!function (e, a, t) { var r, n, o, i, p = a.createElement("canvas"), s = p.getContext && p.getContext("2d"); function c(e, t) { var a = String.fromCharCode; s.clearRect(0, 0, p.width, p.height), s.fillText(a.apply(this, e), 0, 0); var r = p.toDataURL(); return s.clearRect(0, 0, p.width, p.height), s.fillText(a.apply(this, t), 0, 0), r === p.toDataURL() } function l(e) { if (!s || !s.fillText) return !1; switch (s.textBaseline = "top", s.font = "600 32px Arial", e) { case "flag": return !c([127987, 65039, 8205, 9895, 65039], [127987, 65039, 8203, 9895, 65039]) && (!c([55356, 56826, 55356, 56819], [55356, 56826, 8203, 55356, 56819]) && !c([55356, 57332, 56128, 56423, 56128, 56418, 56128, 56421, 56128, 56430, 56128, 56423, 56128, 56447], [55356, 57332, 8203, 56128, 56423, 8203, 56128, 56418, 8203, 56128, 56421, 8203, 56128, 56430, 8203, 56128, 56423, 8203, 56128, 56447])); case "emoji": return !c([55357, 56424, 55356, 57342, 8205, 55358, 56605, 8205, 55357, 56424, 55356, 57340], [55357, 56424, 55356, 57342, 8203, 55358, 56605, 8203, 55357, 56424, 55356, 57340]) }return !1 } function d(e) { var t = a.createElement("script"); t.src = e, t.defer = t.type = "text/javascript", a.getElementsByTagName("head")[0].appendChild(t) } for (i = Array("flag", "emoji"), t.supports = { everything: !0, everythingExceptFlag: !0 }, o = 0; o < i.length; o++)t.supports[i[o]] = l(i[o]), t.supports.everything = t.supports.everything && t.supports[i[o]], "flag" !== i[o] && (t.supports.everythingExceptFlag = t.supports.everythingExceptFlag && t.supports[i[o]]); t.supports.everythingExceptFlag = t.supports.everythingExceptFlag && !t.supports.flag, t.DOMReady = !1, t.readyCallback = function () { t.DOMReady = !0 }, t.supports.everything || (n = function () { t.readyCallback() }, a.addEventListener ? (a.addEventListener("DOMContentLoaded", n, !1), e.addEventListener("load", n, !1)) : (e.attachEvent("onload", n), a.attachEvent("onreadystatechange", function () { "complete" === a.readyState && t.readyCallback() })), (r = t.source || {}).concatemoji ? d(r.concatemoji) : r.wpemoji && r.twemoji && (d(r.twemoji), d(r.wpemoji))) }(window, document, window._wpemojiSettings);
+		</script>*@
+	<style type="text/css">
+		img.wp-smiley,
+		img.emoji {
+			display: inline !important;
+			border: none !important;
+			box-shadow: none !important;
+			height: 1em !important;
+			width: 1em !important;
+			margin: 0 .07em !important;
+			vertical-align: -0.1em !important;
+			background: none !important;
+			padding: 0 !important;
+		}
+
+		.product-bold-price {
+			color: #000000 !important;
+			font-size: 20px !important;
+			padding-right: 4px !important;
+			min-height: 65px !important;
+		}
+
+		.line {
+			content: "";
+			position: absolute;
+			left: 1rem;
+			right: 1rem;
+			bottom: -1px;
+			height: 1px;
+			background-color: #e4e4e4
+		}
+	</style>
+	<link rel='stylesheet' id='dokan-select2-css-css' href="@Url.Content("~/wp-content/plugins/dokan-lite/assets/vendors/select2/select2.css")" type='text/css' media='all' />
+	<script type="text/template" id="tmpl-variation-template">
+		<div class="woocommerce-variation-description">{{{ data.variation.variation_description }}}</div>
+		<div class="woocommerce-variation-price">{{{ data.variation.price_html }}}</div>
+		<div class="woocommerce-variation-availability">{{{ data.variation.availability_html }}}</div>
+	</script>
+	<script type="text/template" id="tmpl-unavailable-variation-template">
+		<p>با عرض پوزش، این محصول در دسترس نیست. خواهشمندیمً ترکیب دیگری را انتخاب کنید.</p>
+	</script>
+	<script type="text/javascript">
+		/* <![CDATA[ */
+		var dokan = { "ajaxurl": "\/wp-admin\/admin-ajax.php", "nonce": "2096dc795f", "ajax_loader": "\/wp-content\/plugins\/dokan-lite\/assets\/images\/ajax-loader.gif", "seller": { "available": "\u062f\u0631 \u062f\u0633\u062a\u0631\u0633", "notAvailable": "\u0645\u0648\u062c\u0648\u062f \u0646\u06cc\u0633\u062a." }, "delete_confirm": "\u0634\u0645\u0627 \u0645\u0637\u0645\u0626\u0646 \u0647\u0633\u062a\u06cc\u062f\u061f", "wrong_message": "\u0638\u0627\u0647\u0631\u0627\u064b \u0627\u0634\u062a\u0628\u0627\u0647\u06cc \u0635\u0648\u0631\u062a \u06af\u0631\u0641\u062a\u0647 \u0627\u0633\u062a. \u0644\u0637\u0641\u0627 \u062f\u0648\u0628\u0627\u0631\u0647 \u062a\u0644\u0627\u0634 \u06a9\u0646\u06cc\u062f.", "vendor_percentage": "90", "commission_type": "percentage", "rounding_precision": "6", "mon_decimal_point": ".", "i18n_choose_featured_img": "\u0622\u067e\u0644\u0648\u062f \u062a\u0635\u0648\u06cc\u0631 \u0634\u0627\u062e\u0635", "i18n_choose_file": "\u0627\u0646\u062a\u062e\u0627\u0628 \u06cc\u06a9 \u0641\u0627\u06cc\u0644", "i18n_choose_gallery": "\u0627\u0641\u0632\u0648\u062f\u0646 \u0639\u06a9\u0633 \u0628\u0647 \u06af\u0627\u0644\u0631\u06cc \u0645\u062d\u0635\u0648\u0644\u0627\u062a", "i18n_choose_featured_img_btn_text": "\u062a\u0639\u06cc\u06cc\u0646 \u062a\u0635\u0648\u06cc\u0631 \u0634\u0627\u062e\u0635", "i18n_choose_file_btn_text": "\u0648\u0627\u0631\u062f \u06a9\u0631\u062f\u0646 \u0622\u062f\u0631\u0633 \u0641\u0627\u06cc\u0644", "i18n_choose_gallery_btn_text": "\u0627\u0641\u0632\u0648\u062f\u0646 \u0628\u0647 \u06af\u0627\u0644\u0631\u06cc", "duplicates_attribute_messg": "\u0628\u0627 \u0639\u0631\u0636 \u067e\u0648\u0632\u0634\u060c \u0627\u06cc\u0646 \u06af\u0632\u06cc\u0646\u0647 \u0648\u06cc\u0698\u06af\u06cc \u062f\u0631 \u062d\u0627\u0644 \u062d\u0627\u0636\u0631 \u0648\u062c\u0648\u062f \u062f\u0627\u0631\u062f\u060c \u062f\u06cc\u06af\u0631\u06cc \u0631\u0627 \u0627\u0645\u062a\u062d\u0627\u0646 \u06a9\u0646\u06cc\u062f.", "variation_unset_warning": "\u0647\u0634\u062f\u0627\u0631! \u0627\u06af\u0631 \u0627\u06cc\u0646 \u06af\u0632\u06cc\u0646\u0647 \u0631\u0627 \u0627\u0646\u062a\u062e\u0627\u0628 \u0646\u06a9\u0646\u06cc\u062f\u060c \u0627\u06cc\u0646 \u0645\u062d\u0635\u0648\u0644 \u0647\u06cc\u0686 \u0646\u0648\u0639 \u0645\u062a\u063a\u06cc\u0631\u06cc \u0646\u062e\u0648\u0627\u0647\u062f \u062f\u0627\u0634\u062a.", "new_attribute_prompt": "\u06cc\u06a9 \u0646\u0627\u0645 \u0628\u0631\u0627\u06cc \u0648\u06cc\u0698\u06af\u06cc \u062c\u062f\u06cc\u062f \u0648\u0627\u0631\u062f \u06a9\u0646\u06cc\u062f:", "remove_attribute": "\u062d\u0630\u0641 \u0627\u06cc\u0646 \u062e\u0635\u0648\u0635\u06cc\u062a\u061f", "dokan_placeholder_img_src": "\/wp-content\/uploads\/woocommerce-placeholder-300x300.png", "add_variation_nonce": "83b571dd65", "link_variation_nonce": "01f6accb7c", "delete_variations_nonce": "1148167a0e", "load_variations_nonce": "db709f1e32", "save_variations_nonce": "cfd4b0b2bc", "bulk_edit_variations_nonce": "5e9e9e3407", "i18n_link_all_variations": "\u0622\u06cc\u0627 \u0634\u0645\u0627 \u0645\u0627\u06cc\u0644 \u0628\u0647 \u062a\u0631\u06a9\u06cc\u0628 \u062a\u0645\u0627\u0645 \u0645\u062a\u063a\u06cc\u0631\u0647\u0627 \u0647\u0633\u062a\u06cc\u062f\u061f \u062f\u0631 \u0627\u06cc\u0646 \u062d\u0627\u0644\u062a \u06cc\u06a9 \u0645\u062a\u063a\u06cc\u0631 \u062c\u062f\u06cc\u062f \u06a9\u0647 \u062d\u0627\u0648\u06cc \u062a\u0631\u06a9\u06cc\u0628 \u062a\u0645\u0627\u0645\u06cc \u0645\u0634\u062e\u0635\u0627\u062a \u0645\u0645\u06a9\u0646 \u0645\u062a\u063a\u06cc\u0631\u0647\u0627\u0633\u062a\u060c \u0633\u0627\u062e\u062a\u0647 \u0645\u06cc\u200c\u0634\u0648\u062f. (\u062f\u0631 \u0628\u06cc\u0634\u062a\u0631\u06cc\u0646 \u062d\u0627\u0644\u062a 50 \u0628\u0627\u0631 \u062f\u0631 \u0647\u0631 \u0627\u062c\u0631\u0627)", "i18n_enter_a_value": "\u06cc\u06a9 \u0645\u0642\u062f\u0627\u0631 \u0648\u0627\u0631\u062f \u0646\u0645\u0627\u06cc\u06cc\u062f.", "i18n_enter_menu_order": "\u0645\u0646\u0648\u06cc \u062a\u0646\u0648\u0639 \u0633\u0641\u0627\u0631\u0634 (\u062a\u0639\u06cc\u06cc\u0646 \u0645\u0648\u0642\u0639\u06cc\u062a \u062f\u0631 \u0644\u06cc\u0633\u062a \u062a\u063a\u06cc\u06cc\u0631\u0627\u062a)", "i18n_enter_a_value_fixed_or_percent": "\u06cc\u06a9 \u0645\u0642\u062f\u0627\u0631 \u0648\u0627\u0631\u062f \u0646\u0645\u0627\u06cc\u06cc\u062f (\u062b\u0627\u0628\u062a \u06cc\u0627 %)", "i18n_delete_all_variations": "\u0622\u06cc\u0627 \u0645\u0637\u0645\u0626\u0646 \u0647\u0633\u062a\u06cc\u062f \u06a9\u0647 \u0645\u06cc \u062e\u0648\u0627\u0647\u06cc\u062f \u062a\u0645\u0627\u0645\u06cc \u062a\u063a\u06cc\u06cc\u0631\u0627\u062a \u0631\u0627 \u062d\u0630\u0641 \u06a9\u0646\u06cc\u062f\u061f \u0627\u06cc\u0646 \u0642\u0627\u0628\u0644 \u0628\u0627\u0632\u06af\u0634\u062a \u0646\u06cc\u0633\u062a.", "i18n_last_warning": "\u0627\u062e\u0631\u06cc\u0646 \u0647\u0634\u062f\u0627\u0631 \u0622\u06cc\u0627 \u0634\u0645\u0627 \u0627\u0632 \u0627\u06cc\u0646 \u06a9\u0627\u0631 \u0627\u0637\u0645\u06cc\u0646\u0627\u0646 \u062f\u0627\u0631\u06cc\u062f\u061f", "i18n_choose_image": "\u0627\u0646\u062a\u062e\u0627\u0628 \u062a\u0635\u0648\u06cc\u0631", "i18n_set_image": "\u062a\u0646\u0638\u06cc\u0645 \u062a\u0635\u0648\u06cc\u0631 \u0645\u062a\u063a\u06cc\u0631", "i18n_variation_added": "\u062a\u063a\u06cc\u06cc\u0631 \u0627\u0636\u0627\u0641\u0647 \u0634\u062f.", "i18n_variations_added": "\u062a\u063a\u06cc\u06cc\u0631\u0627\u062a \u0627\u0636\u0627\u0641\u0647 \u0634\u062f.", "i18n_no_variations_added": "\u062a\u063a\u06cc\u06cc\u0631\u0627\u062a\u06cc \u0627\u0636\u0627\u0641\u0647 \u0646\u0634\u062f\u0647 \u0627\u0633\u062a.", "i18n_remove_variation": "\u0645\u0637\u0645\u0626\u0646\u06cc\u062f \u06a9\u0647 \u0645\u06cc \u062e\u0648\u0627\u0647\u06cc\u062f  \u0627\u06cc\u0646 \u062a\u063a\u06cc\u06cc\u0631 \u0631\u0627 \u062d\u0630\u0641 \u06a9\u0646\u06cc\u062f\u061f", "i18n_scheduled_sale_start": "\u062a\u0627\u0631\u06cc\u062e \u0634\u0631\u0648\u0639 \u062d\u0631\u0627\u062c (\u062f\u0631 \u0642\u0627\u0644\u0628 YYYY-MM-DD \u06cc\u0627 \u062e\u0627\u0644\u06cc \u0628\u06af\u0630\u0627\u0631\u06cc\u062f)", "i18n_scheduled_sale_end": "\u062a\u0627\u0631\u06cc\u062e \u067e\u0627\u06cc\u0627\u0646 \u0641\u0631\u0648\u0634 (\u062f\u0631 \u0642\u0627\u0644\u0628 YYYY-MM-DD \u06cc\u0627 \u062e\u0627\u0644\u06cc \u0628\u06af\u0630\u0627\u0631\u06cc\u062f)", "i18n_edited_variations": "\u062a\u063a\u06cc\u06cc\u0631\u0627\u062a \u0631\u0627 \u0630\u062e\u06cc\u0631\u0647 \u06a9\u0646\u06cc\u062f \u0642\u0628\u0644 \u0627\u0632 \u0627\u06cc\u0646\u06a9\u0647 \u0635\u0641\u062d\u0647 \u0631\u0627 \u062a\u063a\u06cc\u06cc\u0631 \u062f\u0647\u06cc\u062f.", "i18n_variation_count_single": "%qty% \u0645\u062a\u063a\u06cc\u0631", "i18n_variation_count_plural": "%qty% \u0645\u062a\u063a\u06cc\u0631\u0647\u0627", "i18n_no_result_found": "\u0646\u062a\u06cc\u062c\u0647\u200c\u0627\u06cc \u06cc\u0627\u0641\u062a \u0646\u0634\u062f.", "variations_per_page": "10", "store_banner_dimension": { "width": "625", "height": "300", "flex-width": true, "flex-height": true }, "selectAndCrop": "\u0627\u0646\u062a\u062e\u0627\u0628 \u0648 \u0628\u0631\u0634", "chooseImage": "\u0627\u0646\u062a\u062e\u0627\u0628 \u062a\u0635\u0648\u06cc\u0631", "product_title_required": "\u0639\u0646\u0648\u0627\u0646 \u06a9\u0627\u0644\u0627 \u0627\u0644\u0632\u0627\u0645\u06cc \u0645\u06cc \u0628\u0627\u0634\u062f.", "product_category_required": "\u062f\u0633\u062a\u0647 \u0645\u062d\u0635\u0648\u0644 \u0636\u0631\u0648\u0631\u06cc \u0627\u0633\u062a.", "search_products_nonce": "ba8ee4e719", "search_customer_nonce": "f988d9607c", "i18n_matches_1": "\u06cc\u06a9 \u0646\u062a\u06cc\u062c\u0647 \u062f\u0631 \u062f\u0633\u062a\u0631\u0633 \u0627\u0633\u062a\u060c \u0628\u0631\u0627\u06cc \u0627\u0646\u062a\u062e\u0627\u0628 \u0622\u0646 \u0631\u0627 \u0641\u0634\u0627\u0631 \u062f\u0647\u06cc\u062f.", "i18n_matches_n": "%qty% \u0646\u062a\u06cc\u062c\u0647 \u062f\u0631 \u062f\u0633\u062a\u0631\u0633 \u0627\u0633\u062a. \u0628\u0627 \u0627\u0633\u062a\u0641\u0627\u062f\u0647 \u0627\u0632 \u06a9\u0644\u06cc\u062f\u0647\u0627\u06cc \u0628\u0627\u0644\u0627 \u0648 \u067e\u0627\u06cc\u06cc\u0646 \u0628\u0647 \u0622\u0646\u0647\u0627 \u062f\u0633\u062a\u0631\u0633\u06cc \u062f\u0627\u0634\u062a\u0647 \u0628\u0627\u0634\u06cc\u062f.", "i18n_no_matches": "\u062c\u0633\u062a\u062c\u0648 \u062d\u0627\u0635\u0644\u06cc \u062f\u0631\u0628\u0631\u0646\u062f\u0627\u0634\u062a.", "i18n_ajax_error": "\u0628\u0627\u0631\u06af\u06cc\u0631\u06cc \u0627\u0646\u062c\u0627\u0645 \u0646\u0634\u062f.", "i18n_input_too_short_1": "\u0644\u0637\u0641\u0627 1 \u06cc\u0627 \u0686\u0646\u062f \u06a9\u0627\u0631\u0627\u06a9\u062a\u0631 \u0631\u0627 \u0648\u0627\u0631\u062f \u06a9\u0646\u06cc\u062f.", "i18n_input_too_short_n": "\u0644\u0637\u0641\u0627 \u062a\u0639\u062f\u0627\u062f %qty% \u06a9\u0627\u0631\u0627\u06a9\u062a\u0631 \u06cc\u0627 \u0628\u06cc\u0634\u062a\u0631 \u0648\u0627\u0631\u062f \u06a9\u0646\u06cc\u062f.", "i18n_input_too_long_1": "\u0644\u0637\u0641\u0627 1 \u06a9\u0627\u0631\u0627\u06a9\u062a\u0631 \u0631\u0627 \u062d\u0630\u0641 \u06a9\u0646\u06cc\u062f.", "i18n_input_too_long_n": "\u0644\u0637\u0641\u0627\u064b %qty% \u06a9\u0627\u0631\u0627\u06a9\u062a\u0631 \u0631\u0627 \u062d\u0630\u0641 \u06a9\u0646\u06cc\u062f.", "i18n_selection_too_long_1": "\u0634\u0645\u0627 \u0641\u0642\u0637 \u0645\u06cc\u200c\u062a\u0648\u0627\u0646\u06cc\u062f 1 \u0622\u06cc\u062a\u0645 \u0631\u0627 \u0627\u0646\u062a\u062e\u0627\u0628 \u06a9\u0646\u06cc\u062f.", "i18n_selection_too_long_n": "\u0634\u0645\u0627 \u062a\u0646\u0647\u0627 \u0645\u06cc\u200c\u062a\u0648\u0627\u0646\u06cc\u062f %qty% \u0622\u06cc\u062a\u0645 \u0627\u0646\u062a\u062e\u0627\u0628 \u06a9\u0646\u06cc\u062f.", "i18n_load_more": "\u0628\u0627\u0631\u06af\u0630\u0627\u0631\u06cc \u0646\u062a\u0627\u06cc\u062c \u0628\u06cc\u0634\u062a\u0631\u2026", "i18n_searching": "\u062f\u0631\u062d\u0627\u0644 \u062c\u0633\u062a\u062c\u0648\u2026", "i18n_date_format": "j F Y", "rest": { "root": "\/wp-json\/", "nonce": "9c0f4e0c10", "version": "dokan\/v1" }, "api": null, "libs": [], "routeComponents": { "default": null }, "routes": [] };
+/* ]]> */
+	</script>
+	<script type="text/javascript" src="@Url.Content("~/wp-content/themes/rosentis/assets/js/highcharts.js")"></script>
+	<script type="text/javascript" src="@Url.Content("~/wp-content/themes/rosentis/assets/js/jquery.elevateZoom.min.js")"></script>
+
+}
+@using (Html.BeginForm("AddToCart", "Cart", FormMethod.Post, new { id = "frmSubmit" }))
+{
+	<input type="hidden" name="ProductId" value="@Model.Id" />
+	<input type="hidden" name="Name" value="@Model.Name" />
+	if (Model.Children.Count != 0)
+	{
+		<input type="hidden" id="Quantity" name="Quantity" value="0" />
+	}
+	<div id="content" class="site-content">
+		<div id="primary" class="content-area">
+			<main id="main" class="site-main container-fluid" role="main">
+				<a class="single-feedback btn-link-border" data-remodal-target="login">بازخورد درباره این کالا</a>
+				<nav class="woocommerce-breadcrumb">
+					<a href="@Url.Content("~/")">رُزِنتیـس</a>&nbsp;&#47;&nbsp;
+					@for (var i = @Model.Categories.Count - 1; i >= 0; i--)
+				{
+					var id = @Model.Categories[i].Id;
+						<a href="@Url.Content("~/Products/List/?categoryId=" + id)">@Model.Categories[i].Name</a><span>&nbsp;&#47;&nbsp;</span>
+				}
+					@Model.Name
+				</nav>
+				<div class="woocommerce-notices-wrapper"></div>
+				<div id="product-776" class="product type-product post-776 status-publish first instock product_cat-20 product_cat-21 product_tag-48 product_tag--xs product_tag-209 product_tag-49 product_tag-210 has-post-thumbnail sale shipping-taxable purchasable product-type-variable has-default-attributes">
+					<article class="product-page single-new-style">
+						<div class="summary entry-summary">
+							<div class="product-page-header">
+								<h1>
+									@Model.Name
+
+									@*<span>ASUS X541UV - J - 15 inch Laptop</span>*@
+								</h1>
+								<div class="product-page-rating">
+									<div class="rating-stars">
+										<span class="rating-stars-single"></span><span class="rating-stars-single"></span><span class="rating-stars-single"></span><span class="rating-stars-single"></span><span class="rating-stars-single"></span>
+										<div class="rating-stars-active" style="width:80%">
+											<span class="rating-stars-single"></span><span class="rating-stars-single"></span><span class="rating-stars-single"></span><span class="rating-stars-single"></span><span class="rating-stars-single"></span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="product-page-attributes">
+								<div class="product-page-main">
+									<div class="product-page-main-wrapper">
+										<div class="niki-product-meta">
+											<ul>
+												@if (Model.Brand != null)
+												{
+													<li>
+														<span class="brand">برند: </span>
+														<a href="https://niki-kala.ir/product-brands/apple/" rel="tag">
+
+															@Model.Brand.Name
+														</a>
+													</li>
+												}
+											</ul>
+										</div>
+										<div class="product-page-features">
+											@Html.Raw(Model.Specifications)
+										</div>
+										@if (Model.Price != 0)
+										{
+											<span class="sku_wrapper product-bold-price"><span class="sku">@Model.PriceMoney</span></span>
+
+										}
+
+									</div>
+								</div>
+								@if (Model.Children.Count == 0)
+								{
+
+									<div class="product-page-box-section">
+										<div class="product-page-box-seller-info">
+											<div class="product-page-box-seller-row product-page-box-seller-row-add-to-cart">
+												<form class="cart" method="post" enctype="multipart/form-data" >
+													<div class="single_variation_wrap">
+														<div class="woocommerce-variation single_variation" style="">
+															<div class="woocommerce-variation-description"></div>
+															<div class="woocommerce-variation-price">
+															<span class="price">
+																@if (Model.Discount == 0)
+																{
+																	<span class="woocommerce-Price-amount amount">
+																		@Model.Price&nbsp;
+																	<span class="woocommerce-Price-currencySymbol">تومان</span>
+																</span>			}
+																else
+																{
+																	<div class="single-price-section">
+																      <div class="product-price-val">
+																		 <del>@Model.Price&nbsp;</del>
+																	 <span>
+																      <span class="woocommerce-Price-amount amount">@Model.PriceWithDiscountMoney&nbsp;
+																	  </span>
+																	  </span>
+																	</div>
+																<div class="product-price-discount" data-title="تخفیف"><span>@Model.DiscountMoney</span></div>
+																	</div>
+																}
+															</span>
+															</div>
+															<div class="woocommerce-variation-availability"></div>
+														</div><div class="woocommerce-variation-add-to-cart variations_button woocommerce-variation-add-to-cart-enabled">
+
+															<div class="quantity">
+																<input type="number"
+																	   id="quantity_@Model.Id"
+																	   name="Quantity"
+																	   class="input-text qty text"
+																	   step="1"
+																	   min="1"
+																	   max=""
+																	   size="4"
+																	   value="1"
+																	   inputmode="numeric" />
+															</div>
+
+															<button type="submit" name="add-to-cart" class="single_add_to_cart_button button alt">افزودن به سبد خرید</button>
+
+														</div>
+													</div>
+												</form>
+												<script>
+													var wcva_attribute_number = 1;
+													var outofstock_array = [];
+												</script>
+											</div>
+										</div>
+									</div>
+								}
+
+
+							</div>
+						</div>
+						<div class="single-product-image">
+							<div class="woocommerce-product-gallery woocommerce-product-gallery--with-images woocommerce-product-gallery--columns-4 images" data-columns="4" style="opacity: 0; transition: opacity .25s ease-in-out;">
+								<div class="main-image-section">
+									<ul class="images-section-options">
+										<li>
+											<button id="add-to-wish-button" class="shop-btn shop-btn-options shop-btn-wishes" data-remodal-target="login"></button>
+											<span class="shop-tooltip shop-tooltip-left shop-tooltip-short">افزودن به علاقمندی</span>
+											<span class="images-section-options-result"></span>
+										</li>
+										<li>
+											<button class="shop-btn shop-btn-options shop-btn-share" data-remodal-target="share"></button>
+											<span class="shop-tooltip shop-tooltip-left shop-tooltip-short">اشتراک گذاری</span>
+										</li>
+										<li>
+											<button id="notify-button" class="shop-btn shop-btn-options shop-btn-notify" data-remodal-target="login"></button>
+										</li>
+										<li>
+											<a href="https://niki-kala.ir/compare-products/?products=776" class="shop-btn shop-btn-options shop-btn-compare"></a>
+											<span class="shop-tooltip shop-tooltip-left shop-tooltip-short">مقایسه</span>
+										</li>
+									</ul>
+									<figure class="woocommerce-product-gallery__wrapper ">
+										@if (Model.Images.Count != 0)
+										{
+											<div data-thumb="@Model.Images[0].Photo"
+												 class="woocommerce-product-gallery__image">
+												<img width="600" height="328"
+													 src="@Model.Images[0].Photo"
+													 data-src="@Model.Images[0].Photo)"
+													 class="wp-post-image" />
+											</div>
+										}
+									</figure>
+
+								</div>
+								@*ziriha*@
+								<ul class="thumbs-images-section ">
+									@for (var item = 0; item < Model.Images.Count; item++)
+									{
+										<li class="woocommerce-product-thumb" data-slide-index="@item">
+											<img width="100" height="100"
+												 src="@Model.Images[item].Photo"
+												 class="" alt="" title="@Model.Images[item].Title" data-caption=""
+												 data-src="@Model.Images[item].Photo"
+												 data-large_image="@Model.Images[item].Photo"
+												 data-large_image_width="1280" data-large_image_height="700"
+												 data-zoom-image="@Model.Images[item].Photo"
+												 id="item"
+												 srcset="@Model.Images[item].Photo
+											100w, @Model.Images[item].Photo 150w,
+											@Model.Images[item].Photo 20w,
+											@Model.Images[item].Photo 30w,
+											@Model.Images[item].Photo 40w,
+											@Model.Images[item].Photo 300w"
+												 sizes="(max-width: 100px) 100vw, 100px" />
+										</li>
+									}
+
+								</ul>
+							</div>
+						</div>
+
+					</article>
+					@if (Model.Children.Count != 0)
+					{
+						<article class="product-page">
+							<div class="product-page-box-section">
+								<div class="product-page-box-seller-info">
+									<div class="product-page-box-seller-box">
+										<div class="product-page-box-seller-row">
+											<span class="swatchtitlelabel" style="font-size: large;">انتخاب ســایز یا رنگ</span>
+										</div>
+									</div>
+									<div class="product-page-box-seller-row product-page-box-seller-row-add-to-cart">
+										<form class="variations_form cart">
+
+											<table class="row variations shop_table shop_table_responsive cart woocommerce-cart-form__contents" cellspacing="0">
+												@for (var i = 0; i < Model.Children.Count - 1; i++)
+												{
+													<tr class="woocommerce-cart-form__cart-item cart_item col-4" style="float:right;text-align:center; text-align: -webkit-center;font-size:large;">
+														<td>@Model.Children[i].Name</td>
+														<td class="product-name">
+															<input type="hidden" name="Children[@i].ProductId" value="@Model.Children[i].Id" />
+															<div class="nikikala-cart-qty">
+																<div class="nikikala-qty-row item-key-@Model.Children[i].Quantity">
+																	<div class="quantity">
+																		<button type="button" class="qty-plus" onclick="checkQuantity(document.getElementById('quantity_@Model.Children[i].Id'), @Model.Children[i].Id,@Model.Children[i].DiscountPrice);"></button>
+																		<input type="number" id="quantity_@Model.Children[i].Id" class="input-text qty text"
+																			   name="Children[@i].Quantity" value="0">
+																		<button type="button" class="qty-minus" onclick="reduceTheAmount(document.getElementById('quantity_@Model.Children[i].Id'), @Model.Children[i].Id,@Model.Children[i].DiscountPrice);"></button>
+																	</div>
+																	<a class="remove remove-from-cart hidden-required" data-pid="269" data-key="06138bc5af6023646ede0e1f7c1eac75"
+																	   data-vid="0"></a>
+																</div>
+															</div>
+														</td>
+														<td>
+															@if (Model.Children[i].Discount == 0)
+															{
+																@Model.Children[i].PriceMoney
+
+															}
+															else
+															{
+																<div class="single-price-section">
+																	<div class="product-price-val">
+																		<del>@Model.Children[i].Price&nbsp;</del>
+																		<span style="color:red;">
+																			<span class="woocommerce-Price-amount amount">
+																				@Model.Children[i].PriceWithDiscountMoney&nbsp;
+																			</span>
+																		</span>
+																	</div>
+																	<div class="product-price-discount" data-title="تخفیف"><span style="color:red;">@Model.Children[i].DiscountMoney</span></div>
+																</div>
+															}
+														</td>
+													</tr>
+												}
+												<tr class="col-8"></tr>
+												<tr class="woocommerce-cart-form__cart-item cart_item col-12" style="float:right;font-size:large;text-align:center; ">
+													<td>
+														<div class="quantity">
+															<button type="submit" class="single_add_to_cart_button button alt" onclick="return checkTotalPrice(document.getElementById('total').value);">افزودن به سبد خرید</button>
+														</div>
+													</td>
+													<td>
+														<label for="quantity_@Model.Id">جمع مبالغ قابل پرداخت:</label>
+														<input type="hidden" value="0" id="total" min="1" name="TotalPrice" />
+														<label for="quantity_@Model.Id" id="totalPrice">0</label>
+													</td>
+												</tr>
+											</table>
+
+										</form>
+										<script>
+											var wcva_attribute_number = 1;
+											var outofstock_array = [];
+										</script>
+									</div>
+								</div>
+							</div>
+
+						</article>
+					}
+					<div class="remodal-wrapper">
+						<div class="remodal remodal-satisfy" data-remodal-id="price-satisfy" data-remodal-options="hashTracking: false" role="dialog" aria-labelledby="modal1Title" aria-describedby="modal1Desc" tabindex="-1">
+							<button data-remodal-action="close" class="remodal-close" aria-label="Close"></button>
+							<div class="remodal-satisfy-main">
+								<div class="remodal-satisfy-content">
+									<form id="priceSatisfy" action="priceSatisfy" method="post">
+										<div class="shop-message-one hidden"></div>
+										<div class="remodal-satisfy-form-title">این کالا را با چه قیمتی دیده‌اید؟(تومان)</div>
+										<div class="remodal-satisfy-row">
+											<div class="remodal-satisfy-col">
+												<label class="input-warp">
+													<input class="nikikala-input" type="text" name="your_price" placeholder="مانند: 10000">
+												</label>
+											</div>
+										</div>
+										<div class="remodal-satisfy-form-title">این محصول با این قیمت را در کدام فروشگاه می فروشند؟</div>
+										<div class="remodal-satisfy-row">
+											<div class="remodal-satisfy-col">
+												<label class="input-warp">
+													<input class="nikikala-input" type="text" name="store_name">
+												</label>
+											</div>
+										</div>
+										<div class="remodal-satisfy-form-title">آیا فروشگاه آنلاین است؟</div>
+										<div class="remodal-satisfy-row">
+											<div class="remodal-satisfy-col">
+												<ul class="remodal-satisfy-online">
+													<li>
+														<label class="nikikala-radio">
+															<input type="radio" name="online_store" id="online_store_yes" value="1">
+															<span class="nikikala-radio-check"></span>
+														</label>
+														<label for="online_store_yes">بله</label>
+													</li>
+													<li>
+														<label class="nikikala-radio">
+															<input type="radio" name="online_store" id="online_store_no" value="0">
+															<span class="nikikala-radio-check"></span>
+														</label>
+														<label for="online_store_no">خیر</label>
+													</li>
+												</ul>
+											</div>
+										</div>
+										<div class="remodal-satisfy-row remodal-satisfy-row-submit">
+											<div class="remodal-satisfy-col">
+												<button type="submit" name="submit" id="wp-submit" class="btn-remodal-primary">ثبت</button>
+												<button data-remodal-action="close" class="btn-remodal-secondary">بازگشت</button>
+											</div>
+										</div>
+										<input type="hidden" id="current_product_price" name="current_product_price" value="12600000">
+										<input type="hidden" id="product_id" name="product_id" value="776">
+										<input type="hidden" id="user_id" name="user_id" value="0">
+										<input type="hidden" id="security" name="security" value="4454611ccb" /><input type="hidden" name="_wp_http_referer" value="/product/%da%af%d9%88%d8%b4%db%8c-%d9%85%d9%88%d8%a8%d8%a7%db%8c%d9%84-%d8%a7%d9%be%d9%84-%d9%85%d8%af%d9%84-apple-iphone-xs/" />
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="remodal-wrapper">
+						<div class="remodal remodal-share" data-remodal-id="share" data-remodal-options="hashTracking: false" role="dialog" aria-labelledby="modal1Title" aria-describedby="modal1Desc" tabindex="-1">
+							<button data-remodal-action="close" class="remodal-close" aria-label="Close"></button>
+							<div class="remodal-share-main">
+								<div class="remodal-share-main-aside">
+									<div class="remodal-share-main-aside-title">اشتراک گذاری</div>
+									<div class="remodal-share-main-aside-icon"></div>
+								</div>
+								<div class="remodal-share-main-content">
+									@*<form id="sendtofriend" action="sendtofriend" method="post">
+											<div class="form-share-title">اشتراک در شبکه های اجتماعی</div>
+											<div class="form-share-row">
+													<div class="form-share-column">
+														<ul class="form-share-btn-box">
+															<li>
+																<a href="https://wa.me?text=https://rosentis.ir/Products/Details/@Model.Id" rel="nofollow" class="o-btn c-share__social c-share__social--whatsapp" target="_blank"></a>
+															</li>
+															<li>
+																<a href="https://www.facebook.com/sharer.php?u=https://niki-kala.ir/?p=776" data-title="گوشی موبایل اپل مدل Apple iPhone XS" data-image="https://niki-kala.ir/wp-content/uploads/2018/12/IphoneXS-300x300.jpg" data-url="https://niki-kala.ir/?p=776" rel="nofollow" class="shop-btn facebook" target="_blank"></a>
+															</li>
+															<li>
+																<a href="https://plus.google.com/share?url=https://niki-kala.ir/?p=776" data-title="گوشی موبایل اپل مدل Apple iPhone XS" data-image="https://niki-kala.ir/wp-content/uploads/2018/12/IphoneXS-300x300.jpg" data-url="https://niki-kala.ir/?p=776" rel="nofollow" class="shop-btn gplus" target="_blank"></a>
+															</li>
+															<li>
+																<a href="https://telegram.me/share/url?url=https://niki-kala.ir/?p=776" data-title="به اشتراگ گذاری در تلگرام" rel="nofollow" target="_blank" class="shop-btn telegram"></a>
+															</li>
+														</ul>
+													</div>
+												</div>
+											<div class="form-share-title">معرفی به دوستان</div>
+											<div class="shop-message-one hidden"></div>
+											<div class="form-share-row">
+												<div class="form-share-column">
+													<label class="form-share-input">
+														<input id="friendemail" name="friendemail" type="email" placeholder="ایمیل دوستتان yourfriend@email.com">
+													</label>
+												</div>
+											</div>
+											<div class="form-share-row form-share-row-submit">
+												<div class="form-share-column">
+													<button type="submit" name="submit" id="wp-submit" class="btn-share">ارسال</button>
+												</div>
+											</div>
+											<input type="hidden" id="product_id" name="product_id" value="776">
+											<input type="hidden" id="security" name="security" value="7371281505" /><input type="hidden" name="_wp_http_referer" value="/product/%da%af%d9%88%d8%b4%db%8c-%d9%85%d9%88%d8%a8%d8%a7%db%8c%d9%84-%d8%a7%d9%be%d9%84-%d9%85%d8%af%d9%84-apple-iphone-xs/" />
+										</form>
+										<form>
+											<div class="form-share-title">آدرس صفحه</div>
+											<div class="form-share-row-link">
+												<div class="form-share-column-link">
+													<label class="form-share-link-input">
+														<input type="url" value="https://niki-kala.ir/?p=776" readonly="">
+													</label>
+												</div>
+											</div>
+										</form>*@
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="remodal-wrapper">
+						<div class="remodal remodal-notify" data-remodal-id="notify" data-remodal-options="hashTracking: false" role="dialog" aria-labelledby="modal1Title" aria-describedby="modal1Desc" tabindex="-1">
+							<button data-remodal-action="close" class="remodal-close" aria-label="Close"></button>
+							<div class="remodal-notify-main">
+								<div class="remodal-notify-side">
+									<div class="remodal-notify-title">به من اطلاع بده</div>
+									<div class="remodal-notify-icon"></div>
+								</div>
+								<div class="remodal-notify-content">
+									<form id="nikan_notify_form" action="nikan_notify_form" method="post">
+										<div class="remodal-notify-content-title">اطلاع به من در زمان:</div>
+										<div class="remodal-notify-row">
+											<div class="nikikala-switcher">
+												<label class="switcher-label">
+													<input type="checkbox" name="notify_offer" id="notify_offer" value="0">
+													<span class="nikikala-switcher-slider"></span>
+													<span class="nikikala-switcher-back"></span>
+												</label>
+												<div>پیشنهاد شگفت انگیز</div>
+											</div>
+										</div>
+										<div class="remodal-notify-row">
+											<div class="remodal-notify-col">
+												<div class="shop-message-one hidden"></div>
+											</div>
+										</div>
+										<div class="remodal-notify-row">
+											<div class="remodal-notify-col">
+												<div class="shop-message-one shop-message-one-info">
+													برای استفاده از این بخش می بایست ایمیل یا شماره موبایل خود را از طریق ویرایش حساب کاربری خود واردکنید.
+												</div>
+											</div>
+										</div>
+										<input name="notify_u_id" id="notify_u_id" type="hidden" value="0">
+										<input name="notify_p_id" id="notify_p_id" type="hidden" value="776">
+										<input type="hidden" id="security" name="security" value="11065213b2" /><input type="hidden" name="_wp_http_referer" value="/product/%da%af%d9%88%d8%b4%db%8c-%d9%85%d9%88%d8%a8%d8%a7%db%8c%d9%84-%d8%a7%d9%be%d9%84-%d9%85%d8%af%d9%84-apple-iphone-xs/" />
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="remodal-wrapper">
+						<div class="remodal remodal-gallery" data-remodal-id="product-gallery" data-remodal-options="hashTracking: false" role="dialog" aria-labelledby="modal1Title" aria-describedby="modal1Desc" tabindex="-1">
+							<button data-remodal-action="close" class="remodal-close" aria-label="Close"></button>
+							<div class="remodal-gallery-main">
+								<div class="remodal-gallery-content">
+									<div class="swiper-container remodal-gallery-main-id">
+										<div class="swiper-wrapper">
+											@foreach (var item in Model.Images)
+											{
+												<div class="swiper-slide">
+													<img data-src="@item.Photo"
+														 alt="@Model.Name"
+														 src="@item.Photo">
+												</div>
+											}
+
+										</div>
+									</div>
+								</div>
+								<div class="remodal-gallery-side">
+									<div class="swiper-button-next modal-button-next-id"></div>
+									<div class="swiper-button-prev modal-button-prev-id"></div>
+									<div class="swiper-container modal-gallery-thumbs-id">
+										<div class="swiper-wrapper">
+											@foreach (var item in Model.Images)
+											{
+												<div class="swiper-slide">
+													<img data-src="@item.Photo"
+														 alt="@Model.Name"
+														 src="@item.Photo">
+												</div>
+											}
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="remodal-wrapper">
+						<div class="remodal remodal-satisfy" data-remodal-id="product-feedback" data-remodal-options="hashTracking: false" role="dialog" aria-labelledby="modal1Title" aria-describedby="modal1Desc" tabindex="-1">
+							<button data-remodal-action="close" class="remodal-close" aria-label="Close"></button>
+							<div class="remodal-satisfy-main">
+								<div class="remodal-satisfy-side">
+									<div class="remodal-satisfy-side-title">بازخورد درباره این کالا</div>
+									<div class="remodal-satisfy-side-img">
+										<img alt="گوشی موبایل اپل مدل Apple iPhone XS" data-src="https://niki-kala.ir/wp-content/uploads/2018/12/IphoneXS-300x300.jpg" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img alt="گوشی موبایل اپل مدل Apple iPhone XS" data-src="https://niki-kala.ir/wp-content/uploads/2018/12/IphoneXS-300x300.jpg" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img alt="گوشی موبایل اپل مدل Apple iPhone XS" src="https://niki-kala.ir/wp-content/uploads/2018/12/IphoneXS-300x300.jpg"></noscript></noscript>
+									</div>
+								</div>
+								<div class="remodal-satisfy-content">
+									<form id="product_feedback" action="product_feedback" method="post">
+										<div class="shop-message-one hidden"></div>
+										<div class="remodal-satisfy-row">
+											<div class="remodal-satisfy-col">
+												<label class="niki-ui-checkbox-min">
+													<input type="checkbox" name="feedback_options[]" value="نام کالا صحیح نیست">
+													<span></span>
+													نام کالا صحیح نیست
+												</label>
+											</div>
+										</div>
+										<div class="remodal-satisfy-row">
+											<div class="remodal-satisfy-col">
+												<label class="niki-ui-checkbox-min">
+													<input type="checkbox" name="feedback_options[]" value="عکس‌های کالا مناسب نیست">
+													<span></span>
+													عکس‌های کالا مناسب نیست
+												</label>
+											</div>
+										</div>
+										<div class="remodal-satisfy-row">
+											<div class="remodal-satisfy-col">
+												<label class="niki-ui-checkbox-min">
+													<input type="checkbox" name="feedback_options[]" value="مشخصات فنی کالا صحیح نیست">
+													<span></span>
+													مشخصات فنی کالا صحیح نیست
+												</label>
+											</div>
+										</div>
+										<div class="remodal-satisfy-row">
+											<div class="remodal-satisfy-col">
+												<label class="niki-ui-checkbox-min">
+													<input type="checkbox" name="feedback_options[]" value="توضیحات کالا صحیح نیست">
+													<span></span>
+													توضیحات کالا صحیح نیست
+												</label>
+											</div>
+										</div>
+										<div class="remodal-satisfy-row">
+											<div class="remodal-satisfy-col">
+												<label class="niki-ui-checkbox-min">
+													<input type="checkbox" name="feedback_options[]" value="کالا تکراری است">
+													<span></span>
+													کالا تکراری است
+												</label>
+											</div>
+										</div>
+
+
+										<div class="remodal-satisfy-form-title">مشخصات</div>
+										<div class="remodal-satisfy-row">
+											<div class="remodal-satisfy-col">
+												<label class="input-warp">
+													<textarea class="nikikala-input" name="feedback_desc" placeholder="توضیحات"></textarea>
+												</label>
+											</div>
+										</div>
+										<div class="remodal-satisfy-row remodal-satisfy-row-submit">
+											<div class="remodal-satisfy-col">
+												<button type="submit" name="submit" id="wp-submit" class="btn-remodal-primary">ثبت</button>
+												<button data-remodal-action="close" class="btn-remodal-secondary">بازگشت</button>
+											</div>
+										</div>
+										<input type="hidden" id="product_id" name="product_id" value="776">
+										<input type="hidden" id="user_id" name="user_id" value="0">
+										<input type="hidden" id="security" name="security" value="1e08418da5" /><input type="hidden" name="_wp_http_referer" value="/product/%da%af%d9%88%d8%b4%db%8c-%d9%85%d9%88%d8%a8%d8%a7%db%8c%d9%84-%d8%a7%d9%be%d9%84-%d9%85%d8%af%d9%84-apple-iphone-xs/" />
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="woocommerce-tabs wc-tabs-wrapper">
+						<ul class="tabs wc-tabs" role="tablist">
+							<li class="description_tab active" id="tab-title-description" role="tab" aria-controls="tab-description">
+								<a href="#tab-description">
+									توضیحات
+								</a>
+							</li>
+							@if (Model.Technicals.Count != 0)
+							{
+								<li class="additional_information_tab" id="tab-title-additional_information" role="tab" aria-controls="tab-additional_information">
+									<a href="#tab-additional_information">
+										مشخصات فنی
+									</a>
+								</li>
+							}
+							<li class="nik_reviews_tab" id="tab-title-nik_reviews" role="tab" aria-controls="tab-nik_reviews">
+								<a href="#tab-nik_reviews">
+									نظرات
+								</a>
+							</li>
+							<li class="seller_tab" id="tab-title-seller" role="tab" aria-controls="tab-seller">
+								<a href="#tab-seller">
+									لینک های مرتبط
+								</a>
+							</li>
+							<li class="seller_tab" id="tab-title-seller" role="tab" aria-controls="tab-seller">
+								<a href="#tab-seller">
+									کاتالوگ ها
+								</a>
+							</li>
+						</ul>
+						<div class="woocommerce-Tabs-panel woocommerce-Tabs-panel--description panel entry-content wc-tab" id="tab-description" role="tabpanel" aria-labelledby="tab-title-description">
+							@Html.Raw(Model.Description)
+
+						</div>
+						@if (Model.Technicals.Count != 0)
+						{
+							<div class="woocommerce-Tabs-panel woocommerce-Tabs-panel--additional_information panel entry-content wc-tab" id="tab-additional_information" role="tabpanel" aria-labelledby="tab-title-additional_information">
+
+								<h2>
+									مشخصات فنی		<span>@Model.Name</span>
+								</h2>
+								<ul class="spec-list"></ul>
+
+								<ul class="spec-list">
+									@foreach (var item in Model.Technicals)
+									{
+										if (item.TechnicalId == null)
+										{
+											<li class="clearfix ">
+												<span class="technicalspecs-title">
+													@item.Name
+												</span>
+												@if (item.IsValid)
+												{
+
+													if (item.IsChecked)
+													{
+														<span class="technicalspecs-value true"><span><i class="icon icon-green-mark"></i></span></span>
+													}
+													else
+													{
+														<span class="technicalspecs-value false"><span><i class="icon icon-red-close"></i></span></span>
+													}
+												}
+												else
+												{
+													<span class="technicalspecs-value "><span>@item.Description</span></span>
+												}
+											</li>
+										}
+										else
+										{
+											<li class="clearfix ">
+												<span class="technicalspecs-title">
+													@item.Technical.Parent.Title
+												</span>
+												<span class="technicalspecs-value "><span>@item.Technical.Title</span></span>
+											</li>
+										}
+									}
+
+
+								</ul>
+							</div>
+						}
+						<div class="woocommerce-Tabs-panel woocommerce-Tabs-panel--nik_reviews panel entry-content wc-tab" id="tab-nik_reviews" role="tabpanel" aria-labelledby="tab-title-nik_reviews">
+							<h3 class="nik-comments-title">
+								امتیاز کاربران به: 					<span>
+									<span>@Model.Name</span>
+									@*<span> |</span>
+										<span>4.33</span>
+										<span> / 5</span>
+										<span>(2 نفر)</span>*@
+								</span>
+							</h3>
+							<div class="nik-comments-list-title">
+								<span>نظرات کاربران</span>
+							</div>
+							<div id="nik-product-comments-list">
+								<ul class="nik-comments-list">
+									@*<li>
+											<section>
+												<div class="comment-side">
+													<div class="shop-message-one shop-message-one-opinion-noidea">در مورد خرید این محصول مطمئن نیستم</div>
+												</div>
+												<div class="comment-main">
+													<div class="comment-header">
+														<div>
+															عالی											<span>توسط  در تاریخ ۰۳ اردیبهشت ۱۳۹۸</span>
+														</div>
+													</div>
+													<div class="nik-comments-advantages">
+														<div class="nik-comments-advantages-positive">
+															<span>نقاط قوت</span>
+															<ul>
+																<li>صفحه نمایش</li>
+															</ul>
+														</div>
+														<div class="nik-comments-advantages-negative">
+															<span>نقاط ضعف</span>
+															<ul>
+																<li>قیمت</li>
+															</ul>
+														</div>
+													</div>
+													<p>گوشی بسیار خوبی هست</p>
+													<div class="comment-footer">
+														<div class="nik-comments-likes">
+															آیا این نظر برایتان مفید بود؟																							<button class="shop-btn btn-like" data-counter="1" data-remodal-target="login">بله</button>
+															<button class="shop-btn btn-like" data-counter="0" data-remodal-target="login">خیر</button>
+														</div>
+													</div>
+												</div>
+											</section>
+										</li>*@
+								</ul>
+							</div>
+						</div>
+						<div class="woocommerce-Tabs-panel woocommerce-Tabs-panel--seller panel entry-content wc-tab" id="tab-seller" role="tabpanel" aria-labelledby="tab-title-seller">
+							<div class="container-fluid">
+								<div class="row">
+
+
+									<div class="col-md-3">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<section class="products-swiper in-single-page">
+					<div class="object-headline">
+						<span>محصولات مشابه</span>
+					</div>
+					<div class="products-swiper-box">
+						<div class="swiper-container swiper-container-products5" dir="rtl" lang="fa-IR">
+							<div class="swiper-wrapper">
+							</div>
+							<div class="swiper-button-prev js-swiper-button-prev"></div>
+							<div class="swiper-button-next js-swiper-button-next"></div>
+						</div>
+					</div>
+				</section>
+			</main>
+		</div>
+
+	</div>
+}
+@section scripts
+{
+	<script>
+				function checkQuantity(a, id, price) {
+					var valueOfUserQuantity = a.value;
+					var nextValue = (parseInt(a.value) + 1).toString();
+					jQuery.ajax({
+						type: "POST",
+						url: "@Url.Action("CheckQuantity", "Products")",
+						data: { id: id},
+						success: function (data) {
+							if (parseInt(nextValue) > parseInt(data)) {
+								alert('مقدار انتخابی بیشتر از موجودی انبار می باشد');
+								a.value = data;
+							} else {
+								a.value = nextValue;
+
+								//get hidden int value
+								var total = parseInt(document.getElementById('total').value);
+								var newPrice = parseInt(total) + parseInt(price);
+								document.getElementById('total').value = newPrice;
+
+								//set show value for user
+								var str = newPrice.toString().replace(/,/g, "");
+								var t = str.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+								document.getElementById('totalPrice').innerHTML = t + " تومان";
+
+								//add to parent quantity
+								var parent = parseInt(document.getElementById('Quantity').value);
+								document.getElementById('Quantity').value = parent + 1;
+							}
+						},
+					});
+
+					};
+
+				function reduceTheAmount(a, id, price) {
+					var valueOfUserQuantity = a.value;
+					if (valueOfUserQuantity != 0) {
+						a.value = (parseInt(a.value) - 1).toString();
+
+						//get hidden int value
+						var total = parseInt(document.getElementById('total').value);
+						var newPrice = parseInt(total) - parseInt(price);
+						document.getElementById('total').value = newPrice;
+
+						//set show value for user
+						var str = newPrice.toString().replace(/,/g, "");
+						var t = str.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+						document.getElementById('totalPrice').innerHTML = t + " تومان";
+
+						//remove from parent quantity
+						var parent = parseInt(document.getElementById('Quantity').value);
+						document.getElementById('Quantity').value = parent - 1;
+					}
+					}
+
+				function checkTotalPrice(total) {
+					if (total == 0) {
+						alert('لطفا ابتدا محصول و تعداد مورد نیاز خود را انتخاب نمایید');
+						return false;
+					} else {
+						return true;
+					}
+				}
+	</script>
+	<script type="text/javascript" src="~/wp-content/themes/rosentis/assets/js/rosentis.js"></script>
+	<script type='text/javascript'>
+				var jcaa = { "enable_validation": "yes", "enable_attr_toggle": "yes" };
+				var jcaa_attrs = [];
+	</script>
+	<script type="text/javascript">
+				var wcva = { "tooltip": "", "disable_options": "no", "hide_options": "no", "show_attribute": "", "quick_view": "off" };
+	</script>
+	<script type="text/javascript" src="@Url.Content("~/wp-content/plugins/woocommerce-colororimage-variation-select/js/product-frontend.js")"></script>
+	<script type="text/javascript" src="@Url.Content("~/wp-includes/js/underscore.min.js")"></script>
+	<script type="text/javascript">
+				var _wpUtilSettings = { "ajax": { "url": "\/wp-admin\/admin-ajax.php" } };
+	</script>
+	<script type="text/javascript" src="@Url.Content("~/wp-includes/js/wp-util.min.js")"></script>
+	<script type="text/javascript">
+				var wc_add_to_cart_variation_params = { "wc_ajax_url": "\/?wc-ajax=%%endpoint%%", "i18n_no_matching_variations_text": "\u0628\u0627 \u0639\u0631\u0636 \u067e\u0648\u0632\u0634\u060c \u0647\u06cc\u0686 \u0645\u062d\u0635\u0648\u0644\u06cc \u0645\u0637\u0627\u0628\u0642 \u0627\u0646\u062a\u062e\u0627\u0628 \u0634\u0645\u0627 \u06cc\u0627\u0641\u062a \u0646\u0634\u062f. \u062e\u0648\u0627\u0647\u0634\u0645\u0646\u062f\u06cc\u0645\u064b \u062a\u0631\u06a9\u06cc\u0628 \u062f\u06cc\u06af\u0631\u06cc \u0631\u0627 \u0627\u0646\u062a\u062e\u0627\u0628 \u06a9\u0646\u06cc\u062f.", "i18n_make_a_selection_text": "\u0642\u0628\u0644 \u0627\u0632 \u0627\u06cc\u0646 \u06a9\u0647 \u0627\u06cc\u0646 \u0645\u062d\u0635\u0648\u0644 \u0628\u0647 \u0633\u0628\u062f \u062e\u0631\u06cc\u062f \u062e\u0648\u062f \u0627\u0636\u0627\u0641\u0647 \u06a9\u0646\u06cc\u062f \u06af\u0632\u06cc\u0646\u0647 \u0647\u0627\u06cc \u0645\u062d\u0635\u0648\u0644 \u0631\u0627 \u0627\u0646\u062a\u062e\u0627\u0628 \u06a9\u0646\u06cc\u062f.", "i18n_unavailable_text": "\u0628\u0627 \u0639\u0631\u0636 \u067e\u0648\u0632\u0634\u060c \u0627\u06cc\u0646 \u0645\u062d\u0635\u0648\u0644 \u062f\u0631 \u062f\u0633\u062a\u0631\u0633 \u0646\u06cc\u0633\u062a. \u062e\u0648\u0627\u0647\u0634\u0645\u0646\u062f\u06cc\u0645\u064b \u062a\u0631\u06a9\u06cc\u0628 \u062f\u06cc\u06af\u0631\u06cc \u0631\u0627 \u0627\u0646\u062a\u062e\u0627\u0628 \u06a9\u0646\u06cc\u062f." };
+	</script>
+	<script type="text/javascript" src="@Url.Content("~/wp-content/plugins/woocommerce-colororimage-variation-select/js/add-to-cart-variation3.js")"></script>
+	<script type="text/javascript">
+				var wc_single_product_params = { "i18n_required_rating_text": "\u062e\u0648\u0627\u0647\u0634\u0645\u0646\u062f\u06cc\u0645 \u06cc\u06a9 \u0631\u062a\u0628\u0647 \u0631\u0627 \u0627\u0646\u062a\u062e\u0627\u0628 \u06a9\u0646\u06cc\u062f", "review_rating_required": "yes", "flexslider": { "rtl": true, "animation": "slide", "smoothHeight": true, "directionNav": false, "controlNav": "thumbnails", "slideshow": false, "animationSpeed": 500, "animationLoop": false, "allowOneSlide": false }, "zoom_enabled": "", "zoom_options": [], "photoswipe_enabled": "", "photoswipe_options": { "shareEl": false, "closeOnScroll": false, "history": false, "hideAnimationDuration": 0, "showAnimationDuration": 0 }, "flexslider_enabled": "" };
+	</script>
+	<script type="text/javascript" src="@Url.Content("~/wp-content/plugins/woocommerce/assets/js/frontend/single-product.min.js")"></script>
+	<script type="text/javascript" src="@Url.Content("~/wp-includes/js/comment-reply.min.js")"></script>
+	<script type="text/javascript" src="@Url.Content("~/wp-includes/js/jquery/ui/core.min.js")"></script>
+	<script type="text/javascript" src="@Url.Content("~/wp-includes/js/jquery/ui/widget.min.js")"></script>
+	<script type="text/javascript" src="@Url.Content("~/wp-includes/js/jquery/ui/mouse.min.js")"></script>
+	<script type="text/javascript" src="@Url.Content("~/wp-includes/js/jquery/ui/sortable.min.js")"></script>
+	<script type="text/javascript" src="@Url.Content("~/wp-includes/js/jquery/ui/datepicker.min.js")"></script>
+	<script type="text/javascript">
+				jQuery(document).ready(function (jQuery) { jQuery.datepicker.setDefaults({ "closeText": "\u0628\u0633\u062a\u0646.", "currentText": "\u0627\u0645\u0631\u0648\u0632", "monthNames": ["\u0698\u0627\u0646\u0648\u06cc\u0647", "\u0641\u0648\u0631\u06cc\u0647", "\u0645\u0627\u0631\u0633", "\u0622\u0648\u0631\u06cc\u0644", "\u0645\u06cc", "\u0698\u0648\u0626\u0646", "\u062c\u0648\u0644\u0627\u06cc", "\u0622\u06af\u0648\u0633\u062a", "\u0633\u067e\u062a\u0627\u0645\u0628\u0631", "\u0627\u06a9\u062a\u0628\u0631", "\u0646\u0648\u0627\u0645\u0628\u0631", "\u062f\u0633\u0627\u0645\u0628\u0631"], "monthNamesShort": ["\u0698\u0627\u0646\u0648\u06cc\u0647", "\u0641\u0648\u0631\u06cc\u0647", "\u0645\u0627\u0631\u0633", "\u0622\u0648\u0631\u06cc\u0644", "\u0645\u0647", "\u0698\u0648\u0626\u0646", "\u062c\u0648\u0644\u0627\u06cc", "\u0622\u06af\u0648\u0633\u062a", "\u0633\u067e\u062a\u0627\u0645\u0628\u0631", "\u0627\u06a9\u062a\u0628\u0631", "\u0646\u0648\u0627\u0645\u0628\u0631", "\u062f\u0633\u0627\u0645\u0628\u0631"], "nextText": "\u0628\u0639\u062f", "prevText": "\u0642\u0628\u0644\u06cc", "dayNames": ["\u06cc\u06a9\u0634\u0646\u0628\u0647", "\u062f\u0648\u0634\u0646\u0628\u0647", "\u0633\u0647\u200c\u0634\u0646\u0628\u0647", "\u0686\u0647\u0627\u0631\u0634\u0646\u0628\u0647", "\u067e\u0646\u062c\u200c\u0634\u0646\u0628\u0647", "\u062c\u0645\u0639\u0647", "\u0634\u0646\u0628\u0647"], "dayNamesShort": ["\u06cc", "\u062f", "\u0633", "\u0686", "\u067e", "\u062c", "\u0634"], "dayNamesMin": ["\u06cc", "\u062f", "\u0633", "\u0686", "\u067e", "\u062c", "\u0634"], "dateFormat": "d MM yy", "firstDay": 6, "isRTL": true }); });
+	</script>
+	<script type="text/javascript" src="@Url.Content("~/wp-content/plugins/dokan-lite/assets/vendors/tooltips/tooltips.js")"></script>
+	<script type="text/javascript">
+				var DokanValidateMsg = { "required": "\u0627\u06cc\u0646 \u0641\u06cc\u0644\u062f \u0627\u0644\u0632\u0627\u0645\u06cc \u0627\u0633\u062a.", "remote": "\u0644\u0637\u0641\u0627 \u0627\u06cc\u0646 \u0641\u06cc\u0644\u062f \u0631\u0627 \u0627\u0635\u0644\u0627\u062d \u06a9\u0646\u06cc\u062f.", "email": "\u0644\u0637\u0641\u0627 \u06cc\u06a9 \u0622\u062f\u0631\u0633 \u0627\u06cc\u0645\u06cc\u0644 \u0645\u0639\u062a\u0628\u0631 \u0648\u0627\u0631\u062f \u06a9\u0646\u06cc\u062f.", "url": "\u0644\u0637\u0641\u0627 \u06cc\u06a9 \u0646\u0634\u0627\u0646\u06cc \u0648\u0628 \u0645\u0639\u062a\u0628\u0631 \u0648\u0627\u0631\u062f \u06a9\u0646\u06cc\u062f.", "date": "\u0644\u0637\u0641\u0627 \u06cc\u06a9 \u062a\u0627\u0631\u06cc\u062e \u0645\u0639\u062a\u0628\u0631 \u0648\u0627\u0631\u062f \u06a9\u0646\u06cc\u062f.", "dateISO": "\u0644\u0637\u0641\u0627 \u06cc\u06a9 \u062a\u0627\u0631\u06cc\u062e \u0645\u0639\u062a\u0628\u0631 (ISO) \u0631\u0627 \u0648\u0627\u0631\u062f \u06a9\u0646\u06cc\u062f.", "number": "\u0644\u0637\u0641\u0627 \u06cc\u06a9 \u0634\u0645\u0627\u0631\u0647 \u062a\u0644\u0641\u0646 \u0645\u0639\u062a\u0628\u0631 \u0648\u0627\u0631\u062f \u06a9\u0646\u06cc\u062f.", "digits": "\u0644\u0637\u0641\u0627 \u0641\u0642\u0637 \u0631\u0642\u0645 \u0631\u0627 \u0648\u0627\u0631\u062f \u06a9\u0646\u06cc\u062f.", "creditcard": "\u0644\u0637\u0641\u0627 \u06cc\u06a9 \u0634\u0645\u0627\u0631\u0647 \u06a9\u0627\u0631\u062a \u0627\u0639\u062a\u0628\u0627\u0631\u06cc \u0645\u0639\u062a\u0628\u0631 \u0648\u0627\u0631\u062f \u06a9\u0646\u06cc\u062f.", "equalTo": "\u0644\u0637\u0641\u0627 \u0645\u062c\u062f\u062f\u0627 \u0647\u0645\u0627\u0646 \u0645\u0642\u062f\u0627\u0631 \u0631\u0627 \u0648\u0627\u0631\u062f \u06a9\u0646\u06cc\u062f.", "maxlength_msg": "\u0644\u0637\u0641\u0627 \u0628\u06cc\u0634 \u0627\u0632 {0} \u062d\u0631\u0641 \u0648\u0627\u0631\u062f \u06a9\u0646\u06cc\u062f.", "minlength_msg": "\u0644\u0637\u0641\u0627 \u062d\u062f\u0627\u0642\u0644 {0} \u062d\u0631\u0641 \u0648\u0627\u0631\u062f \u06a9\u0646\u06cc\u062f.", "rangelength_msg": "\u0644\u0637\u0641\u0627 \u06cc\u06a9 \u0645\u0642\u062f\u0627\u0631 \u0628\u06cc\u0646 {0} \u0648 {1} \u062d\u0631\u0641 \u0637\u0648\u0644\u0627\u0646\u06cc \u0648\u0627\u0631\u062f \u06a9\u0646\u06cc\u062f.", "range_msg": "\u0644\u0637\u0641\u0627 \u06cc\u06a9 \u0645\u0642\u062f\u0627\u0631 \u0628\u06cc\u0646 {0} \u0648 {1} \u0631\u0627 \u0648\u0627\u0631\u062f \u06a9\u0646\u06cc\u062f.", "max_msg": "\u0644\u0637\u0641\u0627 \u06cc\u06a9 \u0645\u0642\u062f\u0627\u0631 \u06a9\u0645\u062a\u0631 \u06cc\u0627 \u0628\u0631\u0627\u0628\u0631 {0} \u0631\u0627 \u0648\u0627\u0631\u062f \u06a9\u0646\u06cc\u062f.", "min_msg": "\u0644\u0637\u0641\u0627 \u06cc\u06a9 \u0645\u0642\u062f\u0627\u0631 \u0628\u0632\u0631\u06af\u062a\u0631 \u06cc\u0627 \u0628\u0631\u0627\u0628\u0631 {0} \u0631\u0627 \u0648\u0627\u0631\u062f \u06a9\u0646\u06cc\u062f." };
+	</script>
+	<script type="text/javascript" src="@Url.Content("~/wp-content/plugins/dokan-lite/assets/vendors/form-validate/form-validate.js")"></script>
+	<script type="text/javascript" src="@Url.Content("~/wp-content/plugins/dokan-lite/assets/js/speakingurl.min.js")"></script>
+	<script type="text/javascript" src="@Url.Content("~/wp-content/plugins/dokan-lite/assets/vendors/i18n/jed.js")"></script>
+	<script type="text/javascript" src="@Url.Content("~/wp-content/plugins/dokan-lite/assets/js/vendor-registration.js")"></script>
+	<script type="text/javascript" src="@Url.Content("~/wp-includes/js/imgareaselect/jquery.imgareaselect.min.js")"></script>
+	<script type="text/javascript" src="@Url.Content("~/wp-includes/js/customize-base.min.js")"></script>
+	<script type="text/javascript" src="@Url.Content("~/wp-includes/js/backbone.min.js")"></script>
+	<script type="text/javascript" src="@Url.Content("~/wp-includes/js/customize-models.js")"></script>
+	<script type="text/javascript" src="@Url.Content("~/wp-content/plugins/dokan-lite/assets/js/dokan.js")"></script>
+	<script type="text/javascript" src="@Url.Content("~/wp-content/plugins/dokan-lite/assets/vendors/select2/select2.full.min.js")"></script>
+	<script type="text/javascript" src="@Url.Content("~/wp-content/plugins/dokan-pro/assets/js/single-product-shipping.js")"></script>
+}

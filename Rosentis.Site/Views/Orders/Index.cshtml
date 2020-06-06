@@ -1,0 +1,109 @@
+﻿@model IEnumerable<Rosentis.DataContract.Shop.InvoiceDto>
+@{
+  var counter = 0;
+  ViewBag.Title = "سفارش ها";
+
+}
+<div class="container profile">
+  <div class="row">
+    @Html.Partial("_UserSideBar",4)
+    <div class="col-md-9 ">
+      <div class="content-box well">
+        <table class="table">
+          <tr>
+            <th>
+              ردیف
+            </th>
+            <th>
+              #سفارش
+            </th>
+            <th>
+              تاریخ سفارش
+            </th>
+            <th>
+              نام مشتری
+            </th>
+            <th>
+              قیمت خالص
+            </th>
+            <th>
+              قیمت پرداختی
+            </th>
+            <th>
+              میزان تخفیف
+            </th>
+            <th>
+              میزان مالیات
+            </th>
+            <th>
+              تاریخ ارسال
+            </th>
+            <th>
+              وضعیت
+            </th>
+            <th>
+
+            </th>
+          </tr>
+
+          @foreach (var item in Model)
+          {
+
+            <tr>
+              <td>
+                @(++counter)
+              </td>
+              <td>
+                @Html.DisplayFor(modelItem => item.InvoiceNumber)
+              </td>
+              <td>
+                @Html.DisplayFor(modelItem => item.CreatedDateShamsi)
+              </td>
+              <td>
+                @Html.DisplayFor(modelItem => item.Customer.Name)
+              </td>
+              <td>
+                @Html.DisplayFor(modelItem => item.NetTotalMoney)
+              </td>
+              <td>
+                @Html.DisplayFor(modelItem => item.TotalToPayMoney)
+
+              </td>
+              <td>
+                @Html.DisplayFor(modelItem => item.TotalDiscountMoney)
+              </td>
+              <td>
+                @Html.DisplayFor(modelItem => item.VatAmountMoney)
+              </td>
+              <td>
+                @Html.DisplayFor(modelItem => item.DueDateShamsi)
+              </td>
+              <td>
+                @if (item.Paid)
+                {
+                  <span *ngIf="row.Paid" class="text-success">پرداخت شده</span>
+                }
+                else
+                {
+                  <span *ngIf="!row.Paid" class="text-danger">پرداخت نشده</span>
+                }
+              </td>
+              <td>
+                <div class="btn-group" role="group" aria-label="First group">
+                  <a href="@Url.Action("Invoice", new {id = item.Id})" title="نمایش کامل" type="button" class="btn btn-success">
+                    <span class="fa fa-info"></span>
+                  </a>
+                </div>
+              </td>
+            </tr>
+          }
+
+        </table>
+
+      </div>
+    </div>
+
+
+
+  </div>
+</div>

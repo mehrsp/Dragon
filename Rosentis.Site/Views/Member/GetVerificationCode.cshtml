@@ -1,0 +1,63 @@
+﻿
+@{
+  ViewBag.Title = "دریافت کد اعتبار سنجی";
+}
+@section HeadContent{
+
+  <link href="@Url.Content("~/wp-content/themes/theme55220/address.css")" rel="stylesheet" />
+}
+<div class="container">
+  @if (!string.IsNullOrWhiteSpace(ViewBag.Message))
+  {
+    <div class="row">
+      <div class="alert alert-danger">
+        <strong>عملیات ناموفق: </strong> @ViewBag.Message
+      </div>
+    </div>
+  }
+  <div class="row">
+    <div>
+      <div>
+        <h3>ثبت نام در سایت، مرحله اعتبار سنجی</h3>
+        <p>
+          لطفا کد اعتبار سنجی که برای همراه شما ارسال شده است را وارد نمایید.
+        </p>
+      </div>
+    </div>
+  </div>
+  @using (Html.BeginForm("GetVerificationCode", "Member", FormMethod.Post, new {id = "frmSubmit"}))
+  {
+    <div class="row p-sm" style="border-bottom: 1px #eee solid;">
+      <label class="p-sm" style="margin-right: -30px;">فرم ثبت نام</label>
+      <div class="row">
+        <div class="col-md-6" style="padding: 0px; padding-right: 5px;">
+          <div><label>کد اعتبار سنجی</label>
+          </div>
+          <div><input id="code" name="Code" type="number" class="form-control" required/>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <input type="submit" class="submit" style="display: none;">
+  }
+  <div class="row p-sm" style="border-top: 1px #eee solid;">
+    <div class="col-md-1">
+      <a class="text-warning">
+        <button class="btn" onclick="submitForm()">
+          ادامه و تکمیل اطلاعات اختیاری ...
+
+        </button>
+      </a>
+    </div>
+  </div>
+</div>
+@section scripts
+{
+  <script>
+    function submitForm() {
+      //return;
+      $('.submit').click();
+    }
+  </script>
+}

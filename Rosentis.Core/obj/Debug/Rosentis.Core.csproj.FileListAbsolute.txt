@@ -1,0 +1,42 @@
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Core\bin\Debug\Rosentis.Core.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Core\bin\Debug\Rosentis.Core.pdb
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Core\bin\Debug\Fasterflect.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Core\bin\Debug\Newtonsoft.Json.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Core\bin\Debug\System.Buffers.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Core\bin\Debug\System.Linq.Dynamic.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Core\bin\Debug\System.Memory.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Core\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Core\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Core\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Core\bin\Debug\Fasterflect.xml
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Core\bin\Debug\Newtonsoft.Json.xml
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Core\bin\Debug\System.Buffers.xml
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Core\bin\Debug\System.Memory.xml
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Core\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Core\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Core\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Core\obj\Debug\Rosentis.Core.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Core\obj\Debug\Rosentis.Core.pdb
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Core\bin\Debug\Rosentis.Core.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Core\bin\Debug\Rosentis.Core.pdb
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Core\bin\Debug\EntityFramework.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Core\bin\Debug\EntityFramework.Extensions.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Core\bin\Debug\Fasterflect.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Core\bin\Debug\Newtonsoft.Json.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Core\bin\Debug\System.Buffers.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Core\bin\Debug\System.Linq.Dynamic.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Core\bin\Debug\System.Memory.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Core\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Core\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Core\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Core\bin\Debug\EntityFramework.xml
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Core\bin\Debug\Fasterflect.xml
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Core\bin\Debug\Newtonsoft.Json.xml
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Core\bin\Debug\System.Buffers.xml
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Core\bin\Debug\System.Memory.xml
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Core\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Core\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Core\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Core\obj\Debug\Rosentis.Core.csprojResolveAssemblyReference.cache
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Core\obj\Debug\Rosentis.Core.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Core\obj\Debug\Rosentis.Core.pdb

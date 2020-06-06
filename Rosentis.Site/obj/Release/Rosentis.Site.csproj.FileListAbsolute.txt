@@ -1,0 +1,327 @@
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\obj\Release\Rosentis.Site.csprojResolveAssemblyReference.cache
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\ApplicationInsights.config
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\roslyn\csc.exe
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\roslyn\csc.exe.config
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\roslyn\csc.rsp
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\roslyn\csi.exe
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\roslyn\csi.rsp
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\roslyn\System.AppContext.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\roslyn\vbc.exe
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\roslyn\vbc.exe.config
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\roslyn\vbc.rsp
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\roslyn\VBCSCompiler.exe
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\Rosentis.Site.dll.config
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\Rosentis.Site.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\Rosentis.Site.pdb
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\Antlr3.Runtime.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\EntityFramework.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\EntityFramework.SqlServer.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\Microsoft.AI.Web.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\Microsoft.ApplicationInsights.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\Microsoft.IdentityModel.Logging.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\Microsoft.IdentityModel.Tokens.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\Microsoft.Practices.ServiceLocation.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\Microsoft.Win32.Primitives.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\Newtonsoft.Json.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\Rosentis.Common.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\Rosentis.Core.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\Rosentis.DataContract.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\Rosentis.ServiceContract.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\Rosentis.ServiceImplementation.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\StructureMap.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\StructureMap.Microsoft.DependencyInjection.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\StructureMap.Web.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\System.AppContext.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\System.Buffers.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\System.Console.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\System.Data.SqlClient.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\System.Diagnostics.DiagnosticSource.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\System.Diagnostics.Tracing.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\System.Globalization.Calendars.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\System.IO.Compression.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\System.IO.Compression.ZipFile.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\System.IO.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\System.IO.FileSystem.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\System.IO.FileSystem.Primitives.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\System.Net.Http.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\System.Net.Http.Formatting.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\System.Net.Sockets.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\System.Reflection.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\System.Runtime.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\System.Runtime.Extensions.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\System.Runtime.InteropServices.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\System.Security.Cryptography.Algorithms.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\System.Security.Cryptography.Encoding.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\System.Security.Cryptography.Primitives.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\System.Security.Cryptography.X509Certificates.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\System.Web.Helpers.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\System.Web.Http.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\System.Web.Http.WebHost.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\System.Web.Mvc.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\System.Web.Optimization.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\System.Web.Razor.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\System.Web.WebPages.Deployment.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\System.Web.WebPages.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\System.Web.WebPages.Razor.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\System.Xml.ReaderWriter.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\WebActivatorEx.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\WebGrease.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\PersianDate.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\Rosentis.DomainModel.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\AutoMapper.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\Rosentis.Persistance.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\Rosentis.DistributedServices.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\Rosentis.Persistance.Core.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\PhoneNumbers.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\Fasterflect.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\System.Linq.Dynamic.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\System.Collections.Immutable.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\System.Memory.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\Rosentis.Common.pdb
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\Rosentis.Common.dll.config
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\Rosentis.DataContract.pdb
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\Rosentis.DataContract.dll.config
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\Rosentis.ServiceContract.pdb
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\Rosentis.ServiceContract.dll.config
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\Rosentis.ServiceImplementation.pdb
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\Rosentis.ServiceImplementation.dll.config
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\Rosentis.Core.pdb
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\Antlr3.Runtime.pdb
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\EntityFramework.xml
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\EntityFramework.SqlServer.xml
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\Microsoft.AI.Web.xml
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\Microsoft.ApplicationInsights.xml
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\Microsoft.IdentityModel.JsonWebTokens.xml
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\Microsoft.IdentityModel.Logging.xml
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\Microsoft.IdentityModel.Tokens.xml
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\Microsoft.Practices.ServiceLocation.pdb
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\Microsoft.Practices.ServiceLocation.xml
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\Newtonsoft.Json.xml
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\StructureMap.xml
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\StructureMap.Microsoft.DependencyInjection.xml
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\StructureMap.Web.pdb
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\StructureMap.Web.xml
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\System.Buffers.xml
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\System.Data.SqlClient.xml
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\System.Diagnostics.DiagnosticSource.xml
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\System.IdentityModel.Tokens.Jwt.xml
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\System.Net.Http.Formatting.xml
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\System.Web.Helpers.xml
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\System.Web.Http.xml
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\System.Web.Http.WebHost.xml
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\System.Web.Mvc.xml
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\System.Web.Optimization.xml
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\System.Web.Razor.xml
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\System.Web.WebPages.xml
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\System.Web.WebPages.Deployment.xml
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\System.Web.WebPages.Razor.xml
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\Rosentis.DomainModel.pdb
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\Rosentis.DomainModel.dll.config
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\Rosentis.Persistance.pdb
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\Rosentis.Persistance.dll.config
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\Rosentis.DistributedServices.pdb
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\Rosentis.Persistance.Core.pdb
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\Rosentis.Persistance.Core.dll.config
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\PhoneNumbers.xml
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\Fasterflect.xml
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\System.Collections.Immutable.xml
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\System.Memory.xml
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\bin\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\obj\Release\Rosentis.Site.dll
+C:\Users\SepidPc\documents\visual studio 2017\Projects\Rosentis\Rosentis.Site\obj\Release\Rosentis.Site.pdb
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\ApplicationInsights.config
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\roslyn\csc.exe
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\roslyn\csc.exe.config
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\roslyn\csc.rsp
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\roslyn\csi.exe
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\roslyn\csi.rsp
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\roslyn\System.AppContext.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\roslyn\vbc.exe
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\roslyn\vbc.exe.config
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\roslyn\vbc.rsp
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\roslyn\VBCSCompiler.exe
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\Rosentis.Site.dll.config
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\Rosentis.Site.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\Rosentis.Site.pdb
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\Antlr3.Runtime.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\EntityFramework.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\EntityFramework.SqlServer.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\Microsoft.AI.Web.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\Microsoft.ApplicationInsights.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\Microsoft.IdentityModel.Logging.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\Microsoft.IdentityModel.Tokens.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\Microsoft.Practices.ServiceLocation.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\Microsoft.Win32.Primitives.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\Newtonsoft.Json.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\RestSharp.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\Rosentis.Common.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\Rosentis.Core.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\Rosentis.DataContract.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\Rosentis.DomainModel.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\Rosentis.ServiceContract.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\Rosentis.ServiceImplementation.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\StructureMap.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\StructureMap.Microsoft.DependencyInjection.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\StructureMap.Web.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\System.AppContext.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\System.Buffers.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\System.Console.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\System.Data.SqlClient.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\System.Diagnostics.DiagnosticSource.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\System.Diagnostics.Tracing.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\System.Globalization.Calendars.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\System.IO.Compression.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\System.IO.Compression.ZipFile.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\System.IO.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\System.IO.FileSystem.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\System.IO.FileSystem.Primitives.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\System.Net.Http.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\System.Net.Http.Formatting.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\System.Net.Sockets.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\System.Reflection.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\System.Runtime.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\System.Runtime.Extensions.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\System.Runtime.InteropServices.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\System.Security.Cryptography.Algorithms.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\System.Security.Cryptography.Encoding.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\System.Security.Cryptography.Primitives.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\System.Security.Cryptography.X509Certificates.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\System.Web.Helpers.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\System.Web.Http.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\System.Web.Http.WebHost.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\System.Web.Mvc.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\System.Web.Optimization.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\System.Web.Razor.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\System.Web.WebPages.Deployment.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\System.Web.WebPages.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\System.Web.WebPages.Razor.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\System.Xml.ReaderWriter.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\WebActivatorEx.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\WebGrease.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\PersianDate.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\AutoMapper.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\Rosentis.Persistance.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\Rosentis.DistributedServices.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\Rosentis.Persistance.Core.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\PhoneNumbers.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\Fasterflect.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\System.Linq.Dynamic.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\System.Collections.Immutable.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\System.Memory.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\Rosentis.Common.pdb
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\Rosentis.DataContract.pdb
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\Rosentis.DomainModel.pdb
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\Rosentis.ServiceContract.pdb
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\Rosentis.ServiceContract.dll.config
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\Rosentis.ServiceImplementation.pdb
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\Rosentis.ServiceImplementation.dll.config
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\Rosentis.Core.pdb
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\Antlr3.Runtime.pdb
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\EntityFramework.xml
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\EntityFramework.SqlServer.xml
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\Microsoft.AI.Web.xml
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\Microsoft.ApplicationInsights.xml
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\Microsoft.IdentityModel.JsonWebTokens.xml
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\Microsoft.IdentityModel.Logging.xml
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\Microsoft.IdentityModel.Tokens.xml
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\Microsoft.Practices.ServiceLocation.pdb
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\Microsoft.Practices.ServiceLocation.xml
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\Newtonsoft.Json.xml
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\RestSharp.xml
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\StructureMap.xml
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\StructureMap.Microsoft.DependencyInjection.xml
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\StructureMap.Web.pdb
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\StructureMap.Web.xml
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\System.Buffers.xml
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\System.Data.SqlClient.xml
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\System.Diagnostics.DiagnosticSource.xml
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\System.IdentityModel.Tokens.Jwt.xml
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\System.Net.Http.Formatting.xml
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\System.Web.Helpers.xml
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\System.Web.Http.xml
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\System.Web.Http.WebHost.xml
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\System.Web.Mvc.xml
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\System.Web.Optimization.xml
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\System.Web.Razor.xml
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\System.Web.WebPages.xml
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\System.Web.WebPages.Deployment.xml
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\System.Web.WebPages.Razor.xml
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\Rosentis.Persistance.pdb
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\Rosentis.Persistance.dll.config
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\Rosentis.DistributedServices.pdb
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\Rosentis.Persistance.Core.pdb
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\Rosentis.Persistance.Core.dll.config
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\PhoneNumbers.xml
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\Fasterflect.xml
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\System.Collections.Immutable.xml
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\System.Memory.xml
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\bin\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\obj\Release\Rosentis.Site.csprojResolveAssemblyReference.cache
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\obj\Release\Rosentis.Site.dll
+C:\Users\SepidPc\Source\Repos\Rosentis\Rosentis.Site\obj\Release\Rosentis.Site.pdb

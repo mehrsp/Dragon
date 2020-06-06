@@ -1,0 +1,40 @@
+﻿@model Rosentis.DataContract.Products.ProductDto
+@{
+}
+<div class="swiper-slide">
+	<div class="products-swiper-p-box ">
+		<a href="@Url.Action("Detail","Products",new {Id=Model.Id})" class="products-swiper-link"></a>
+		@if (Model.Discount != 0)
+		{
+			<span class="products-swiper-discount">فروش ویژه</span>
+		}
+		<a class="products-swiper-img" 
+		   href="@Model.Picture">
+			<img alt="@Model.Name" class="swiper-lazy" 
+				 data-src="@Model.Picture" 
+				 src="@Model.Picture" width="205" height="205">
+		</a>
+		<div class="products-swiper-title">@Model.Name</div>
+		<div class="products-swiper-price ">
+
+			<div class="products-swiper-price-value">
+				@if (Model.Discount == 0)
+				{
+					<span class="woocommerce-Price-amount amount">
+						@Model.PriceMoney&nbsp;
+					</span>
+				}
+				else
+				{
+					<del>
+				     @Model.Price&nbsp;
+					</del>
+					<span class="woocommerce-Price-amount amount">
+						@Model.PriceWithDiscountMoney&nbsp;
+					</span>
+				}
+			
+			</div>
+		</div>
+	</div>
+</div>
